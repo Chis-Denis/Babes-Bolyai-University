@@ -1,0 +1,49 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  
+     4                                  extern exit,fopen,printf,scanf,fread,fclose,fprintf,gets          
+     5                                  import exit msvcrt.dll   
+     6                                  import fopen msvcrt.dll
+     7                                  import printf msvcrt.dll
+     8                                  import scanf msvcrt.dll
+     9                                  import fread msvcrt.dll
+    10                                  import fclose msvcrt.dll
+    11                                  import fprintf msvcrt.dll
+    12                                  import gets msvcrt.dll
+    13                                  
+    14                                  segment data use32 class=data
+    15                                      ;x dw -129, 10+100h+1000b
+    16                                      ;y dw 1001h>>1001b, 128h & 128
+    17                                      ;z dw z, $$-z
+    18                                      ;w dd x+y-z,w-y+x
+    19                                      ;h dw 101b, 11h-11b,h-11
+    20                                      ;a db $$-$
+    21                                      ;b dd  2Ch,h-b+0ah-0bh
+    22                                     ; c db z-w
+    23                                      ;d dw -513,128^(~128)
+    24                                      ;e dd 'abcdefh'
+    25                                     ; f dw w-1
+    26                                     ; g times 3 dw 'db'
+    27                                    ;  k dw c+0ch
+    28                                     ; m dd a+0ah
+    29                                      ;s dd start-start1
+    30                                    ;  xx dd 1abcdh,0abcdh
+    31                                  segment code use32 class=code
+    32                                      start:
+    33                                          ;mov ax, 128|2
+    34                                          ;mov bh, 4ah>>2
+    35                                          ;sub ah,bh
+    36                                          
+    37                                          ;mov ebx,12345678h       
+    38                                          ;xor ah,ah
+    39                                          ;cwde
+    40                                          ;add ebx,eax
+    41                                          ;mov al,[ebx]
+    42 00000000 B204                            mov dl,4
+    43 00000002 31C0                            xor eax,eax
+    44 00000004 8D1E                            lea ebx ,[esi]
+    45 00000006 26D7                            es xlat
+    46                                          
+    47                                  
+    48 00000008 6A00                            push    dword 0      
+    49 0000000A FF15[00000000]                  call    [exit]       

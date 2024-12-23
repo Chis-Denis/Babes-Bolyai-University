@@ -1,0 +1,101 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  
+     4                                  extern exit,fopen,printf,scanf,fread,fclose,fprintf,gets          
+     5                                  import exit msvcrt.dll   
+     6                                  import fopen msvcrt.dll
+     7                                  import printf msvcrt.dll
+     8                                  import scanf msvcrt.dll
+     9                                  import fread msvcrt.dll
+    10                                  import fclose msvcrt.dll
+    11                                  import fprintf msvcrt.dll
+    12                                  import gets msvcrt.dll
+    13                                  
+    14                                  segment data use32 class=data
+    15 00000000 FCE70200CDAB000005-         sir dq 0ABCD0002E7FCh,5,1110111b, 1000000000h
+    15 00000009 000000000000007700-
+    15 00000012 000000000000000000-
+    15 0000001B 0010000000         
+    16                                      len equ ($-sir)/8
+    17 00000020 69                          x db 69h
+    18                                      rez times len resd 0
+    19 00000021 0200                        two dw 2
+    20 00000023 03                          three db 3
+    21 00000024 00000000                    current_groups dd 0
+    22 00000028 00000000                    number_of_ones dd 0
+    23 0000002C 00000000                    current_double dd 0
+    24                                      
+    25 00000030 256F000000000000            format_print dd "%o",0
+    26                                      
+    27                                  
+    28                                  segment code use32 class=code
+    29                                      start:
+    30                                      
+    31 00000000 FF35[20000000]                  push dword [x]
+    32 00000006 68[30000000]                    push dword format_print
+    33 0000000B FF15[00000000]                  call [printf]
+    34 00000011 83C408                          add esp, 4*2
+    35                                          
+    36 00000014 BE[00000000]                    mov esi, sir
+    37 00000019 BF[21000000]                    mov edi, rez
+    38                                          
+    39 0000001E B904000000                      mov ecx,len
+    40                                          main:
+    41 00000023 AD                                  lodsd ; la inceput , trb sa mutam la sfarsit ; eax = DS:ESI
+    42 00000024 A3[2C000000]                        mov dword [current_double], eax  ;the initial low word  
+    43 00000029 89C2                                mov edx, eax ;  cu edx shiftam
+    44                                              shiftari:
+    45 0000002B 89D3                                    mov ebx, edx ;  cu ebx tinem minte starea inainte de shiftare
+    46                                                  
+    47 0000002D A1[28000000]                            mov eax, dword [number_of_ones]
+    48 00000032 83F803                                  cmp eax,3
+    49 00000035 7402                                    je este_grupa
+    50 00000037 EB10                                    jmp continuare
+    51                                                  
+    52                                                  este_grupa:
+    53 00000039 FF05[24000000]                          inc dword [current_groups]
+    54 0000003F C705[28000000]0000-                     mov dword [number_of_ones],0
+    54 00000047 0000               
+    55                                                  
+    56                                                  continuare:
+    57                                                  
+    58                                                  
+    59 00000049 83FA00                                  cmp edx,0
+    60 0000004C 742B                                    je urm_nr
+    61                                                                  
+    62                                                  
+    63 0000004E 6689D0                                  mov ax, dx
+    64                                                  ;shiftam high wordul pe low word
+    65 00000051 C1EA10                                  shr edx,16
+    66                                                  ; DX:AX =  cuvantul initial
+    67                                                  
+    68 00000054 66F735[21000000]                        div word [two]
+    69 0000005B 6683FA01                                cmp DX,1 ; comparam sa fie 1 
+    70 0000005F 740C                                    je gasit_unu
+    71 00000061 C705[28000000]0000-                     mov dword [number_of_ones],0
+    71 00000069 0000               
+    72 0000006B EB06                                    jmp shiftare_efectiva                
+    73                                                  gasit_unu:
+    74 0000006D FF05[28000000]                          inc dword [number_of_ones]
+    75                                                 
+    76                                                  shiftare_efectiva:
+    77                                                  
+    78 00000073 89DA                                    mov edx,ebx
+    79 00000075 D1EA                                    shr edx,1
+    80 00000077 EBB2                                    jmp shiftari
+    81                                                           
+    82                                              
+    83                                           
+    84                                          urm_nr:
+    85 00000079 AD                              lodsd ; la sfarsit    
+    86                                          
+    87 0000007A FF35[24000000]                  push dword [current_groups]
+    88 00000080 68[30000000]                    push format_print
+    89 00000085 FF15[00000000]                  call [printf]
+    90                                          
+    91 0000008B E296                            loop main
+    92                                              
+    93                                      
+    94                                      
+    95 0000008D 6A00                            push    dword 0      
+    96 0000008F FF15[00000000]                  call    [exit]       

@@ -1,0 +1,67 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  
+     4                                  extern exit,fopen,printf,scanf,fread,fclose,fprintf,gets          
+     5                                  import exit msvcrt.dll   
+     6                                  import fopen msvcrt.dll
+     7                                  import printf msvcrt.dll
+     8                                  import scanf msvcrt.dll
+     9                                  import fread msvcrt.dll
+    10                                  import fclose msvcrt.dll
+    11                                  import fprintf msvcrt.dll
+    12                                  import gets msvcrt.dll
+    13                                  
+    14                                  segment data use32 class=data
+    15 00000000 3235362C2D323536            a1 db '256,-256'
+    16 00000008 00015602                    a2 dw 256, 256h
+    17 0000000C 0400                        a3 dw $-a2
+    18                                      a4 equ -256/4
+    19 0000000E 4000                        a5 db 128>>1, -128<<1
+    19          ******************       warning: byte data exceeds bounds [-w+number-overflow]
+    20 00000010 FAFF0500                    a6 dw a2-a5,~(a2-a5)
+    21                                      ;a7 dd [a2],!a2
+    22 00000014 5603000056622500            a8 dd 256h^256,256256h
+    23 0000001C 0C000000                    a9 dd ($-a8)+(a10-$)
+    24 00000020 01FF0001                    a10 dw -255,256
+    25 00000024 <res 00000006>              a11 resb 6
+    26 0000002A 0001<rept>                  a12 times 4 dw 256
+    27                                      ;a13 dw times 4 -128
+    28 00000032 <res 00000008>              times 2 resw 2
+    29 0000003A 78563412<rept>              times 2 dd 12345678h
+    30                                      
+    31 00000042 01                          x db 1
+    32                                  
+    33                                  segment code use32 class=code
+    34                                      start:
+    35                                          ;cld
+    36                                          ;push ax
+    37                                          ;mov ax,[esp+2]
+    38                                          ;stosw
+    39                                          ;lea edi, [edi-2]
+    40                                          ;add esp,4
+    41                                          
+    42                                          ;mov word [edi],a ; ?
+    43 00000000 BB78563412                      mov ebx, 0x12345678
+    44                                          
+    45                                          ;lea ebx, [ebx+6] ; 1
+    46                                          ;lea ebx, [bx+6]  ; 2
+    47                                          ;lea bx,[bx+6]  ;1
+    48                                          ;lea bx, [ebx+6] ;1
+    49                                          ;mov ebx, ebx+6 ;3
+    50                                          ;mov ebx, [ebx+6] ;4
+    51                                          ;movzx ebx, [ebx+6] ; 3
+    52                                          ;movzx ebx, [bx+6] ; 3
+    53                                          
+    54 00000005 6683C306                        add bx,6 ; 1
+    55 00000009 0FB7DB                          movzx ebx,bx
+    56                                          
+    57                                          ;mov [ebx], dword [bx+6] ; 3
+    58                                          ;add ebx,6 ; 1
+    59                                          ;add bx, 6 ; 1
+    60                                          ;push [ebx+6] ; pop ebx , 3
+    61                                          ;xchg ebx, [ebx+6] ; 4
+    62                                          
+    63                                  
+    64                                    
+    65 0000000C 6A00                            push    dword 0      
+    66 0000000E FF15[00000000]                  call    [exit]       

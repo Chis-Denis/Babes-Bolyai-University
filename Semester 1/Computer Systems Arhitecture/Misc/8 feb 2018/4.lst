@@ -1,0 +1,110 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  
+     4                                  extern exit,fopen,printf,scanf,fread,fclose,fprintf,gets          
+     5                                  import exit msvcrt.dll   
+     6                                  import fopen msvcrt.dll
+     7                                  import printf msvcrt.dll
+     8                                  import scanf msvcrt.dll
+     9                                  import fread msvcrt.dll
+    10                                  import fclose msvcrt.dll
+    11                                  import fprintf msvcrt.dll
+    12                                  import gets msvcrt.dll
+    13                                  
+    14                                  segment data use32 class=data
+    15 00000000 78A63412785634127D-         sir dd 1234A678h,12345678h,1AC3B47Dh,0FEDC9876h
+    15 00000009 B4C31A7698DCFE     
+    16                                      len equ ($-sir)/4
+    17 00000010 00                          suma db 0
+    18                                      sir_pozitie times 100 resb 0    
+    19 00000011 00                          byte_maxim db 0
+    20 00000012 00000000                    pozitie dd 0    
+    21 00000016 255800                      format_hexa db "%X",0
+    22 00000019 256400                      format_suma db "%d",0
+    23 0000001C 2000                        space db " ",0
+    24 0000001E 00                          lungime_sir db 0
+    25                                  
+    26                                  segment code use32 class=code
+    27                                  
+    28                                  
+    29                                      start1:
+    30 00000000 8B442408                        mov eax,[esp+8]
+    31 00000004 8B542404                        mov edx, [esp+4] ;edx suma
+    32 00000008 BB00000000                      mov ebx,0
+    33                                          
+    34 0000000D B904000000                      mov ecx,4
+    35                                          repeta:
+    36 00000012 43                                  inc ebx
+    37 00000013 3A05[11000000]                      cmp al,byte [byte_maxim]
+    38 00000019 7702                                ja mai_mare
+    39 0000001B EB0D                                jmp shiftare
+    40                                              
+    41                                              mai_mare:
+    42 0000001D A2[11000000]                        mov byte [byte_maxim],al
+    43 00000022 891D[12000000]                      mov dword [pozitie],ebx
+    44 00000028 EB00                                jmp shiftare
+    45                                          
+    46                                              shiftare:
+    47 0000002A C1E808                                  shr eax,8
+    48 0000002D E2E3                            loop repeta
+    49                                          
+    50 0000002F A0[11000000]                    mov al, byte [byte_maxim]
+    51 00000034 0315[11000000]                  add edx, dword [byte_maxim]
+    52 0000003A C605[11000000]00                mov byte [byte_maxim],0
+    53 00000041 C705[12000000]0000-             mov dword [pozitie],0
+    53 00000049 0000               
+    54                                          
+    55 0000004B C20800                          ret 4*2
+    56                                      start:
+    57 0000004E B104                            mov cl, len
+    58 00000050 880D[1E000000]                  mov byte [lungime_sir],cl
+    59                                          
+    60 00000056 BE[00000000]                    mov esi, sir
+    61 0000005B BF00000000                      mov edi,0
+    62                                          parcurg: 
+    63                                              
+    64 00000060 AD                                  lodsd
+    65                                              
+    66 00000061 50                                  push eax
+    67 00000062 FF35[10000000]                      push dword [suma]
+    68 00000068 E893FFFFFF                          call start1
+    69                                              
+    70                                              ;eax byteul maxim
+    71                                              ;ebx pozitia
+    72                                              
+    73 0000006D 8815[10000000]                      mov byte [suma],dl
+    74 00000073 889F[11000000]                      mov byte [sir_pozitie+edi],bl
+    75 00000079 47                                  inc edi
+    76                                              
+    77 0000007A 50                                  push dword eax
+    78 0000007B 68[16000000]                        push dword format_hexa
+    79 00000080 FF15[00000000]                      call [printf]
+    80 00000086 83C408                              add esp, 4*2
+    81                                              
+    82 00000089 68[1C000000]                        push dword space
+    83 0000008E FF15[00000000]                      call [printf]
+    84 00000094 83C404                              add esp, 4
+    85                                              
+    86                                              
+    87 00000097 FE0D[1E000000]                      dec byte [lungime_sir]
+    88 0000009D 8A0D[1E000000]                      mov cl,byte [lungime_sir]
+    89 000000A3 80F900                              cmp cl,0
+    90 000000A6 7402                                je final        
+    91                                          
+    92 000000A8 EBB6                            jmp parcurg 
+    93                                          
+    94                                                  
+    95                                      final:   
+    96 000000AA FF35[10000000]                  push dword [suma]
+    97 000000B0 68[19000000]                    push format_suma
+    98 000000B5 FF15[00000000]                  call [printf]
+    99 000000BB 83C408                          add esp, 4*2
+   100                                          
+   101                                          
+   102 000000BE 68[11000000]                    push dword sir_pozitie
+   103 000000C3 FF15[00000000]                  call [printf]
+   104 000000C9 83C404                          add esp, 4*1
+   105                                  
+   106                                      
+   107 000000CC 6A00                            push    dword 0      
+   108 000000CE FF15[00000000]                  call    [exit]       

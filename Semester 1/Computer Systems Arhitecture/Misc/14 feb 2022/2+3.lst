@@ -1,0 +1,57 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  
+     4                                  extern exit,fopen,printf,scanf,fread,fclose,fprintf,gets          
+     5                                  import exit msvcrt.dll   
+     6                                  import fopen msvcrt.dll
+     7                                  import printf msvcrt.dll
+     8                                  import scanf msvcrt.dll
+     9                                  import fread msvcrt.dll
+    10                                  import fclose msvcrt.dll
+    11                                  import fprintf msvcrt.dll
+    12                                  import gets msvcrt.dll
+    13                                  
+    14                                  segment data use32 class=data
+    15 00000000 99FFFFFF[28000000]          a1 dd -103,a6
+    16 00000008 000007000300030007-         a2 dw 1&2,3|4,5^6,1|2,3^4,5&6
+    16 00000011 000400             
+    17 00000014 030000000700                   dw 1^2,3&4,5|6
+    18 0000001A 1A00E6FF                    a3 dw $-$$,$$-a3
+    19 0000001E BCBA                        a4 db -((-1)^0bbh),1^0bbh
+    20 00000020 0000008001000000            a5 dd -129<<1Fh,81h>>0111b
+    20          ******************       warning: dword data exceeds bounds [-w+number-overflow]
+    21 00000028 613161326133613461-         a6 dd "a1a2a3a4a5",(a6-a5)<<(a5-a4)
+    21 00000031 35000020000000     
+    22 00000038 [0800][0900]<rept>          a7 times 4 dw a2,a2+1
+    23 00000048 0000                        a8 dw !(a2-a1)    
+    24 0000004A FF                          a db -1
+    25 0000004B 8000                        b dw 80h
+    26                                  
+    27                                  
+    28                                  segment code use32 class=code
+    29                                      start:
+    30                                          ;movsx ebx, [ebx+esp]6
+    31                                          ;xchg ebx, [ebx+esp]
+    32                                          ;lea eax, [ebx+esp]
+    33                                          ;lea eax, [ebx+ebp]
+    34                                          ;mov ax, a+b 
+    35                                          
+    36                                          ;mov ax,0100h
+    37                                          ;mov bx, 1000+10b
+    38                                          ;idiv bl
+    39                                          
+    40                                          ;mov ah,0cdh
+    41                                          ;mov al,0ebh
+    42                                          ;add ah,al
+    43                                          
+    44                                          ;mov ax, 1010h
+    45                                          ;mov bx,1111b
+    46                                          ;mul bl
+    47                                          
+    48 00000000 B6C8                            mov dh,200
+    49 00000002 B562                            mov ch,62h
+    50 00000004 28EE                            sub dh,ch
+    51                                          
+    52                                       
+    53 00000006 6A00                            push    dword 0      
+    54 00000008 FF15[00000000]                  call    [exit]       

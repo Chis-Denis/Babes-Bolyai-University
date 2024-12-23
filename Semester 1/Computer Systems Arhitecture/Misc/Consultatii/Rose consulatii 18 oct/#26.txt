@@ -1,0 +1,125 @@
+# 26
+ 
+bits 32 
+global start        
+ 
+ 
+extern exit            
+import exit msvcrt.dll   
+ 
+ 
+segment data use32 class=data
+    ; a-word; b-byte; c-word; d-doubleword; x-qword
+    a dw 15
+    b db 4
+    c dw 3
+    d dd 5
+    x dq 111111111000h
+ 
+ 
+segment code use32 class=code
+    start:
+        ;(a*a+b/c-1)/(b+c)+d-x;
+        ; signed
+        mov ax, [a]
+        imul word [a] ; dx:ax = a * a
+ 
+        push dx
+        push ax
+        pop ebx ; ebx = a * a
+ 
+        mov al, [b]
+        cbw ; ax = b
+        cwd ; dx:ax = b
+ 
+        idiv word [c] ; ax = cat, dx = rest
+        cwde ; ax -> eax
+ 
+        add eax, ebx
+        sub eax, 1 ; eax = (a*a+b/c-1)
+        mov ebx, eax ; ebx = (a*a+b/c-1)
+ 
+        mov al, [b]
+        cbw
+        add ax, [c]
+ 
+        mov cx, ax ; cx = b + c
+        ;   ebx -> dx:ax = (a*a+b/c-1)
+        push ebx
+        pop ax
+        pop dx
+ 
+        idiv word cx ; ax = cat, dx = rest
+        cwde ; ax -> eax
+ 
+        add eax, [d]
+        cdq
+        sub eax, [x] ; x = 00001057AF6E90B2 -> in memorie: B2 90 6E AF 57 10 00 00 
+        sbb edx, [x+4] ; - borrow digit in CF
+ 
+ 
+        push    dword 0     
+        call    [exit]       
+ 
+----------------------------------------------------------------------------------------------------------------------------------
+ 
+bits 32 
+global start        
+ 
+ 
+extern exit            
+import exit msvcrt.dll   
+ 
+ 
+segment data use32 class=data
+    ; a-word; b-byte; c-word; d-doubleword; x-qword
+    a dw 15
+    b db 4
+    c dw 3
+    d dd 5
+    x dq 111111111000h
+ 
+ 
+segment code use32 class=code
+    start:
+        ;(a*a+b/c-1)/(b+c)+d-x;
+        ; signed
+        mov ax, [a]
+        imul word [a] ; dx:ax = a * a
+ 
+ 
+        mov cx, dx
+        mov bx, ax ; cx:bx = a * a
+ 
+        mov al, [b]
+        cbw ; ax = b
+        cwd ; dx:ax = b
+ 
+        idiv word [c] ; ax = cat, dx = rest
+        cwd ; ax -> dx:ax = b / c
+ 
+        add ax, bx
+        adc dx, cx ; dx:ax = a * a + b / c
+        sub ax, 1
+        sbb dx, 0 ; dx:ax = (a*a+b/c-1) 
+        mov bx, ax ; bx = (a*a+b/c-1)
+ 
+        mov al, [b]
+        cbw
+        add ax, [c]
+ 
+        mov cx, ax ; cx = b + c
+        mov ax, bx
+ 
+        idiv word cx ; ax = cat, dx = rest
+        cwde ; ax -> eax
+ 
+        add eax, [d]
+        cdq
+        sub eax, [x] ; x = 00001057AF6E90B2 -> in memorie: B2 90 6E AF 57 10 00 00 
+        sbb edx, [x+4] ; - borrow digit in CF
+ 
+ 
+        push    dword 0     
+        call    [exit]       
+ 
