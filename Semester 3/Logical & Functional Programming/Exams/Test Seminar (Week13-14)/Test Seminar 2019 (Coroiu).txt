@@ -1,0 +1,14 @@
+1. PROLOG
+Eliminati numere prime dintr-o lista.
+Eliminati numere palindroame dintr-o lista.
+
+
+2. LISP
+GCD la o lista neliniara.
+
+=:=, =\= pt numere
+==, \== pt atomi (_abc, bcd)
+=, \= atribuire cu construire, RS=[E|R] - uniune
+is -> RS=R[:], atribuire fara construire
+
+

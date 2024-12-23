@@ -1,0 +1,111 @@
+;a) Write a function to eliminate the n-th element of a linear list.
+
+(defun remove-nth (lst n)
+  "Remove the n-th element from the list."
+  (cond
+    ((zerop n) (rest lst))  ; If n is 0, return the rest of the list (skip the first element)
+    ((null lst) nil)        ; If the list is empty, return nil (out of bounds)
+    (t (cons (first lst) (remove-nth (rest lst) (1- n))))))  ; Otherwise, continue the recursion
+    
+(print (remove-nth '(1 2 3 4 5) 2))  ; Example 1: Removes the element at index 2 (zero-based)
+(print (remove-nth '(1 2 3 4 5) 0))  ; Example 2: Removes the first element (index 0)
+
+b)
+(defun add-one (digits &optional (carry 1))
+  (if (null digits)
+      (if (= carry 1) '(1) nil) ; If carry remains, add a leading 1
+      (let ((sum (+ (car digits) carry))) ; Add carry to the current digit
+        (cons (mod sum 10) ; Add the least significant digit of sum to the result
+          (add-one (cdr digits) (floor sum 10)))))) ; Recurse to handle the carry
+
+(defun reverse-list (lst)
+  (if (null lst) nil (append (reverse-list (cdr lst)) (list (car lst)))))
+
+(defun add-one-proper (digits)
+  (reverse-list (add-one (reverse-list digits))))
+
+; examples with print statements
+(print (add-one-proper '(1 9 3 5 9))) ;; Expected: (1 9 3 6 0)
+(print (add-one-proper '(9 9 9))) ;; Expected: (1 0 0 0)
+
+
+c)
+(defun collect-atoms (lst)
+  (cond
+    ((null lst) nil) ;; Base case: empty list
+    ((atom lst) (list lst)) ;; Atom case: return as list
+    (t (union (collect-atoms (car lst)) 
+              (collect-atoms (cdr lst)))))) ;; Recursive for CAR and CDR
+
+;; Hardcoded examples with print statements
+(print (collect-atoms '(1 (2 (1 3 (2 4) 3) 1) (1 4)))) ;; Expected: (1 2 3 4)
+(print (collect-atoms '(a b (c d) a))) ;; Expected: (a b c d)
+
+
+
+
+;d)Write a function to test whether a linear list is a set.
+
+(defun is-set (lst)
+  (labels ((has-duplicate-p (lst seen)
+             (cond
+               ((null lst) nil)  ; If list is empty, no duplicates found
+               ((is-in-seen (first lst) seen) t)  ; If the element is in 'seen', it's a duplicate
+               (t (has-duplicate-p (rest lst) (cons (first lst) seen))))))  ; Recurse with the element added to 'seen'
+    (not (has-duplicate-p lst nil))))  ; Start with an empty 'seen' list
+
+(defun is-in-seen (item seen)
+  (cond
+    ((null seen) nil)  ; If 'seen' is empty, the item is not there
+    ((equal item (first seen)) t)  ; If the item matches the first element in 'seen', it's found
+    (t (is-in-seen item (rest seen)))))  ; Recurse through the rest of the 'seen' list
+    
+(print (is-set '(1 2 3 4)))
+(print (is-set '(1 2 3 3)))
+
+
+
+(defun is-set (lst)
+  (cond
+    ((null lst) t) ; Empty list is a set
+    ((member (car lst) (cdr lst)) nil) ; If head repeats, not a set
+    (t (is-set (cdr lst))))) ; Recursive check for the rest of the list
+
+; examples with print statements
+(print (is-set '(1 2 3 4))) ; Expected: T (true)
+(print (is-set '(x y x))) ; Expected: NIL (false)
+
+
+
+(defun remove-nth (lst n)
+  "Remove the n-th element from the list, skipping over non-numerical elements."
+  (cond
+    ((null lst) nil)  ; If the list is empty, return nil (out of bounds)
+    ((zerop n) (rest lst))  ; If n is 0, return the rest of the list (skip the first element)
+    ((not (numberp (first lst)))
+     (cons (first lst) (remove-nth (rest lst) (1+ n))))  ; Increment n if the element is non-numerical
+    (t
+     (cons (first lst) (remove-nth (rest lst) (1- n))))))  ; Otherwise, decrement n and recurse
+
+;; Examples
+(print (remove-nth '(1 2 3 4 5) 2))  ; Removes the element at index 2 (zero-based)
+(print (remove-nth '(1 2 3 4 5) 0))  ; Removes the first element (index 0)
+(print (remove-nth '(a 2 3 4 5) 2))  ; Handles non-numerical elements
+(print (remove-nth '(1 a 3 4 5) 2))  ; Another example with non-numerical elements
+
+
+(defun remove-nth (lst n)
+  "Remove the n-th element from the list, ignoring non-numerical elements."
+  (cond
+    ((null lst) nil)  ; If the list is empty, return nil (out of bounds)
+    ((not (numberp (first lst)))  ; If the first element is non-numerical
+     (cons (first lst) (remove-nth (rest lst) n)))  ; Keep the element and recurse without decrementing n
+    ((zerop n) (rest lst))  ; If n is 0, return the rest of the list (skip the first element)
+    (t
+     (cons (first lst) (remove-nth (rest lst) (1- n))))))  ; Otherwise, decrement n and recurse
+
+;; Examples
+(print (remove-nth '(1 2 3 4 5) 2))  ; Removes the element at index 2 (zero-based)
+(print (remove-nth '(1 2 3 4 5) 0))  ; Removes the first element (index 0)
+(print (remove-nth '(a 2 3 4 5) 2))  ; Ignores 'a' and removes the 2nd numerical element
+(print (remove-nth '(1 a 3 b 5) 2))  ; Ignores 'a' and 'b', removes the 2nd numerical element

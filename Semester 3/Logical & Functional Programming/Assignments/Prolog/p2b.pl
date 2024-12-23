@@ -1,0 +1,50 @@
+%b. For a heterogeneous list, formed from integer numbers and list of
+% numbers, merge all sublists with removing the  double values.
+%[1, [2, 3], 4, 5, [1, 4, 6], 3, [1, 3, 7, 9, 10], 5, [1, 10, 11], 8] =>
+%[1, 2, 3, 4, 6, 7, 9, 10, 11].
+
+% Flatten the list (L:list, F:list)
+merge_sublists_only([], []).
+merge_sublists_only([H|T], R) :- is_list(H),  merge_sublists_only(T, RT), merge_unique(H, RT, R).
+merge_sublists_only([H|T], R) :- number(H), merge_sublists_only(T, R).
+
+% Merge two lists with unique elements
+merge_unique([], L, L).
+merge_unique(L, [], L).
+merge_unique([H1|T1], [H2|T2], [H1|R]) :- H1 =:= H2, merge_unique(T1, T2, R).
+merge_unique([H1|T1], [H2|T2], [H1|R]) :- H1 < H2, merge_unique(T1, [H2|T2], R).
+merge_unique([H1|T1], [H2|T2], [H2|R]) :- H1 > H2, merge_unique([H1|T1], T2, R).
+
+% Wrapper predicate for merging all sublists
+merge_all(L, R) :- merge_sublists_only(L, R).
+
+
+%merge_all(l1..ln)
+%     merge_sublits_only(l1..ln)
+%
+%merge_sublists_only(l1..ln)
+%     [], n=0
+%     merge_unique(l1, merge_sublists_only(l2..ln)), H-list
+%     merge_sublists_only(l2..ln), H-number
+%
+%
+%
+%
+%merge_unique(l1..ln, k1..km)
+%     l1..ln, m=0
+%     k1..km, n=0
+%     l1 U merge_unique(l2..ln, k2..km), l1==l2
+%     l1 U merge_unique(l2..ln, k1..km), l1<l2
+%     k1 U merge_unique(l1..ln, k2..km), l1>l2
+
+%
+%flow model:merge_all(i,o)
+%           merge_sublists_only(i,o)
+%           merge_unique(i,i,o)
+%
+%
+%?- merge_all([1, [2, 3], 4, 5, [1, 4, 6], 3, [1, 3, 7, 9, 10], 5, [1, 1, 11], 8], R).
+%R = [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 8].
+%
+%merge_all([2, [3, 4], [5, 2], [6, 3, 8, 4], 9, 3], R).
+%R = [3,4,5,2,6,3,8,4].
