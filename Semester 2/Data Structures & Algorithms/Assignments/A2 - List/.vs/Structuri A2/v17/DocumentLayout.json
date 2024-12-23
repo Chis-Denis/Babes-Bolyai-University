@@ -1,0 +1,154 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\IndexedList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|solutionrelative:Structuri A2\\IndexedList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\IndexedList.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|solutionrelative:Structuri A2\\IndexedList.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ListIterator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|solutionrelative:Structuri A2\\ListIterator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ShortTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|solutionrelative:Structuri A2\\ShortTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\App.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|solutionrelative:Structuri A2\\App.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ExtendedTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|solutionrelative:Structuri A2\\ExtendedTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ListIterator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|solutionrelative:Structuri A2\\ListIterator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ShortTest.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{91EC80AC-DF79-411E-B3BC-9515AA0A13F0}|Structuri A2\\Structuri A2.vcxproj|solutionrelative:Structuri A2\\ShortTest.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExtendedTest.cpp",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ExtendedTest.cpp",
+              "RelativeDocumentMoniker": "Structuri A2\\ExtendedTest.cpp",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ExtendedTest.cpp",
+              "RelativeToolTip": "Structuri A2\\ExtendedTest.cpp",
+              "ViewState": "AQIAAPMAAAAAAAAAAIAwwHsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-10T03:33:27.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ShortTest.h",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ShortTest.h",
+              "RelativeDocumentMoniker": "Structuri A2\\ShortTest.h",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ShortTest.h",
+              "RelativeToolTip": "Structuri A2\\ShortTest.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-10T11:38:08.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ShortTest.cpp",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ShortTest.cpp",
+              "RelativeDocumentMoniker": "Structuri A2\\ShortTest.cpp",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ShortTest.cpp",
+              "RelativeToolTip": "Structuri A2\\ShortTest.cpp",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-10T11:32:12.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.cpp",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\App.cpp",
+              "RelativeDocumentMoniker": "Structuri A2\\App.cpp",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\App.cpp",
+              "RelativeToolTip": "Structuri A2\\App.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-10T03:03:46.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ListIterator.cpp",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ListIterator.cpp",
+              "RelativeDocumentMoniker": "Structuri A2\\ListIterator.cpp",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ListIterator.cpp",
+              "RelativeToolTip": "Structuri A2\\ListIterator.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-10T03:03:50.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ListIterator.h",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ListIterator.h",
+              "RelativeDocumentMoniker": "Structuri A2\\ListIterator.h",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\ListIterator.h",
+              "RelativeToolTip": "Structuri A2\\ListIterator.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-10T03:03:57.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IndexedList.cpp",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\IndexedList.cpp",
+              "RelativeDocumentMoniker": "Structuri A2\\IndexedList.cpp",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\IndexedList.cpp",
+              "RelativeToolTip": "Structuri A2\\IndexedList.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-10T03:03:49.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IndexedList.h",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\IndexedList.h",
+              "RelativeDocumentMoniker": "Structuri A2\\IndexedList.h",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\Structuri A2\\Structuri A2\\IndexedList.h",
+              "RelativeToolTip": "Structuri A2\\IndexedList.h",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAcwEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-10T03:03:57.772Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

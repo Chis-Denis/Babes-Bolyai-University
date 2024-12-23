@@ -1,0 +1,12 @@
+﻿  App.cpp
+  ExtendedTest.cpp
+C:\Users\Chisu\source\repos\SDA A5\SDA A5\ExtendedTest.cpp(116,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Chisu\source\repos\SDA A5\SDA A5\ExtendedTest.cpp(126,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Chisu\source\repos\SDA A5\SDA A5\ExtendedTest.cpp(134,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Chisu\source\repos\SDA A5\SDA A5\ExtendedTest.cpp(142,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Chisu\source\repos\SDA A5\SDA A5\ExtendedTest.cpp(251,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  SMIterator.cpp
+  ShortTest.cpp
+  SortedMap.cpp
+  Generating Code...
+  SDA A5.vcxproj -> C:\Users\Chisu\source\repos\SDA A5\x64\Debug\SDA A5.exe

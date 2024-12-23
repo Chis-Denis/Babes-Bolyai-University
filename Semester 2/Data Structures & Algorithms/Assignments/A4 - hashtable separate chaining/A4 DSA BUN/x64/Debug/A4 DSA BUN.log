@@ -1,0 +1,4 @@
+﻿ExtendedTest.obj : error LNK2019: unresolved external symbol "public: class MapIterator __cdecl Map::iterator(void)const " (?iterator@Map@@QEBA?AVMapIterator@@XZ) referenced in function "void __cdecl testCreate(void)" (?testCreate@@YAXXZ)
+ShortTest.obj : error LNK2001: unresolved external symbol "public: class MapIterator __cdecl Map::iterator(void)const " (?iterator@Map@@QEBA?AVMapIterator@@XZ)
+Map.obj : error LNK2019: unresolved external symbol "private: int __cdecl Map::find_empty_place_from_bottom(int)" (?find_empty_place_from_bottom@Map@@AEAAHH@Z) referenced in function "public: int __cdecl Map::add(int,int)" (?add@Map@@QEAAHHH@Z)
+C:\Users\Chisu\source\repos\A4 DSA BUN\x64\Debug\A4 DSA BUN.exe : fatal error LNK1120: 2 unresolved externals
