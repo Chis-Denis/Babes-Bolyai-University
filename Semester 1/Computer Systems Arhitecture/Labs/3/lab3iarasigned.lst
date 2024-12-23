@@ -1,0 +1,91 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit               
+     6                                  import exit msvcrt.dll
+     7                                  
+     8                                  segment data use32 class=data
+     9                                  
+    10 00000000 33CD                        a dw 0xCD33
+    11 00000002 23                          b db 0x23
+    12 00000003 3412                        c dw 0x1234
+    13 00000005 7856341200000000            x dq 0x12345678
+    14                                  
+    15                                  segment code use32 class=code
+    16                                      start:
+    17                                      
+    18                                       ;c+(a*a-b+7)/(2+a), a-byte; b-doubleword; c-qword signed
+    19                                       
+    20                                      ;mov al, [a]
+    21                                      ;imul byte [a]
+    22                                      ;cwd
+    23                                      ;
+    24                                      ;mov bx, [b]
+    25                                      ;mov cx, [b+2]
+    26                                  
+    27                                     ;sub ax, bx
+    28                                      ;sbb dx, cx
+    29                                      
+    30                                      ;mov bx, [a]
+    31                                      ;add bx, 2
+    32                                      
+    33                                      ;idiv bx
+    34                                      ;cwd
+    35                                      
+    36                                      ;push dx
+    37                                      ;push ax
+    38                                      ;pop eax
+    39                                      ;   cdq
+    40                                      
+    41                                      ;add eax, [c]
+    42                                      ;adc edx, [c+4]
+    43                                      
+    44                                       ;x-(a*100+b)/(b+c-1); a-word; b-byte; c-word; x-qword signed
+    45                                      
+    46 00000000 66A1[00000000]              mov ax, [a]
+    47 00000006 66BB6400                    mov bx, 100
+    48 0000000A 66F7EB                      imul bx
+    49                                      
+    50 0000000D 660305[02000000]            add ax, [b]
+    51 00000014 661315[04000000]            adc dx, [b+2]
+    52                                      
+    53 0000001B 6631DB                      xor bx, bx
+    54 0000001E 6631C9                      xor cx, cx
+    55                                      
+    56 00000021 6689C3                      mov bx, ax
+    57 00000024 6689CA                      mov dx, cx
+    58                                      
+    59 00000027 6631C0                      xor ax, ax
+    60 0000002A 6631D2                      xor dx, dx
+    61                                      
+    62 0000002D A0[02000000]                mov al, [b]
+    63 00000032 6698                        cbw
+    64 00000034 660305[03000000]            add ax, [c]
+    65 0000003B 6683E801                    sub ax, 1
+    66                                      
+    67 0000003F 6652                        push dx
+    68 00000041 6650                        push ax
+    69 00000043 6689D8                      mov ax, bx
+    70 00000046 6689CA                      mov dx, cx
+    71 00000049 58                          pop eax
+    72 0000004A 6631C9                      xor cx, cx
+    73                                      
+    74 0000004D 66F7FB                      idiv bx
+    75                                      
+    76 00000050 6631DB                      xor bx, bx
+    77 00000053 6631C9                      xor cx, cx
+    78                                      
+    79 00000056 6699                        cwd
+    80 00000058 6652                        push dx
+    81 0000005A 6650                        push ax
+    82 0000005C 58                          pop eax
+    83                                      
+    84 0000005D 8B1D[05000000]              mov ebx, [x]
+    85 00000063 8B0D[09000000]              mov ecx, [x+4]
+    86                                      
+    87 00000069 29C3                        sub ebx, eax
+    88 0000006B 19D1                        sbb ecx, edx
+    89                                       
+    90 0000006D 6A00                            push    dword 0
+    91 0000006F FF15[00000000]                  call    [exit]

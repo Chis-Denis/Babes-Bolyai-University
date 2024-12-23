@@ -1,0 +1,68 @@
+     1                                  bits 32
+     2                                  global start
+     3                                  extern exit
+     4                                  import exit msvcrt.dll
+     5                                  
+     6                                  segment data use32 class=data
+     7                                      ; Input array of doublewords (each doubleword is 4 bytes)
+     8 00000000 78567F12CDABCDABEF-         input_array dd 0x127F5678, 0x0ABCDABCD, 0x89ABCDEF ; Example input
+     8 00000009 CDAB89             
+     9 0000000C 000000000000000000-         output_array dd 0, 0, 0                          ; Output array initialized to 0
+     9 00000015 000000             
+    10 00000018 03000000                    array_size dd 3                                  ; Number of elements in the array
+    11                                  
+    12                                  segment code use32 class=code
+    13                                  start:
+    14 00000000 BE[00000000]                mov esi, input_array    ; Load address of the input array into ESI
+    15 00000005 BF[0C000000]                mov edi, output_array   ; Load address of the output array into EDI
+    16 0000000A 8B0D[18000000]              mov ecx, [array_size]   ; Load number of elements in ECX
+    17                                  
+    18                                  process_loop:
+    19 00000010 AD                          lodsd                   ; Load doubleword from input_array into EAX (ESI += 4)
+    20                                  
+    21                                      ; Extract the odd-positioned bytes (1st and 3rd byte)
+    22 00000011 8A06                        mov al, byte [esi]      ; Load the first byte (1st byte)
+    23 00000013 8A6602                      mov ah, byte [esi + 2]  ; Load the third byte (3rd byte)
+    24                                  
+    25                                      ; Handle sign extension for odd-position bytes (1st and 3rd byte)
+    26                                      ; If the MSB (bit 7) is set, extend it by filling with 1s, otherwise fill with 0s
+    27 00000016 A880                        test al, 80h            ; Test if MSB of AL is set (sign bit for 1st byte)
+    28 00000018 7507                        jnz odd_byte_sign_extend
+    29 0000001A 31C0                        xor eax, eax            ; Clear EAX if no sign extension needed
+    30 0000001C 0FB6C0                      movzx eax, al           ; Move the signed byte into EAX without extension
+    31 0000001F EB05                        jmp odd_byte_done
+    32                                  odd_byte_sign_extend:
+    33 00000021 0C00                        or al, 0xFF00           ; Sign-extend the value to 16 bits (set high byte to 0xFF)
+    33          ******************       warning: byte data exceeds bounds [-w+number-overflow]
+    34 00000023 0FBEC0                      movsx eax, al           ; Sign-extend the result to EAX (now it's 32-bit)
+    35                                  odd_byte_done:
+    36                                  
+    37                                      ; Store the odd sum in the high word of the result
+    38 00000026 C1E010                      shl eax, 16             ; Shift the sum of odd bytes into the high word of the result
+    39                                  
+    40                                      ; Extract the even-positioned bytes (2nd and 4th byte)
+    41 00000029 8A4601                      mov al, byte [esi + 1]  ; Load the second byte (2nd byte)
+    42 0000002C 8A6603                      mov ah, byte [esi + 3]  ; Load the fourth byte (4th byte)
+    43                                  
+    44                                      ; Handle sign extension for even-position bytes (2nd and 4th byte)
+    45 0000002F A880                        test al, 80h            ; Test if MSB of AL is set (sign bit for 2nd byte)
+    46 00000031 7507                        jnz even_byte_sign_extend
+    47 00000033 31C0                        xor eax, eax            ; Clear EAX if no sign extension needed
+    48 00000035 0FB6C0                      movzx eax, al           ; Move the signed byte into EAX without extension
+    49 00000038 EB05                        jmp even_byte_done
+    50                                  even_byte_sign_extend:
+    51 0000003A 0C00                        or al, 0xFF00           ; Sign-extend the value to 16 bits (set high byte to 0xFF)
+    51          ******************       warning: byte data exceeds bounds [-w+number-overflow]
+    52 0000003C 0FBEC0                      movsx eax, al           ; Sign-extend the result to EAX (now it's 32-bit)
+    53                                  even_byte_done:
+    54                                  
+    55                                      ; Add the even sum to the low word
+    56 0000003F 09D8                        or eax, ebx             ; Combine the odd and even sums into a single doubleword
+    57                                  
+    58 00000041 AB                          stosd                   ; Store the result doubleword in output_array (EDI += 4)
+    59                                  
+    60 00000042 E2CC                        loop process_loop       ; Repeat the loop until ECX is zero (all elements processed)
+    61                                  
+    62                                      ; Exit the program
+    63 00000044 6A00                        push dword 0            ; Push exit code 0 onto the stack
+    64 00000046 FF15[00000000]              call [exit]             ; Call exit to terminate the program

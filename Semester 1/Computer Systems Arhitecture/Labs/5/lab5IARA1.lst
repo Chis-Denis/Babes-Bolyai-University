@@ -1,0 +1,73 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit               
+     6                                  import exit msvcrt.dll
+     7                                  
+     8                                  segment data use32 class=data
+     9                                  
+    10 00000000 2B3432614033242A            set db '+', '4', '2', 'a', '@', '3', '$', '*'
+    11                                      lenghten equ $-set
+    12                                  
+    13                                      ;good_set db '!', '@', '#', '$', '%', '^', '&', '*'
+    14                                      ;lenghten_good equ $-good_set
+    15                                      
+    16 00000008 00<rept>                    destination times lenghten db 0
+    17                                  
+    18                                  segment code use32 class=code
+    19                                  
+    20                                      ;Given a character string S, obtain the string D containing all special characters (!@#$%^&*) of the string S.
+    21                                      ;Example:
+    22                                      ;S: '+', '4', '2', 'a', '@', '3', '$', '*'
+    23                                      ;D: '@','$','*'
+    24                                      
+    25                                      
+    26                                      start:
+    27                                      
+    28 00000000 B908000000                  mov ecx, lenghten
+    29 00000005 BE00000000                  mov esi, 0
+    30 0000000A BF00000000                  mov edi, 0
+    31                                      
+    32                                      main_loop:
+    33                                      
+    34 0000000F 8A86[00000000]                  mov al, [set+esi]
+    35                                          
+    36 00000015 3C21                            cmp al, '!'
+    37 00000017 7426                            je store_char
+    38 00000019 3C40                            cmp al, '@'
+    39 0000001B 7422                            je store_char
+    40 0000001D 3C23                            cmp al, '#'
+    41 0000001F 741E                            je store_char
+    42 00000021 3C24                            cmp al, '$'
+    43 00000023 741A                            je store_char
+    44 00000025 3C25                            cmp al, '%'
+    45 00000027 7416                            je store_char
+    46 00000029 3C5E                            cmp al, '^'
+    47 0000002B 7412                            je store_char
+    48 0000002D 3C26                            cmp al, '&'
+    49 0000002F 740E                            je store_char
+    50 00000031 3C2A                            cmp al, '*'
+    51 00000033 740A                            je store_char
+    52 00000035 3C2B                            cmp al, '+'
+    53 00000037 7406                            je store_char
+    54                                          
+    55                                      next_element:
+    56                                          
+    57 00000039 46                              inc esi
+    58 0000003A 49                              dec ecx
+    59 0000003B 75D2                            jnz main_loop
+    60                                          
+    61 0000003D EB09                            jmp endloop
+    62                                          
+    63                                      store_char:
+    64                                      
+    65 0000003F 8887[08000000]                  mov [destination + edi], al
+    66 00000045 47                              inc edi
+    67 00000046 EBF1                            jmp next_element
+    68                                      
+    69                                      endloop:
+    70                                  
+    71                                      
+    72 00000048 6A00                            push    dword 0
+    73 0000004A FF15[00000000]                  call    [exit]

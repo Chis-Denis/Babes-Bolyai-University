@@ -1,0 +1,94 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit               
+     6                                  import exit msvcrt.dll
+     7                                  
+     8                                  segment data use32 class=data
+     9                                  
+    10 00000000 AAAA                        a dw 0b1010_1010_1010_1010
+    11 00000002 FEFF                        b dw 0b1111_1111_1111_1110
+    12                                      
+    13 00000004 00000000                    c dd 0b0000_0000_0000_0000_0000_0000_0000_0000
+    14                                  
+    15                                  segment code use32 class=code
+    16                                      start:
+    17                                      
+    18                                          ;Given the words A and B, compute the doubleword C as follows:
+    19                                          ;the bits 0-4 of C are the same as the bits 11-15 of A
+    20                                          ;the bits 5-11 of C have the value 1
+    21                                          ;the bits 12-15 of C are the same as the bits 8-11 of B
+    22                                          ;the bits 16-31 of C are the same as the bits of A
+    23                                      
+    24                                          ;mov ax, [a]
+    25                                          ;mov bx, [b]
+    26                                          
+    27                                          ;mov cx, ax
+    28                                          ;and cx, 0Fh
+    29                                          
+    30                                          
+    31                                          ;mov dx, 0b0000_1111_1110_0000
+    32                                          ;or cx, dx
+    33                                          ;xor dx, dx
+    34                                          
+    35                                          
+    36                                          ;shr bx, 8
+    37                                          ;shl bx, 12
+    38                                          ;or cx, bx
+    39                                          ;xor bx, bx
+    40                                          ;or bx, cx
+    41                                          ;mov cx, 0
+    42                                          
+    43                                          
+    44                                          ;or cx, ax
+    45                                          ;push cx
+    46                                          ;push bx
+    47                                          ;pop ebx
+    48                                          
+    49                                          
+    50                                          ;Given the word A, compute the doubleword B as follows:
+    51                                          ;the bits 28-31 of B have the value 1;
+    52                                          ;the bits 24- 25 and 26-27 of B are the same as the bits 8-9 of A
+    53                                          ;the bits 20-23 of B are the invert of the bits 0-3 of A ;
+    54                                          ;the bits 16-19 of B have the value 0
+    55                                          ;the bits 0-15 of B are the same as the bits 16-31 of B.
+    56                                          
+    57 00000000 66A1[00000000]                  mov ax, [a]
+    58                                          
+    59 00000006 66BB0000                        mov bx, 0
+    60 0000000A 66B90000                        mov cx, 0
+    61                                          
+    62                                          
+    63 0000000E 66BA00F0                        mov dx, 0b1111_0000_0000_0000
+    64 00000012 6609D1                          or cx, dx
+    65 00000015 6631D2                          xor dx, dx
+    66                                          
+    67                                          
+    68 00000018 66C1E006                        shl ax, 6
+    69 0000001C 66C1E80E                        shr ax, 14
+    70 00000020 6609C2                          or dx, ax
+    71 00000023 66C1E002                        shl ax, 2
+    72 00000027 6609C2                          or dx, ax
+    73 0000002A 66C1E208                        shl dx, 8
+    74 0000002E 6609D1                          or cx, dx
+    75                                          
+    76                                          
+    77 00000031 6631C0                          xor ax, ax
+    78 00000034 66A1[00000000]                  mov ax, [a]
+    79 0000003A 6631D2                          xor dx, dx
+    80 0000003D 6683E00F                        and ax, 0Fh
+    81 00000041 66F7D0                          not ax
+    82 00000044 66C1E00C                        shl ax, 12
+    83 00000048 66C1E80C                        shr ax, 12
+    84 0000004C 6609C1                          or cx, ax
+    85                                          
+    86                                          
+    87 0000004F 6609CB                          or bx, cx
+    88 00000052 6651                            push cx
+    89 00000054 6653                            push bx
+    90 00000056 5B                              pop ebx
+    91                                          
+    92                                          
+    93 00000057 6A00                            push    dword 0
+    94 00000059 FF15[00000000]                  call    [exit]

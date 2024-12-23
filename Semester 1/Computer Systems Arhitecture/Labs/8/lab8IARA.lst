@@ -1,0 +1,61 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit, printf, scanf
+     6                                  import exit msvcrt.dll
+     7                                  import printf msvcrt.dll
+     8                                  import scanf msvcrt.dll
+     9                                  
+    10                                  segment data use32 class=data
+    11 00000000 00000000                    console_input_a dd 0
+    12 00000004 00000000                    console_input_b dd 0
+    13 00000008 456E7465722061206E-         message db "Enter a number: ", 0
+    13 00000011 756D6265723A2000   
+    14 00000019 4E756D626572207265-         output_msg db "Number read is %d", 10, 0
+    14 00000022 61642069732025640A-
+    14 0000002B 00                 
+    15 0000002C 256400                      format db "%d", 0
+    16                                  
+    17                                  segment code use32 class=code
+    18                                      start:
+    19                                          ;Read two numbers a and b (in base 10) from the keyboard and calculate their product. This value will be stored in a variable called "result" (defined in the data segment).
+    20                                      
+    21                                          ; Print prompt message
+    22 00000000 68[08000000]                    push dword message
+    23 00000005 FF15[00000000]                  call [printf]
+    24 0000000B 83C404                          add esp, 4*1
+    25                                  
+    26                                          ; Read a number from the console
+    27 0000000E 68[00000000]                    push dword console_input_a
+    28 00000013 68[2C000000]                    push dword format
+    29 00000018 FF15[00000000]                  call [scanf]
+    30 0000001E 83C408                          add esp, 4*2
+    31                                          
+    32                                          ; Print prompt message
+    33 00000021 68[08000000]                    push dword message
+    34 00000026 FF15[00000000]                  call [printf]
+    35 0000002C 83C404                          add esp, 4*1
+    36                                  
+    37                                          ; Read a number from the console
+    38 0000002F 68[04000000]                    push dword console_input_b
+    39 00000034 68[2C000000]                    push dword format
+    40 00000039 FF15[00000000]                  call [scanf]
+    41 0000003F 83C408                          add esp, 4*2
+    42                                          
+    43 00000042 66A1[00000000]                  mov ax, [console_input_a]
+    44 00000048 668B1D[04000000]                mov bx, [console_input_b]
+    45 0000004F 66F7E3                          mul bx
+    46 00000052 A3[00000000]                    mov [console_input_a], eax
+    47                                          
+    48                                  
+    49                                          ; Print the number read
+    50 00000057 FF35[00000000]                  push dword [console_input_a]
+    51 0000005D 68[19000000]                    push dword output_msg
+    52 00000062 FF15[00000000]                  call [printf]
+    53 00000068 83C408                          add esp, 4*2
+    54                                          
+    55                                  
+    56                                          ; Exit the program
+    57 0000006B 6A00                            push dword 0
+    58 0000006D FF15[00000000]                  call [exit]

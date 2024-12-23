@@ -1,0 +1,162 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  extern exit               
+     6                                  import exit msvcrt.dll
+     7                                  
+     8                                  segment data use32 class=data
+     9                                  
+    10 00000000 CD                          a db 0xCD
+    11 00000001 3402                        b dw 0x234
+    12 00000003 44230100                    c dd 0x12344
+    13 00000007 CDAB896745230100            d dq 0x123456789ABCD
+    14                                  
+    15                                  segment code use32 class=code
+    16                                      start:
+    17                                      
+    18 00000000 B001                            mov al, 1
+    19 00000002 B002                            mov al, 2
+    20 00000004 B000                            mov al, 0
+    21 00000006 B0FF                            mov al, 255
+    22 00000008 04FF                            add al, -1
+    23                                      
+    24                                           ;a - byte, b - word, c - double word, d - qword - Unsigned representation
+    25                                          ;(b+b)+(c-a)+d
+    26 0000000A 668B1D[01000000]                mov bx, [b]
+    27 00000011 66031D[01000000]                add bx, [b]
+    28                                          
+    29 00000018 668B1D[03000000]                mov bx, [c]
+    30 0000001F 668B0D[05000000]                mov cx, [c+2]
+    31                                          
+    32 00000026 A0[00000000]                    mov al, [a]
+    33 0000002B B400                            mov ah, 0
+    34 0000002D 66BA0000                        mov dx, 0
+    35                                          
+    36 00000031 6629C3                          sub bx, ax
+    37 00000034 6619D1                          sbb cx, dx
+    38                                          
+    39 00000037 6631C0                          xor ax, ax
+    40 0000003A 6631D2                          xor dx, dx
+    41                                          
+    42 0000003D 66A1[01000000]                  mov ax, [b]
+    43 00000043 660305[01000000]                add ax, [b]
+    44 0000004A 66BA0000                        mov dx, 0
+    45                                          
+    46 0000004E 6601D8                          add ax, bx
+    47 00000051 6611CA                          adc dx, cx
+    48                                          
+    49 00000054 6652                            push dx
+    50 00000056 6650                            push ax
+    51 00000058 58                              pop eax
+    52 00000059 BA00000000                      mov edx, 0
+    53                                          
+    54 0000005E 0305[07000000]                  add eax, [d]
+    55 00000064 1305[0B000000]                  adc eax, [d+4]
+    56                                          
+    57 0000006A 31C0                            xor eax, eax
+    58 0000006C 31DB                            xor ebx, ebx
+    59 0000006E 31C9                            xor ecx, ecx
+    60 00000070 31D2                            xor edx, edx
+    61                                          
+    62                                          ;(d+d)-a-b-c
+    63                                          
+    64 00000072 A0[00000000]                    mov al, [a]
+    65 00000077 B400                            mov ah, 0
+    66                                          
+    67 00000079 662B05[01000000]                sub ax, [b]
+    68 00000080 66BA0000                        mov dx, 0
+    69                                          
+    70 00000084 662B05[03000000]                sub ax, [c]
+    71 0000008B 661B15[05000000]                sbb dx, [c+2]
+    72                                          
+    73 00000092 6652                            push dx
+    74 00000094 6650                            push ax
+    75 00000096 58                              pop eax
+    76 00000097 BA00000000                      mov edx, 0
+    77                                          
+    78 0000009C 8B1D[07000000]                  mov ebx, [d]
+    79 000000A2 8B0D[0B000000]                  mov ecx, [d+4]
+    80 000000A8 031D[07000000]                  add ebx, [d]
+    81 000000AE 130D[0B000000]                  adc ecx, [d+4]
+    82                                          
+    83 000000B4 29C3                            sub ebx, eax
+    84 000000B6 19D1                            sbb ecx, edx
+    85                                          
+    86 000000B8 31C0                            xor eax, eax
+    87 000000BA 31DB                            xor ebx, ebx
+    88 000000BC 31C9                            xor ecx, ecx
+    89 000000BE 31D2                            xor edx, edx
+    90                                      
+    91                                           ;a - byte, b - word, c - double word, d - qword - Signed representation
+    92                                          ;c-b-(a+a)-b
+    93                                          
+    94 000000C0 668B1D[03000000]                mov bx, [c]
+    95 000000C7 668B0D[05000000]                mov cx, [c+2]
+    96                                          
+    97 000000CE 66A1[01000000]                  mov ax, [b]
+    98 000000D4 6699                            cwd
+    99                                  
+   100 000000D6 6629C3                          sub bx, ax
+   101 000000D9 6619D1                          sbb cx, dx
+   102 000000DC 6629C3                          sub bx, ax
+   103 000000DF 6619D1                          sbb cx, dx
+   104                                          
+   105 000000E2 6631C0                          xor ax, ax
+   106 000000E5 6631D2                          xor dx, dx
+   107                                          
+   108 000000E8 A0[00000000]                    mov al, [a]
+   109 000000ED 0205[00000000]                  add al, [a]
+   110                                          
+   111 000000F3 6698                            cbw
+   112 000000F5 6699                            cwd
+   113                                          
+   114 000000F7 6629C3                          sub bx, ax
+   115 000000FA 6619D1                          sbb cx, dx
+   116                                          
+   117 000000FD 6651                            push cx
+   118 000000FF 6653                            push bx
+   119 00000101 5B                              pop ebx
+   120                                          
+   121 00000102 31C0                            xor eax, eax
+   122 00000104 31DB                            xor ebx, ebx
+   123 00000106 31C9                            xor ecx, ecx
+   124 00000108 31D2                            xor edx, edx
+   125                                          
+   126                                          ;c+a+b+b+a
+   127                                          
+   128 0000010A 668B1D[03000000]                mov bx, [c]
+   129 00000111 668B0D[05000000]                mov cx, [c+2]
+   130                                          
+   131 00000118 A0[00000000]                    mov al, [a]
+   132 0000011D 6698                            cbw
+   133 0000011F 6699                            cwd
+   134 00000121 6601C3                          add bx, ax
+   135 00000124 6611D1                          adc cx, dx
+   136                                          
+   137 00000127 6631C0                          xor ax, ax
+   138 0000012A 6631D2                          xor dx, dx
+   139                                          
+   140 0000012D 66A1[01000000]                  mov ax, [b]
+   141 00000133 6699                            cwd
+   142                                          
+   143 00000135 6601C3                          add bx, ax
+   144 00000138 6611D1                          adc cx, dx
+   145 0000013B 6601C3                          add bx, ax
+   146 0000013E 6611D1                          adc cx, dx
+   147                                          
+   148 00000141 6631C0                          xor ax, ax
+   149 00000144 6631D2                          xor dx, dx
+   150                                          
+   151 00000147 A0[00000000]                    mov al, [a]
+   152 0000014C 6698                            cbw
+   153 0000014E 6699                            cwd
+   154 00000150 6601C3                          add bx, ax
+   155 00000153 6611D1                          adc cx, dx
+   156                                          
+   157 00000156 6651                            push cx
+   158 00000158 6653                            push bx
+   159 0000015A 5B                              pop ebx
+   160                                          
+   161 0000015B 6A00                            push    dword 0
+   162 0000015D FF15[00000000]                  call    [exit]
