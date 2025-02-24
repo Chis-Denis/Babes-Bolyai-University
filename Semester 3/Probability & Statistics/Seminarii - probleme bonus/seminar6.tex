@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Seminar 6}
+\author{Octavian Custura }
+\date{January 2021}
+
+\begin{document}
+
+\maketitle
+
+\textbf{8. } Two independent customers are scheduled to arrive in the afternoon. Their arrival times are uniformly distributed between 2 pm and 8 pm. What is the expected time of \\
+a) the first (earlier) arrival; \\
+b) the last (later) arrival? \\
+
+\begin{proof}
+We need to compute the expectations of min and max functions.
+Let $Z = max(X, Y)$ and $U = min(X, Y)$
+
+The cdf of max is \[F_Z(z) = P(Z \leq z) = P(X \leq z, Y \leq z) = P(X \leq z)P(Y \leq z) = (\frac{z - 2}{8 - 2})^2\]
+Thus, the pdf is $f_Z(z) = \dfrac{z-2}{18}$.
+The cdf of min is 
+\begin{equation*}
+    \begin{split}
+        F_U(u) = P(U \leq u) &= 1 - P(U \geq u) \\ &= P(X \geq u)P(Y \geq u) \\ &= 1 - (1 - \frac{u - 2}{6})^2 \\ &= 1 - ({\frac{8 - u}{6}})^{2}
+    \end{split}
+\end{equation*}
+The pdf is $f_U(u) = \dfrac{8-u}{18}$.
+
+Finally, we need to compute $E(Z)$ and $E(U)$.
+\[ E(U) = \int_{2}^{8} u \dfrac{8 - u}{18} \, du = 4 pm, \text{earliest arrival} \]
+\[ E(Z) = \int_{2}^{8} z \dfrac{z-2}{18}\, dz = 6 pm, \text{latest arrival}\]
+
+\end{proof}
+\textbf{9.}  In an office n different letters are placed randomly into n addressed envelopes. Let $Z_n$ denote the number of
+correct mailings. For each $k \in \{1, . . . , n\}.$, let $X_k$ be the random variable defined by
+$$
+X_k = \begin{cases} 1 \text{, if the k-th letter is placed correctly} \\
+0, \text{, otherwise.}\end{cases}$$ \\
+a) Find $E(X_k)$ and $V (X_k)$ for each $k \in \{1, . . . , n\}.$ \\
+b) Find $E(Z_n)$ and $V(Z_n)$.\\
+c) How many correct mailings are to be expected? \\
+
+\begin{proof}
+a, b) We know that $X = X_1 + X_2 + X_3 + ... + X_n$, thus $E(X) = E(X_1) + E(X_2) + ... + E(X_n)$
+
+We need to compute $E(X_k)$, for $k \in \{1, . . . , n\}.$ Since all possibilities of mailing are equally possible, $E(X_k) = E(X_1).$
+Since $X_1$ is a variable with values 0 or 1, then $E(X_1) = P(X_1 = 1) = \frac{1}{n}$
+\[
+    E(Z_n) = E(X_1) + E(X_2) + ... + E(X_n) = n \cdot \frac{1}{n} = 1
+\]
+ \[ Z_n^2 = \sum_{i=1}^{n}{X_i^2} + \sum_{(i,j) = (1, 1), i \neq j}^{(n, n)}{X_i X_j}\]
+
+
+We need to compute $E(X_k^2) = E(X_1^2) = E(X_1) = \frac{1}{n}$, since the pdf of $X_1^2$ is 
+\begin{equation*}
+    \begin{pmatrix}
+    0 & 1 \\
+    \frac{n - 1}{n} & \frac{1}{n}
+    \end{pmatrix}
+\end{equation*}
+
+\begin{equation*}
+    \begin{split}
+    E(X_k X_p) &= E(X_1 X_2) = P(X_1 X_2 = 1) \\ &= P(X_1 = 1, X_2 = 1) = P(X_1 = 1) P(X_2 = 1 | X_1 = 1) = \frac{1}{n} \cdot \frac{1}{n - 1}
+    \end{split}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+     E(Z_n^2) &= \sum_{i=1}^{n}{E(X_i^2)} + \sum_{(i,j) = (1, 1), i \neq j}^{(n, n)}{E(X_i X_j)} \\
+     &= n \cdot \frac{1}{n} + n\cdot (n - 1) \cdot \frac{1}{n} \cdot \frac{1}{n - 1} \\
+     &= 2
+\end{split}
+   
+\end{equation*}
+\begin{equation*}
+    V(X_k) = E(X_k^2) - (E(X_k))^2 = \frac{1}{n} - \frac{1}{n^2} = \frac{n - 1}{n^2}
+\end{equation*}
+\begin{equation*}
+    V(Z_n) = E(Z_n^2) - (E(Z_n))^2 = 2 - 1 = 1
+\end{equation*}
+
+c) There are to be expected $E(Z_n) = 1$ correct mailing.
+\end{proof}
+\end{document}

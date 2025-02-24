@@ -1,0 +1,14 @@
+;; Substitutes an element E with all elements of a list L1 at all levels of a given list L
+(defun substitute-all (e l1 l)
+  (mapcar (lambda (x)
+            (cond
+              ((equal x e) l1)  ; Replace E with L1
+              ((listp x) (substitute-all e l1 x))  ; Recur on sublists
+              (t x)))  ; Keep other elements unchanged
+          l))
+
+;; Test cases
+(print (substitute-all 'X '(A B) '(1 X (2 X 3 (X 4))))) ; Output: (1 (A B) (2 (A B) 3 ((A B) 4)))
+(print (substitute-all 'Y '(1 2) '(Y (Z (Y X) Y))))     ; Output: ((1 2) (Z ((1 2) X) (1 2)))
+
+

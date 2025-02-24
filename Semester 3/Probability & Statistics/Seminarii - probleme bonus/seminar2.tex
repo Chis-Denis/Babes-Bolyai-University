@@ -1,0 +1,46 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\author{Octavian Custura}
+\title{Seminar 2}
+\date{\today}
+\begin{document}
+\maketitle
+
+8. There are N people in a room, each wearing a different hat. They all take their hats off, put them together and then each randomly picks one up. What is the probability of no person getting their own hat back (denote this event by A)? What does this probability become as $N \rightarrow \infty $ ?
+
+\begin{proof}
+We know that \[ P_A = \frac {N_f}{N_t} \] where $N_t$ is the total number of permutations of the N hats. Thus, $N_t = N!$.
+
+We need to exclude all permutations with fixed points. Let perm(\textit{i}) denote the number of permutations with element on position \textit{i} as a fixed point,      perm(\textit{i}, \textit{j}) the number of permutations with elements on positions \textit{i} and \textit{j}, etc. By using the inclusion and exclusion principle, we get that \[ N_f = N! - \sum\limits_{1 \leq i \leq N} perm(i) + \sum\limits_{1 \leq i < j \leq N} perm(i, j) + ... + (-1)^{n} \cdot perm(1, 2, ... N) \]
+
+We know that there are equal number of permutations with k fixed points, so:
+\[ perm(1) = perm(2) = ... = perm(i) \]
+\[ perm(1, 2) = perm(1, 3) = ... = perm(i, j) \] and so on.
+
+Thus, we have that \[ N_f = N! - \binom{N}{1} \cdot perm(1) + \binom{N}{2} \cdot perm(1, 2) - \binom{N}{3} \cdot perm(1, 2, 3) + ... + (-1)^{N} \cdot \binom{N}{1} \cdot perm(1, 2, ... N) \]
+
+Since $perm(1)$ denotes the number of permutations in which person 1 gets correct hat, $perm(1) = (N - 1)!$. Similarly, $perm(1, 2) = (N - 2)!$ and so on and so forth. This way, we get to \[ N_f = N! - N! \cdot (N - 1)! + \frac{N!}{2!} \cdot (n - 2)! + ... + (-1)^{N} \cdot 1 \]
+
+By taking the common factor out, we get that \[ N_f = N!(1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + ... + (-1)^{N} \cdot \frac{1}{N!} \]
+
+Finally \[ P_A = \frac{N_f}{N_t} = \frac{N!(1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + ... + (-1)^{N} \cdot \frac{1}{N!}}{N!} \]
+
+\[P_A = 1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + ... + (-1)^{N} \cdot \frac{1}{N!} \]
+
+Taylor Polynomial with $N$ elements for exponential function is \[ e^{x} = 1 + \frac{x}{1!} + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + ... +  \frac{x^{N}}{N!} \]
+By replacing in it $x = -1$, we get that \[ e^{-1} = P_A \] so the probability becomes $\frac{1}{e}$ as $N \rightarrow \infty $
+\end{proof}
+
+9. A computer program consists of two blocks written independently by two different programmers. The first block has an error with probability of 0.2, the second block has an error with probability 0.3. If the program returns an error, what is the probability that there is an error in both blocks?
+
+\begin{proof}
+Denote by $p_1$ the event that the first block has an error, and by $p_2$ the event that the second block has an error. Since they are 2 independent events, the probability of both events is \[ P = P(p_2) \cdot P(p_3) = 0.2 \cdot 0.3 = 0.06 \]
+\end{proof}
+\end{document}
+
+

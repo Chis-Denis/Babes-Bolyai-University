@@ -1,0 +1,128 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{diagbox}
+\title{Seminar 4}
+\author{Octavian Custura}
+\date{November 2020}
+
+\begin{document}
+
+\maketitle
+
+8. The independent variables $X$, $Y$ have binomial distributions with parameters $m$, $p$ and $n$, $p$, respectively. Find the pdf of $X + Y$ . What distribution does $X + Y$ have?
+
+\begin{proof}
+
+a) Denote $Z = X + Y$. We have to compute $P(Z = z) = P(X + Y = z)$. We can fix the first variable, so we have $P(X = x, Y = z - x)$, where $x \in [0, z]$. Thus, we have 
+\begin{equation}
+\begin{split}
+    P(Z = z) &= \sum\limits_{x = 0}^{z}P(X = x, Y = z - x) \\
+     &= \sum\limits_{x = 0}^{z}P(X = x)P(Y = z - x) \\
+     &= \sum\limits_{x = 0}^{z}C_{n}^{x}p^{x}(1-p)^{n - x} \cdot C_{m}^{z - x}p^{z - x}(1-p)^{m - z + x} \\
+     &= \sum\limits_{x = 0}^{z}C_{n}^{x} p^{x + z - x} (1 - p)^{n - x + m - z + x} C_{m}^{z - x} \\
+     &= \sum\limits_{x = 0}^{z}C_{n}^{x}C_{m}^{z - x} p^{z} (1-p)^{n + m - z} \\
+     &= p^{z}(1 - p)^{n + m - z} \sum\limits_{x = 0}^{z}C_{n}^{x}C_{m}^{z - x} \\
+     &= p^{z}(1 - p)^{n + m - z} C_{n + m}^{z - x + x} \\
+     &= p^{z}(1 - p)^{n + m - z} C_{n + m}^{z}
+\end{split}
+\end{equation}
+from $X$ and $Y$ being independent and by using the properties of combinations.
+
+Thus, we have that the pdf of $X + Y$ is
+\begin{equation}
+     X+Y \binom{k}{C_{n + m}^{k}p(k)(1-p)^{n + m - k}}
+\end{equation}
+which is a variable of \textbf{binomial distribution}.
+\end{proof}
+
+9. Two dice are rolled. Let X be the smaller number of points and Y the larger number of points. If
+both dice show the same number, say z, then X = Y = z.
+a) Find the joint pdf of (X, Y );
+b) Are X and Y independent? Explain;
+c) If the smaller number shown is 2, what is the probability that the larger one will be 5?
+
+\begin{proof}
+Let $D_{1}$ denote the value of the first die, and $D_{2}$ the value of the second die. Then $X = min(D_{1}, D_{2})$ and $Y = max(D_{1}, D_{2})$. Note that $D_{1}$ and $D_{2}$ are independent.
+
+For $x = y$, we have 
+\begin{equation}
+    P(X = x, Y = y) = P(D_{1} = x, D_{2} = x) = P(D_{1} = x)P(D_{2} = x)
+\end{equation}
+
+
+For $x \neq y$, we have
+\begin{equation}
+\begin{split}
+    P(X = x, Y = y) &= P(D_{1} = x, D_{2} = y) + P(D_{1} = y,D_{2} = x) \\
+    &= 2P(D_{1} = x)P(D_{2} = y)
+\end{split}
+\end{equation}
+since we don't know which value between $D_{1}$ and $D_{2}$ is greater, so both (X, Y) and (Y, X) are possible outcomes.
+
+The \textbf{joint pdf} of $(X, Y)$ is
+\begin{equation}
+    p_{ij} = P(X = x_{i}, Y = y_{j})
+\end{equation}
+
+We know that 
+\begin{equation}
+    \begin{split}
+        & pdf(D_{1}) = D_{1}\begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ \frac{1}{6} & \frac{1}{6} & \frac{1}{6} & \frac{1}{6} & \frac{1}{6} & \frac{1}{6}
+        \end{pmatrix} \\
+        & pdf(D_{2}) = D_{2} \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ \frac{1}{6} & \frac{1}{6} & \frac{1}{6} & \frac{1}{6} & \frac{1}{6} & \frac{1}{6}
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+
+Thus, we have the joint pdf represented in the table below \\
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+    \diagbox{$X$}{$Y$} & 1 & 2 & 3 & 4 & 5 & 6 \\
+     \hline
+     1 & $\frac{1}{36}$ & $\frac{1}{18}$ & $\frac{1}{18}$ & $\frac{1}{18}$ & $\frac{1}{18}$ & $\frac{1}{18}$ \\
+     \hline
+     2 & 0 & $\frac{1}{36}$ & $\frac{1}{18}$ & $\frac{1}{18}$ & $\frac{1}{18}$ & $\frac{1}{18}$ \\
+     \hline
+     3 & 0 & 0 & $\frac{1}{36}$ & $\frac{1}{18}$ & $\frac{1}{18}$ & $\frac{1}{18}$ \\
+     \hline
+     4 & 0 & 0 & 0 & $\frac{1}{36}$ & $\frac{1}{18}$ & $\frac{1}{18}$ \\
+     \hline
+     5 & 0 & 0 & 0 & 0 & $\frac{1}{36}$ & $\frac{1}{18}$ \\
+     \hline
+     6 & 0 & 0 & 0 & 0 & 0 & $\frac{1}{36}$ \\
+     \hline
+\end{tabular}
+\end{center}
+having values of 0 in cells with column > row, as X denotes the smaller value.
+
+
+b) \begin{equation}
+\begin{split}
+     X \text{ and } Y \text{ are independent } &\iff P(X = x, Y = y) = P(X = x)P(Y = y) \\
+     \text {For } X = 1 \text{ and } Y = 2 \Rightarrow \\ & P(X = 1, Y = 2) = P(X = 1)P(Y = 2) \iff \\ & \frac{1}{18} = \frac{1}{36} \textit{(false)}
+\end{split}
+\end{equation}
+
+c) The probability of having the minimum value 2 is the sum on the 2nd row of the joint pdf. Thus, we have $P(X = 2) = \frac{1}{4}$.
+
+The probability of having the maximum value 5 is the sum on the 5th column. Thus, we have $P(Y = 5) = \frac{1}{4}$.
+
+Finally, 
+\begin{equation}
+\begin{split}
+    P(Y = 5|X = 2) &= \frac{P(X = 2, Y = 5)}{P(X = 2)} \\
+    &= \frac{\frac{1}{18}}{\frac{1}{4}} \\
+    &= \frac{4}{18} \\
+    &= 0.222
+\end{split}
+    
+\end{equation}
+
+\end{proof}
+
+
+\end{document}

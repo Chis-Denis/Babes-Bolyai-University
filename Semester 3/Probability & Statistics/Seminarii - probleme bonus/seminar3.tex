@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\title{Seminar 3}
+\author{Octavian Custura}
+\date{November 2020}
+
+\begin{document}
+
+\maketitle
+
+8. Three contestants participate in a trivia game show. Their probabilities of answering a
+question correctly are 0.8, 0.9 and 0.75, respectively. If 10 questions are asked and every contestant answers every question, find the probability that one contestant (any one) answers exactly
+7 questions correctly, while the other two give any other number of correct answers. (event A)?
+\begin{proof}
+Denote by $A_{1}$, $A_{2}$ and ${A}_{3}$ the probability that the contestant no 1, 2, respectively 3 answers exactly 7 questions right. It can be seen that the 3 probabilities are computed using a \textbf{Binomial model}, since every one of them has equal probability for every iteration. We have 
+\[ P({A}_{1}) = {C}^{k}_{n} \cdot {0.8}^{7} \cdot {0.2}^{3} = 0.2\]
+\[ P({A}_{2}) = {C}^{k}_{n} \cdot {0.9}^{7} \cdot {0.1}^{3} = 0.05\]
+\[ P({A}_{3}) = {C}^{k}_{n} \cdot {0.75}^{7} \cdot {0.25}^{3} = 0.25\]
+In order to compute P(A), we need exactly one value from the 3 probabilities $A_{1}$, $A_{2}$ and ${A}_{3}$, thus using a \textbf{Poisson Model}.
+
+$P(A) =$ \text{the coefficient of} ${x}^{1}$ \text{in the polynomial expansion of} $(P({A}_{1}) \cdot x + 1 - P({A}_{1})) \cdot (P({A}_{2}) \cdot x + 1 - P({A}_{2})) \cdot (P({A}_{3}) \cdot x + 1 - P({A}_{3}))$
+\begin{equation}
+    (0.2 \cdot x + 0.8) \cdot (0.05 \cdot x + 0.95) \cdot (0.25 \cdot x + 0.75) = 0.0025 \cdot {x}^{3} + 0.065 \cdot {x}^{2} + 0.3625 \cdot {x} + 0.57
+\end{equation}
+
+We can see that the coefficient of ${x}^{1}$ is 0.3625 $= P(A)$ , which is our final probability.
+\end{proof}
+
+9. In a department store at the mall, black and brown gloves are on sale. There are N (identical)
+pairs of black gloves and N (identical) pairs of brown gloves. If N customers come in, one at a
+time and randomly choose and buy 2 pairs each, find the probability of event A: each customer
+buys 2 pairs of different colors (one black and one brown).
+
+\begin{proof}
+There are N trials, where we need N successes, and every trial has a different probability. Thus, we need a \textbf{Poisson Model}. 
+Denote by $P({A}_{K})$ the probability that the kth person chooses gloves of different colours, knowing that the first the first k - 1 people took gloves of different colours.
+\[ P({A}_{1}) = \frac{N}{2 \cdot N - 1}, P({A}_{2}) = \frac{N - 1}{2 \cdot N - 3} \textit{ ... } P({A}_{i}) = \frac{N - i + 1}{2 \cdot N - 2 \cdot i + 1} \textit{ ... } P({A}_{N}) = \frac{1}{1}\]
+Thus, we observe that the probability of N successes in N trials is the coefficient of ${x}^{N}$ in the polynomial expansion of $\displaystyle\prod_{i = 1}^{N} {(\frac{N - i + 1}{2 \cdot N - 2 \cdot i + 1} \cdot x + \frac{N - i}{2 \cdot N - 2 \cdot i + 1})}$. We can observe that the coefficient of ${x}^{N}$ is the product of the coefficients of $x$ in the above product, so \[ P(A) = \prod_{i = 1}^{N} {\frac{N - i + 1}{2 \cdot N - 2 \cdot i + 1}} = \frac{N!}{(2 \cdot N - 1) \cdot (2 \cdot N - 3) \cdot \textit{ ... } \cdot 3 \cdot 1} \]
+
+Denote $Q = 2 \cdot 4 \cdot 6 \cdot \cdot \cdot 2n$. $Q = (1 \cdot 2)(2 \cdot 2)(3 \cdot 2)\cdot\cdot\cdot(n \cdot 2) = n! \cdot {2}^{n}$.
+Also, $(2n)! = (1 \cdot 3 \cdot 5 \cdot\cdot\cdot (2n - 1)) \cdot (2 \cdot 4 \cdot 6 \cdot \cdot \cdot 2n) = (1 \cdot 3 \cdot 5 \cdot\cdot\cdot (2n - 1)) \cdot Q$. So $(1 \cdot 3 \cdot 5 \cdot\cdot\cdot (2n - 1)) = \frac{(2n)!}{{2}^{n} \cdot n!}$
+In conclusion,
+\[ P(A) = \frac{{N!}^{2}\cdot {2}^{N}}{(2N)!} \]
+\end{proof}
+\end{document}
