@@ -1,0 +1,453 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\views\\reservation\\myreservations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\views\\reservation\\myreservations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\views\\reservation\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\views\\reservation\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\views\\reservation\\availablerooms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\views\\reservation\\availablerooms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\views\\reservation\\reserve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\views\\reservation\\reserve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\views\\reservation\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\views\\reservation\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\models\\hotelroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\models\\hotelroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\services\\pricingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\services\\pricingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\migrations\\20250617071856_seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\migrations\\20250617071856_seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\migrations\\20250617071814_initialschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\migrations\\20250617071814_initialschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\examen.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\examen.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\chiarexamen\\examen\\examen\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8785D2CF-6A04-4D21-A911-DB976FDEC3E9}|EXAMEN\\EXAMEN.csproj|solutionrelative:examen\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyReservations.cshtml",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\Reservation\\MyReservations.cshtml",
+              "RelativeDocumentMoniker": "EXAMEN\\Views\\Reservation\\MyReservations.cshtml",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\Reservation\\MyReservations.cshtml",
+              "RelativeToolTip": "EXAMEN\\Views\\Reservation\\MyReservations.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T07:52:33.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Reserve.cshtml",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\Reservation\\Reserve.cshtml",
+              "RelativeDocumentMoniker": "EXAMEN\\Views\\Reservation\\Reserve.cshtml",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\Reservation\\Reserve.cshtml",
+              "RelativeToolTip": "EXAMEN\\Views\\Reservation\\Reserve.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T07:52:14.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "EXAMEN\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "EXAMEN\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T07:46:17.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\Reservation\\Delete.cshtml",
+              "RelativeDocumentMoniker": "EXAMEN\\Views\\Reservation\\Delete.cshtml",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\Reservation\\Delete.cshtml*",
+              "RelativeToolTip": "EXAMEN\\Views\\Reservation\\Delete.cshtml*",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T07:45:35.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Search.cshtml",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\Reservation\\Search.cshtml",
+              "RelativeDocumentMoniker": "EXAMEN\\Views\\Reservation\\Search.cshtml",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\Reservation\\Search.cshtml",
+              "RelativeToolTip": "EXAMEN\\Views\\Reservation\\Search.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T07:45:31.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "EXAMEN\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "EXAMEN\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T07:45:30.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "EXAMEN\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "EXAMEN\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T07:45:29.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "EXAMEN\\Data\\SeedData.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Data\\SeedData.cs",
+              "RelativeToolTip": "EXAMEN\\Data\\SeedData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T07:27:15.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "EXAMEN\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "EXAMEN\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T07:25:07.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20250617071856_SeedData.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Migrations\\20250617071856_SeedData.cs",
+              "RelativeDocumentMoniker": "EXAMEN\\Migrations\\20250617071856_SeedData.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Migrations\\20250617071856_SeedData.cs",
+              "RelativeToolTip": "EXAMEN\\Migrations\\20250617071856_SeedData.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T07:19:06.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20250617071814_InitialSchema.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Migrations\\20250617071814_InitialSchema.cs",
+              "RelativeDocumentMoniker": "EXAMEN\\Migrations\\20250617071814_InitialSchema.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Migrations\\20250617071814_InitialSchema.cs",
+              "RelativeToolTip": "EXAMEN\\Migrations\\20250617071814_InitialSchema.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T07:18:42.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "EXAMEN\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "EXAMEN\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T07:18:37.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EXAMEN",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\EXAMEN.csproj",
+              "RelativeDocumentMoniker": "EXAMEN\\EXAMEN.csproj",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\EXAMEN.csproj",
+              "RelativeToolTip": "EXAMEN\\EXAMEN.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-17T07:16:11.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AvailableRooms.cshtml",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\Reservation\\AvailableRooms.cshtml",
+              "RelativeDocumentMoniker": "EXAMEN\\Views\\Reservation\\AvailableRooms.cshtml",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Views\\Reservation\\AvailableRooms.cshtml",
+              "RelativeToolTip": "EXAMEN\\Views\\Reservation\\AvailableRooms.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T07:15:06.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PricingService.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Services\\PricingService.cs",
+              "RelativeDocumentMoniker": "EXAMEN\\Services\\PricingService.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Services\\PricingService.cs",
+              "RelativeToolTip": "EXAMEN\\Services\\PricingService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T07:01:43.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\appsettings.json",
+              "RelativeDocumentMoniker": "EXAMEN\\appsettings.json",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\appsettings.json",
+              "RelativeToolTip": "EXAMEN\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-17T07:01:37.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReservationController.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Controllers\\ReservationController.cs",
+              "RelativeDocumentMoniker": "EXAMEN\\Controllers\\ReservationController.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Controllers\\ReservationController.cs",
+              "RelativeToolTip": "EXAMEN\\Controllers\\ReservationController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAgwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T07:00:07.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "EXAMEN\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "EXAMEN\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T07:00:05.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "EXAMEN\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "EXAMEN\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T06:59:55.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Program.cs",
+              "RelativeDocumentMoniker": "EXAMEN\\Program.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Program.cs",
+              "RelativeToolTip": "EXAMEN\\Program.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwD0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T06:59:29.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "EXAMEN\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "EXAMEN\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T06:59:17.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "EXAMEN\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "EXAMEN\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T06:59:15.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HotelRoom.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Models\\HotelRoom.cs",
+              "RelativeDocumentMoniker": "EXAMEN\\Models\\HotelRoom.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Models\\HotelRoom.cs",
+              "RelativeToolTip": "EXAMEN\\Models\\HotelRoom.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T06:59:14.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Models\\Reservation.cs",
+              "RelativeDocumentMoniker": "EXAMEN\\Models\\Reservation.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Models\\Reservation.cs",
+              "RelativeToolTip": "EXAMEN\\Models\\Reservation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T06:59:11.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Models\\User.cs",
+              "RelativeDocumentMoniker": "EXAMEN\\Models\\User.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\CHIARExamen\\EXAMEN\\EXAMEN\\Models\\User.cs",
+              "RelativeToolTip": "EXAMEN\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T06:59:06.983Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

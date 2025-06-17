@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Search Rooms";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2>Search Available Rooms</h2>
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label for="checkInDate">Check-in Date</label>
+                <input type="date" class="form-control" id="checkInDate" name="checkInDate" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="checkOutDate">Check-out Date</label>
+                <input type="date" class="form-control" id="checkOutDate" name="checkOutDate" required />
+            </div>
+            
+            <div class="form-group mt-3">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+    </div>
+</div> 
