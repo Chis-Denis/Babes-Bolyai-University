@@ -67,12 +67,12 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ASP1\\Views\\Home\\ShowReservations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP1F\\ASP1\\ASP1\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ASP1\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP1F\\ASP1\\ASP1\\Models\\Flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ASP1\\Models\\Flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\asp1f\\asp1\\asp1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|solutionrelative:asp1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -100,7 +100,7 @@
               "RelativeDocumentMoniker": "ASP1\\Migrations\\20250621085146_MakePartyIdNullableOnCandidate.cs",
               "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP1F\\ASP1\\ASP1\\Migrations\\20250621085146_MakePartyIdNullableOnCandidate.cs",
               "RelativeToolTip": "ASP1\\Migrations\\20250621085146_MakePartyIdNullableOnCandidate.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBMAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-21T09:13:14.057Z",
               "EditorCaption": ""
@@ -115,8 +115,7 @@
               "RelativeToolTip": "ASP1\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T09:13:13.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T09:13:13.462Z"
             },
             {
               "$type": "Document",
@@ -128,8 +127,7 @@
               "RelativeToolTip": "ASP1\\Migrations\\20250621082735_CleanPartyCandidateOnly.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T09:13:12.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T09:13:12.523Z"
             },
             {
               "$type": "Document",
@@ -141,8 +139,7 @@
               "RelativeToolTip": "ASP1\\Views\\Candidate\\Delete.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-21T08:35:35.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T08:35:35.383Z"
             },
             {
               "$type": "Document",
@@ -154,8 +151,7 @@
               "RelativeToolTip": "ASP1\\Views\\Candidate\\Create.cshtml",
               "ViewState": "AgIAADUAAAAAAAAAAAAAABcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-21T08:33:45.433Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T08:33:45.433Z"
             },
             {
               "$type": "Document",
@@ -167,8 +163,7 @@
               "RelativeToolTip": "ASP1\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T08:05:56.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T08:05:56.502Z"
             },
             {
               "$type": "Document",
@@ -191,8 +186,7 @@
               "RelativeToolTip": "ASP1\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-16T03:55:09.748Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T03:55:09.748Z"
             },
             {
               "$type": "Document",
@@ -256,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP1F\\ASP1\\ASP1\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "ASP1\\Controllers\\HomeController.cs",
@@ -268,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "Flight.cs",
               "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP1F\\ASP1\\ASP1\\Models\\Flight.cs",
               "RelativeDocumentMoniker": "ASP1\\Models\\Flight.cs",
