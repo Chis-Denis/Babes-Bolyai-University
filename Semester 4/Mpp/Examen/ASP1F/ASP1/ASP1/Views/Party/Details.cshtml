@@ -1,0 +1,43 @@
+@model ASP1.Models.Party
+@{
+    ViewData["Title"] = "Party Details";
+}
+<h1>@Model.Name</h1>
+<p>@Model.Description</p>
+@if (!string.IsNullOrEmpty(Model.LogoUrl))
+{
+    <img src="@Model.LogoUrl" alt="@Model.Name Logo" width="100" />
+}
+<h2>Candidates</h2>
+@* Start of change: Candidate list table for party details *@
+@if (Model.Candidates != null && Model.Candidates.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Age</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var candidate in Model.Candidates)
+            {
+                <tr>
+                    <td>@candidate.Name</td>
+                    <td>@candidate.Position</td>
+                    <td>@candidate.Age</td>
+                    <td>
+                        <a asp-controller="Candidate" asp-action="Details" asp-route-id="@candidate.CandidateId" class="btn btn-info">View</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No candidates for this party.</p>
+}
+@* End of change: Candidate list table for party details *@ 

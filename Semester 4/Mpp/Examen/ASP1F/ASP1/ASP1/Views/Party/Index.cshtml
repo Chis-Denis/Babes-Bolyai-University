@@ -1,0 +1,53 @@
+@model IEnumerable<ASP1.Models.Party>
+@{
+    ViewData["Title"] = "Parties";
+}
+<h1>Romanian Parties</h1>
+@* Start of change: Add Create Party button *@
+<a asp-action="Create" class="btn btn-success mb-2">Create Party</a>
+@* End of change: Add Create Party button *@
+@* Start of change: Party list table *@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Logo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var party in Model)
+        {
+            <tr>
+                <td>@party.Name</td>
+                <td>@party.Description</td>
+                <td>
+                    @* Start of change: Show actual party logo only if LogoUrl is a valid, non-empty URL, otherwise show SVG fallback *@
+                    @if (!string.IsNullOrWhiteSpace(party.LogoUrl) && (party.LogoUrl.StartsWith("http://") || party.LogoUrl.StartsWith("https://")))
+                    {
+                        <img src="@party.LogoUrl" alt="@party.Name Logo" width="50" style="background:white;border-radius:50%;object-fit:contain;" />
+                    }
+                    else
+                    {
+                        <div class="d-flex justify-content-center align-items-center" style="height: 50px;">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="#e63946"/>
+                                <text x="12" y="17" text-anchor="middle" fill="white" font-size="1rem" font-family="Arial" font-weight="bold">@party.Name</text>
+                            </svg>
+                        </div>
+                    }
+                    @* End of change: Show actual party logo only if LogoUrl is a valid, non-empty URL, otherwise show SVG fallback *@
+                </td>
+                <td>
+                    <a asp-controller="Party" asp-action="Details" asp-route-id="@party.PartyId" class="btn btn-primary btn-sm">Details</a>
+                    @* Start of change: Add Edit and Delete buttons *@
+                    <a asp-action="Edit" asp-route-id="@party.PartyId" class="btn btn-warning btn-sm">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@party.PartyId" class="btn btn-danger btn-sm">Delete</a>
+                    @* End of change: Add Edit and Delete buttons *@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@* End of change: Party list table *@ 

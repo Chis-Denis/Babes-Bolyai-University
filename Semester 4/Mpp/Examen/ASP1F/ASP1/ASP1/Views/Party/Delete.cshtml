@@ -1,0 +1,25 @@
+@model ASP1.Models.Party
+@{
+    ViewData["Title"] = "Delete Party";
+}
+<h1>Delete Party</h1>
+<p>Are you sure you want to delete this party?</p>
+@* Start of change: Party delete form *@
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="PartyId" />
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="LogoUrl"></label>
+        <input asp-for="LogoUrl" class="form-control" readonly />
+    </div>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+@* End of change: Party delete form *@ 

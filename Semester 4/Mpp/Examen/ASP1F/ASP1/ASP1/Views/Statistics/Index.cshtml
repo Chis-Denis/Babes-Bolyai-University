@@ -1,0 +1,27 @@
+@model ASP1.Controllers.StatisticsViewModel
+@{
+    ViewData["Title"] = "Statistics";
+}
+<h1>Statistics</h1>
+<div class="mb-3">
+    <strong>Total Candidates:</strong> @Model.TotalCandidates<br />
+    <strong>Total Parties:</strong> @Model.TotalParties
+</div>
+<h2>Candidates per Party</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Party</th>
+            <th>Candidate Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var party in Model.CandidatesPerParty)
+        {
+            <tr>
+                <td>@party.PartyName</td>
+                <td>@party.CandidateCount</td>
+            </tr>
+        }
+    </tbody>
+</table> 

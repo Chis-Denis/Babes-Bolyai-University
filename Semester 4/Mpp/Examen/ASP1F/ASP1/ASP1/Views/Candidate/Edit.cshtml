@@ -1,0 +1,45 @@
+@model ASP1.Models.CandidateViewModel
+@{
+    ViewData["Title"] = "Edit Candidate";
+    var parties = ViewBag.Parties as List<ASP1.Models.Party>;
+}
+<h1>Edit Candidate</h1>
+@* Start of change: Add validation summary and anti-forgery token *@
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<form asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="CandidateId" />
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ImageUrl"></label>
+        <input asp-for="ImageUrl" class="form-control" />
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Age"></label>
+        <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Position"></label>
+        <input asp-for="Position" class="form-control" />
+        <span asp-validation-for="Position" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PartyName">Party</label>
+        <input asp-for="PartyName" class="form-control" autocomplete="off" />
+        <span asp-validation-for="PartyName" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+@* End of change: Add validation summary and anti-forgery token *@ 

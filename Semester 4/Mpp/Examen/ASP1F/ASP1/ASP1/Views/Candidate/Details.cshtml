@@ -1,0 +1,23 @@
+@model dynamic
+@{
+    ViewData["Title"] = "Candidate Details";
+}
+<h1>Candidate Details</h1>
+@* Start of change: Candidate details section *@
+<div class="card" style="width: 24rem;">
+    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+    {
+        <img src="@Model.ImageUrl" class="card-img-top" alt="@Model.Name" style="max-height:200px;object-fit:cover;" />
+    }
+    <div class="card-body">
+        <h3 class="card-title">@Model.Name</h3>
+        <p class="card-text">@Model.Description</p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Party:</strong> @ViewBag.PartyName</li>
+            <li class="list-group-item"><strong>ID:</strong> @Model.CandidateId</li>
+            <li class="list-group-item"><strong>Age:</strong> @Model.Age</li>
+            <li class="list-group-item"><strong>Position:</strong> @Model.Position</li>
+        </ul>
+    </div>
+</div>
+@* End of change: Candidate details section *@ 

@@ -1,0 +1,49 @@
+@model IEnumerable<ASP1.Models.Candidate>
+@{
+    ViewData["Title"] = "Candidates";
+}
+<h1>All Candidates</h1>
+@* Start of change: Add Create Candidate button *@
+<a asp-action="Create" class="btn btn-success mb-2">Create Candidate</a>
+@* End of change: Add Create Candidate button *@
+<div class="mb-3">
+    <form asp-action="StartGenerating" method="post" style="display:inline;">
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-primary">Start Generating</button>
+    </form>
+    <form asp-action="StopGenerating" method="post" style="display:inline; margin-left: 10px;">
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-danger">Stop Generating</button>
+    </form>
+</div>
+@* Start of change: Candidate list table *@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Party</th>
+            <th>Position</th>
+            <th>Age</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var candidate in Model)
+        {
+            <tr>
+                <td>@candidate.Name</td>
+                <td>@candidate.PartyId</td>
+                <td>@candidate.Position</td>
+                <td>@candidate.Age</td>
+                <td>
+                    <a asp-controller="Candidate" asp-action="Details" asp-route-id="@candidate.CandidateId" class="btn btn-primary btn-sm">Details</a>
+                    @* Start of change: Add Edit and Delete buttons *@
+                    <a asp-action="Edit" asp-route-id="@candidate.CandidateId" class="btn btn-warning btn-sm">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@candidate.CandidateId" class="btn btn-danger btn-sm">Delete</a>
+                    @* End of change: Add Edit and Delete buttons *@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@* End of change: Candidate list table *@ 
