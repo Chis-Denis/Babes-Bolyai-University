@@ -1,0 +1,50 @@
+@model ASP1.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register"; // Sets the title of the page.
+}
+
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h2>@ViewData["Title"]</h2>
+        <form method="post"> // Form for submitting registration data.
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div> <!-- Displays validation errors for the entire model. -->
+            <div class="form-floating mb-3">
+                <input asp-for="FirstName" class="form-control" autocomplete="firstname" aria-required="true" placeholder="John" /> <!-- Input field for first name. -->
+                <label asp-for="FirstName">First Name</label> <!-- Label for the first name input. -->
+                <span asp-validation-for="FirstName" class="text-danger"></span> <!-- Displays validation errors for the first name field. -->
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="LastName" class="form-control" autocomplete="lastname" aria-required="true" placeholder="Doe" /> <!-- Input field for last name. -->
+                <label asp-for="LastName">Last Name</label> <!-- Label for the last name input. -->
+                <span asp-validation-for="LastName" class="text-danger"></span> <!-- Displays validation errors for the last name field. -->
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" /> <!-- Input field for email. -->
+                <label asp-for="Email">Email</label> <!-- Label for the email input. -->
+                <span asp-validation-for="Email" class="text-danger"></span> <!-- Displays validation errors for the email field. -->
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" /> <!-- Input field for password. -->
+                <label asp-for="Password">Password</label> <!-- Label for the password input. -->
+                <span asp-validation-for="Password" class="text-danger"></span> <!-- Displays validation errors for the password field. -->
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" /> <!-- Input field for confirm password. -->
+                <label asp-for="ConfirmPassword">Confirm Password</label> <!-- Label for the confirm password input. -->
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span> <!-- Displays validation errors for the confirm password field. -->
+            </div>
+            <button type="submit" class="w-100 btn btn-lg btn-primary">Register</button> <!-- Submit button for registration. -->
+            <div class="mt-3">
+                <p>
+                    Already have an account? <a asp-action="Login">Log in here</a> <!-- Link to the login page. -->
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} <!-- Renders partial view for client-side validation scripts. -->
+} 

@@ -1,0 +1,239 @@
+<!-- Standard HTML5 Document Declaration -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The New York Times</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="a3.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <!-- Left section with search button -->
+            <div class="left-section">
+                <button class="search-btn">🔍</button>
+            </div>
+            <!-- Center section with international edition links -->
+            <div class="top-nav">
+                <a href="#">U.S.</a>
+                <a href="#">INTERNATIONAL</a>
+                <a href="#">CANADA</a>
+                <a href="#">ESPAÑOL</a>
+                <a href="#">中文</a>
+            </div>
+            <!-- Right section with subscription and login buttons -->
+            <div class="right-section">
+                <button class="subscribe-btn">SUBSCRIBE FOR €0.50/WEEK</button>
+                <button class="login-btn">LOG IN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header Section -->
+    <header>
+        <div class="header-content">
+            <!-- Top header bar with date and stock information -->
+            <div class="header-top">
+                <div class="left">
+                    <div class="date-section">
+                        <span>Thursday, April 3, 2025</span>
+                        <span class="separator">|</span>
+                        <a href="#">Today's Paper</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <span class="stock">Dow <span class="negative">-3.98% ↓</span></span>
+                </div>
+            </div>
+
+            <!-- NYT Logo -->
+            <h1 class="logo">The New York Times</h1>
+
+            <!-- Main Navigation Menu -->
+            <nav class="main-nav">
+                <!-- Primary Navigation Items -->
+                <ul>
+                    <li><a href="#">U.S. <span class="dropdown">▾</span></a></li>
+                    <li><a href="#">World <span class="dropdown">▾</span></a></li>
+                    <li><a href="#">Business <span class="dropdown">▾</span></a></li>
+                    <li><a href="#">Arts <span class="dropdown">▾</span></a></li>
+                    <li><a href="#">Lifestyle <span class="dropdown">▾</span></a></li>
+                    <li><a href="#">Opinion <span class="dropdown">▾</span></a></li>
+                    <li><a href="#">Audio <span class="dropdown">▾</span></a></li>
+                    <li><a href="#">Games <span class="dropdown">▾</span></a></li>
+                </ul>
+                <!-- Secondary Navigation Items -->
+                <ul class="secondary-nav">
+                    <li><a href="#">Cooking <span class="dropdown">▾</span></a></li>
+                    <li><a href="#">Wirecutter <span class="dropdown">▾</span></a></li>
+                    <li><a href="#">The Athletic <span class="dropdown">▾</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Live Updates Bar -->
+    <div class="live-bar">
+        <div class="container">
+            <span class="live-indicator">LIVE</span>
+            <!-- Live update items with timestamps -->
+            <div class="live-items">
+                <a href="#" class="live-item">Tariffs <span class="time">10m ago</span></a>
+                <a href="#" class="live-item">Trump Administration <span class="time">14m ago</span></a>
+                <a href="#" class="live-item">U.S. Storms <span class="time">14m ago</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="main-content">
+            <!-- Left Column - Main news content -->
+            <div class="left-column">
+                <!-- Featured Article -->
+                <article class="main-story">
+                    <h1 class="headline">Tariffs Set Off Wall Street's Steepest Plunge Since 2020</h1>
+                    
+                    <div class="story-content">
+                        <!-- Live Updates Section -->
+                        <div class="live-section">
+                            <div class="live-header">
+                                <span class="live-tag">LIVE</span>
+                                <span class="time">2m ago</span>
+                            </div>
+                            <h2>S&P 500 Is Down Almost 5% as Trump's Moves Stun Markets</h2>
+                            <!-- List of recent updates -->
+                            <ul class="updates-list">
+                                <li>
+                                    <p>Eight oil producers follow President Trump's tariffs with a surprise increase in production.</p>
+                                    <span class="time">1h ago</span>
+                                </li>
+                                <li>
+                                    <p>Mexico's leader unveils a plan to blunt tariffs by increasing domestic production of food, energy and textiles.</p>
+                                    <span class="time">2h ago</span>
+                                </li>
+                                <li>
+                                    <p>Canada's prime minister says the country will introduce retaliatory tariffs on the U.S.</p>
+                                    <span class="time">2h ago</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="more-updates">See more updates ›</a>
+                        </div>
+                        <!-- Market Chart Section -->
+                        <div class="chart-section">
+                            <img src="chart.png" alt="Market Chart" class="chart-image">
+                            <span class="caption">Karl Russell</span>
+                        </div>
+                    </div>
+
+                    <!-- Story Footer -->
+                    <div class="story-footer">
+                        <h3 class="subheadline">The Job Market Has Been Resilient. The Trade War Could Be Its Undoing.</h3>
+                        <span class="read-time">5 MIN READ</span>
+                    </div>
+                </article>
+
+                <!-- Additional Stories Section -->
+                <div class="additional-stories">
+                    <!-- First Row of Stories -->
+                    <div class="story-row">
+                        <article class="story">
+                            <h3>Apple Plunges 9%, Leading a Tech Sell-Off</h3>
+                            <span class="read-time">4 MIN READ</span>
+                        </article>
+                        <article class="story">
+                            <h3>How Much Will Tariffs Cost U.S. Importers?</h3>
+                        </article>
+                    </div>
+
+                    <!-- Second Row of Stories with Images -->
+                    <div class="story-row">
+                        <article class="story with-image">
+                            <div class="story-content">
+                                <span class="tag">ANALYSIS</span>
+                                <h3>Trump's Trade War Risks Forfeiting America's Economic Primacy</h3>
+                                <span class="read-time">6 MIN READ</span>
+                            </div>
+                            <img src="cars.jpg" alt="Cars" class="story-image">
+                        </article>
+                        <article class="story with-image">
+                            <div class="story-content">
+                                <h3>Trade 'Emergency' Follows Decades of Anger That America Has Been Ripped Off</h3>
+                                <span class="read-time">6 MIN READ</span>
+                            </div>
+                            <img src="trump.jpg" alt="Trump" class="story-image">
+                        </article>
+                    </div>
+
+                    <!-- Full-width Story with Chart -->
+                    <article class="story-full">
+                        <h3>Where Trump's Tariffs Will Hit Hardest</h3>
+                        <p>These economies are deeply reliant on selling goods to the U.S., and many of them were hit with especially steep taxes by President</p>
+                        <!-- Data Visualization Section -->
+                        <div class="chart-data">
+                            <div class="data-row">
+                                <span class="country">Vietnam</span>
+                                <div class="bar-container">
+                                    <div class="bar exports" style="width: 29%">29%</div>
+                                    <div class="bar tariffs" style="width: 46%">+46%</div>
+                                </div>
+                            </div>
+                            <div class="data-row">
+                                <span class="country">Cambodia</span>
+                                <div class="bar-container">
+                                    <div class="bar exports" style="width: 27%">27%</div>
+                                    <div class="bar tariffs" style="width: 49%">+49%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Right Column - Featured and side stories -->
+            <div class="right-column">
+                <!-- Featured Story with Image Grid -->
+                <article class="featured-story">
+                    <div class="image-grid">
+                        <img src="Eric Adams.jpeg" alt="Couple with dog" class="main-image">
+                        <div class="small-images">
+                            <img src="Trump at event.jpeg" alt="Building facade 1">
+                            <img src="Train trip.jpeg" alt="Building facade 2">
+                        </div>
+                    </div>
+                    <h2>They Wanted Bigger Space in a Smaller Building. Friendly Neighbors a Plus.</h2>
+                    <p>Shaking off first-time, home-buying jitters, a couple with a budget of just over $1 million searched for a two-bedroom in Brooklyn.</p>
+                    <span class="photo-credit">Katherine Marks for The New York Times</span>
+                </article>
+
+                <!-- Side Stories Section -->
+                <div class="side-stories">
+                    <!-- Side Story with Icon -->
+                    <article class="side-story">
+                        <div class="story-icon">
+                            <img src="icon1.png" alt="Story icon">
+                        </div>
+                        <div class="story-content">
+                            <h3>My Future Sister-in-Law Is Skipping My Wedding</h3>
+                        </div>
+                    </article>
+
+                    <!-- Side Story with Image -->
+                    <article class="side-story">
+                        <div class="story-image">
+                            <img src="beatles.jpg" alt="Beatles photo">
+                        </div>
+                        <div class="story-content">
+                            <h3>Beatles Audition Tape Surfaces in a Newspaper's Archives</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

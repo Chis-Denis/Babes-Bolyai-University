@@ -1,0 +1,237 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\asp2f\\asp1\\asp1\\views\\home\\flightslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|solutionrelative:asp1\\views\\home\\flightslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\asp2f\\asp1\\asp1\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|solutionrelative:asp1\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\asp2f\\asp1\\asp1\\models\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|solutionrelative:asp1\\models\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\asp2f\\asp1\\asp1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|solutionrelative:asp1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\asp2f\\asp1\\asp1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|solutionrelative:asp1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\asp2f\\asp1\\asp1\\views\\home\\hotelslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|solutionrelative:asp1\\views\\home\\hotelslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\asp2f\\asp1\\asp1\\views\\home\\showreservations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|solutionrelative:asp1\\views\\home\\showreservations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\asp2f\\asp1\\asp1\\views\\home\\reservationoptions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|solutionrelative:asp1\\views\\home\\reservationoptions.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\asp2f\\asp1\\asp1\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|solutionrelative:asp1\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\asp2f\\asp1\\asp1\\models\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|solutionrelative:asp1\\models\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\asp2f\\asp1\\asp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|solutionrelative:asp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\asp2f\\asp1\\asp1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|solutionrelative:asp1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\web\\examen\\asp2f\\asp1\\asp1\\asp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E54ED036-3914-4EDE-A1DF-4D51E933E8B1}|ASP1\\ASP1.csproj|solutionrelative:asp1\\asp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Models\\Reservation.cs",
+              "RelativeDocumentMoniker": "ASP1\\Models\\Reservation.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Models\\Reservation.cs",
+              "RelativeToolTip": "ASP1\\Models\\Reservation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T18:10:13.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ASP1\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ASP1\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T03:55:09.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HotelsList.cshtml",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Views\\Home\\HotelsList.cshtml",
+              "RelativeDocumentMoniker": "ASP1\\Views\\Home\\HotelsList.cshtml",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Views\\Home\\HotelsList.cshtml",
+              "RelativeToolTip": "ASP1\\Views\\Home\\HotelsList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T03:55:08.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FlightsList.cshtml",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Views\\Home\\FlightsList.cshtml",
+              "RelativeDocumentMoniker": "ASP1\\Views\\Home\\FlightsList.cshtml",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Views\\Home\\FlightsList.cshtml",
+              "RelativeToolTip": "ASP1\\Views\\Home\\FlightsList.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T03:54:42.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Hotel.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Models\\Hotel.cs",
+              "RelativeDocumentMoniker": "ASP1\\Models\\Hotel.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Models\\Hotel.cs",
+              "RelativeToolTip": "ASP1\\Models\\Hotel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T03:54:39.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReservationOptions.cshtml",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Views\\Home\\ReservationOptions.cshtml",
+              "RelativeDocumentMoniker": "ASP1\\Views\\Home\\ReservationOptions.cshtml",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Views\\Home\\ReservationOptions.cshtml",
+              "RelativeToolTip": "ASP1\\Views\\Home\\ReservationOptions.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T03:50:52.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ShowReservations.cshtml",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Views\\Home\\ShowReservations.cshtml",
+              "RelativeDocumentMoniker": "ASP1\\Views\\Home\\ShowReservations.cshtml",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Views\\Home\\ShowReservations.cshtml",
+              "RelativeToolTip": "ASP1\\Views\\Home\\ShowReservations.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T03:49:44.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ASP1\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ASP1\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAcwLoAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T03:43:43.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Flight.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Models\\Flight.cs",
+              "RelativeDocumentMoniker": "ASP1\\Models\\Flight.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Models\\Flight.cs",
+              "RelativeToolTip": "ASP1\\Models\\Flight.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T02:43:14.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "ASP1\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "ASP1\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T02:42:55.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\appsettings.json",
+              "RelativeDocumentMoniker": "ASP1\\appsettings.json",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\appsettings.json",
+              "RelativeToolTip": "ASP1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-16T02:32:25.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Program.cs",
+              "RelativeDocumentMoniker": "ASP1\\Program.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\Program.cs",
+              "RelativeToolTip": "ASP1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T02:28:45.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ASP1.csproj",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\ASP1.csproj",
+              "RelativeDocumentMoniker": "ASP1\\ASP1.csproj",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\WEB\\EXAMEN\\ASP2F\\ASP1\\ASP1\\ASP1.csproj",
+              "RelativeToolTip": "ASP1\\ASP1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-16T02:27:06.118Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

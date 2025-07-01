@@ -1,0 +1,38 @@
+@model List<string>
+
+@{
+    ViewData["Title"] = "Course Participants";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Participants for @ViewBag.CourseName</h1>
+
+    @if (Model != null && Model.Any())
+    {
+        <table class="table table-bordered table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Participant Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var participant in Model)
+                {
+                    <tr>
+                        <td>@participant</td>
+                        <td>
+                            <a asp-action="AssignGrade" asp-route-courseId="@ViewBag.CourseId" asp-route-studentName="@participant" class="btn btn-primary btn-sm">Assign/Update Grade</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p class="mt-3">No participants found for this course.</p>
+    }
+
+    <p class="mt-4"><a asp-action="ProfessorDashboard">Back to Dashboard</a></p>
+</div> 

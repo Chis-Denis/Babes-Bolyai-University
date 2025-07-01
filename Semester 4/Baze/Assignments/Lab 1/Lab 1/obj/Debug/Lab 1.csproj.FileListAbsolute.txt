@@ -1,0 +1,10 @@
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Lab 1\Lab 1\obj\Debug\Lab 1.csproj.AssemblyReference.cache
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Lab 1\Lab 1\obj\Debug\Lab_1.Properties.Resources.resources
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Lab 1\Lab 1\obj\Debug\Lab 1.csproj.GenerateResource.cache
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Lab 1\Lab 1\obj\Debug\Lab 1.csproj.CoreCompileInputs.cache
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Lab 1\Lab 1\bin\Debug\Lab 1.exe.config
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Lab 1\Lab 1\bin\Debug\Lab 1.exe
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Lab 1\Lab 1\bin\Debug\Lab 1.pdb
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Lab 1\Lab 1\obj\Debug\Lab 1.exe
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Lab 1\Lab 1\obj\Debug\Lab 1.pdb
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Lab 1\Lab 1\obj\Debug\L1DBMSForm.Form1.resources

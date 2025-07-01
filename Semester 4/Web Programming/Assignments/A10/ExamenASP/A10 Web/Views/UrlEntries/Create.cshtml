@@ -1,0 +1,38 @@
+@model UrlEntry
+@{
+    ViewBag.Title = "Add New URL";
+}
+@if (ViewBag.Debug != null)
+{
+    <div style="color: red;">DEBUG: @ViewBag.Debug</div>
+}
+@if (ViewBag.ModelStateErrors != null)
+{
+    <div style="color: orange;">ModelState Errors: @ViewBag.ModelStateErrors</div>
+}
+<h2>Add New URL</h2>
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Url"></label>
+        <input asp-for="Url" class="form-control" />
+        <span asp-validation-for="Url" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Category"></label>
+        <input asp-for="Category" class="form-control" />
+        <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+    <a asp-action="Index">Back to List</a>
+</form>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 

@@ -1,0 +1,4 @@
+Type: Turbo Engine, Engine Type petrol, Base Price: 3000, Engine price: 3100 Number Of Doors: 2, Total Price: 10100
+Type: Electric Engine, Autonomy: 51251, Base Price: 3000, Engine price: 3512.51 Number Of Doors: 2, Total Price: 10512.5
+Type: Turbo Engine, Engine Type petrol, Base Price: 3000, Engine price: 3100 Number Of Doors: 4, Total Price: 11600
+Type: Electric Engine, Autonomy: 141241, Base Price: 3000, Engine price: 4412.41 Number Of Doors: 4, Total Price: 12912.4

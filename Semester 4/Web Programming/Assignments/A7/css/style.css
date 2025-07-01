@@ -1,0 +1,109 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: #f8f9fa;
+}
+
+.modal-content {
+    border-radius: 0.3rem;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+.alert {
+    margin-bottom: 1rem;
+}
+
+/* Custom styles for forms */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Custom styles for tables */
+.table-responsive {
+    margin-bottom: 1rem;
+}
+
+/* Custom styles for buttons */
+.btn {
+    margin-right: 0.5rem;
+}
+
+/* Custom styles for navigation */
+.navbar {
+    margin-bottom: 1rem;
+}
+
+/* Custom styles for cards */
+.card-title {
+    margin-bottom: 0.75rem;
+}
+
+/* Custom styles for alerts */
+.alert {
+    border-radius: 0.3rem;
+}
+
+/* Custom styles for modals */
+.modal-dialog {
+    max-width: 500px;
+}
+
+/* Custom styles for input groups */
+.input-group {
+    margin-bottom: 1rem;
+}
+
+/* Custom styles for validation messages */
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback {
+    display: block;
+} 

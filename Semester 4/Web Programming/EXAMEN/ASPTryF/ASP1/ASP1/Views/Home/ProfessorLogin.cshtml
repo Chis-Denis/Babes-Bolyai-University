@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Professor Login";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Professor Login</h1>
+    <p>Enter your details to login.</p>
+
+    <form asp-controller="Home" asp-action="ProfessorLogin" method="post">
+        <div class="form-group">
+            <label for="professorName">Your Name:</label>
+            <input type="text" class="form-control" id="professorName" name="professorName" />
+            <span class="text-danger">@Html.ValidationMessage("professorName")</span>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>

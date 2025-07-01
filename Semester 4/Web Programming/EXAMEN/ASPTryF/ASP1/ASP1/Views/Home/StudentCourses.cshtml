@@ -1,0 +1,36 @@
+@model IEnumerable<ASP1.Models.Course>
+
+@{
+    ViewData["Title"] = "Student Courses";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Courses for @ViewBag.StudentNameSearch</h1>
+
+    @if (Model != null && Model.Any())
+    {
+        <table class="table table-bordered table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Professor ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var course in Model)
+                {
+                    <tr>
+                        <td>@course.courseName</td>
+                        <td>@course.professorID</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p class="mt-3">No courses found for this student or student name not provided.</p>
+    }
+
+    <p class="mt-4"><a asp-action="ProfessorDashboard">Back to Dashboard</a></p>
+</div> 

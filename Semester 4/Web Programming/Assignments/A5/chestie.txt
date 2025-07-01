@@ -1,0 +1,33 @@
+// Wait for the page to load
+$(document).ready(function() {
+    // Handle text selection
+    $('.content').on('mouseup', function() {
+        // Clear previous highlights
+        $('.highlighted').each(function() {
+            let text = $(this).text();
+            $(this).replaceWith(text);
+        });
+
+        // Get selected text
+        let selectedText = window.getSelection().toString().trim();
+
+        // If there's selected text
+        if (selectedText && selectedText.length > 0) {
+            // Look through all paragraphs in the content area
+            $('.content p').each(function() {
+                let paragraphText = $(this).text();
+                // If this paragraph contains the selected text
+                if (paragraphText.includes(selectedText)) {
+                    // Create a new span element
+                    let highlightedSpan = $('<span>', {
+                        'class': 'highlighted',
+                        'text': paragraphText
+                    });
+                    
+                    // Replace the paragraph content with the highlighted span
+                    $(this).html(highlightedSpan);
+                }
+            });
+        }
+    });
+}); 

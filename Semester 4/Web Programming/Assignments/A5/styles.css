@@ -1,0 +1,36 @@
+/* This makes the whole page look clean and modern */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* This is the white box that contains all our text */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* The big title at the top of the page */
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+/* How our regular text looks */
+p {
+    color: #444;
+}
+
+/* This is what makes the highlighted words stand out with a nice yellow background */
+.highlighted {
+    background-color: #ffeb3b;
+    padding: 2px 4px;          /* A little space around the word */
+    border-radius: 3px;        /* Soft rounded corners */
+} 

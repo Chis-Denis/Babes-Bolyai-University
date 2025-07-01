@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: #808080;
+    overflow: hidden;
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.ball:hover {
+    animation: drop 0.5s forwards, bounce 1s 0.5s infinite ease-in-out;
+}
+
+.ball.dropped {
+    animation: bounce 1s infinite ease-in-out;
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(calc(100vh - 100px));
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(calc(100vh - 100px)); /* Lower bounce point */
+    }
+    50% {
+        transform: translateY(calc(100vh - 180px)); /* Raised peak */
+    }
+}

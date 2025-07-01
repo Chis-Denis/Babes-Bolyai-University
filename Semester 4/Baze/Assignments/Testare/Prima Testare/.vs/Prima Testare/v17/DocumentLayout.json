@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\SQL C#\\Testare\\Prima Testare\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{54415354-D489-4B52-9CE5-2F5BC10B19D0}|Prima Testare\\Prima Testare.csproj|c:\\chestii\\programe\\facultate\\anu2sem2\\sql c#\\testare\\prima testare\\prima testare\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54415354-D489-4B52-9CE5-2F5BC10B19D0}|Prima Testare\\Prima Testare.csproj|solutionrelative:prima testare\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54415354-D489-4B52-9CE5-2F5BC10B19D0}|Prima Testare\\Prima Testare.csproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\SQL C#\\Testare\\Prima Testare\\prima testare\\cevaseminar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54415354-D489-4B52-9CE5-2F5BC10B19D0}|Prima Testare\\Prima Testare.csproj|solutionrelative:prima testare\\cevaseminar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "cevaseminar.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\SQL C#\\Testare\\Prima Testare\\Prima Testare\\cevaseminar.cs",
+              "RelativeDocumentMoniker": "Prima Testare\\cevaseminar.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\SQL C#\\Testare\\Prima Testare\\Prima Testare\\cevaseminar.cs",
+              "RelativeToolTip": "Prima Testare\\cevaseminar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T15:01:52.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\SQL C#\\Testare\\Prima Testare\\Prima Testare\\Program.cs",
+              "RelativeDocumentMoniker": "Prima Testare\\Program.cs",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\SQL C#\\Testare\\Prima Testare\\Prima Testare\\Program.cs",
+              "RelativeToolTip": "Prima Testare\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T10:52:29.143Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

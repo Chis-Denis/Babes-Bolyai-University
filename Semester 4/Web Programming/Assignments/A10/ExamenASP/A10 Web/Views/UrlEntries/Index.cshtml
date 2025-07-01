@@ -1,0 +1,48 @@
+@model IEnumerable<UrlEntry>
+@{
+    ViewBag.Title = "My URLs";
+}
+<h2>My URLs</h2>
+<p style="color: red;">DEBUG: Your UserId is @User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value</p>
+@if (!Model.Any())
+{
+    <p style="color: orange;">No URLs found for your user. If you add a URL and it does not appear, copy the above UserId and check the database.</p>
+}
+<div>
+    <a href="@Url.Action("Create")">Add New URL</a>
+</div>
+<div>
+    <label>Category:</label>
+    <select id="categoryFilter">
+        <option value="">All</option>
+        @foreach (var cat in ViewBag.Categories as List<string>)
+        {
+            string selected = (ViewBag.Category == cat) ? "selected=\"selected\"" : string.Empty;
+            @:<option value="@cat" @Html.Raw(selected)>@cat</option>
+        }
+    </select>
+</div>
+<div id="urlList">
+    @await Html.PartialAsync("_UrlListPartial", Model)
+</div>
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function loadUrls(category, page) {
+            $.get('@Url.Action("List")', { category: category, page: page }, function (data) {
+                $('#urlList').html(data);
+            });
+        }
+        $(function () {
+            $('#categoryFilter').change(function () {
+                loadUrls($(this).val(), 1);
+            });
+            $(document).on('click', '.page-link', function (e) {
+                e.preventDefault();
+                var page = $(this).data('page');
+                var category = $('#categoryFilter').val();
+                loadUrls(category, page);
+            });
+        });
+    </script>
+} 

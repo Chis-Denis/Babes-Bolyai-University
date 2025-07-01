@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Enter your details to begin your reservation.</p>
+
+    <form asp-controller="Home" asp-action="BeginReservation" method="post">
+        <div class="form-group">
+            <label for="personName">Your Name:</label>
+            <input type="text" class="form-control" id="personName" name="personName" required>
+        </div>
+        <div class="form-group">
+            <label for="specificDate">Date:</label>
+            <input type="date" class="form-control" id="specificDate" name="specificDate" required>
+        </div>
+        <div class="form-group">
+            <label for="destinationCity">Destination City:</label>
+            <input type="text" class="form-control" id="destinationCity" name="destinationCity" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Begin Reservation</button>
+    </form>
+</div>

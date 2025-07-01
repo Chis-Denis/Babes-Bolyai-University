@@ -1,0 +1,241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\Service.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|solutionrelative:Test\\Service.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\ElectricEngine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\Service.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|solutionrelative:Test\\Service.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Car.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Car.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\ElectricEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\UI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|solutionrelative:Test\\UI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\TurboEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\TurboEngine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\UI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|solutionrelative:Test\\UI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{31C7FE56-DF47-4EF7-9E0D-33206D56CB6D}|Test\\Test.vcxproj|solutionrelative:Test\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 13,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Service.cpp",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\Service.cpp",
+              "RelativeDocumentMoniker": "Test\\Service.cpp",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\Service.cpp",
+              "RelativeToolTip": "Test\\Service.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-08T15:36:00.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Car.cpp",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Car.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Car.cpp",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Car.cpp",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Car.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-08T15:31:34.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TurboEngine.cpp",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\TurboEngine.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\TurboEngine.cpp",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\TurboEngine.cpp",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\TurboEngine.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-08T15:30:42.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Engine.cpp",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Engine.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Engine.cpp",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Engine.cpp",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Engine.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-08T15:30:38.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ElectricEngine.cpp",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\ElectricEngine.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\ElectricEngine.cpp",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\ElectricEngine.cpp",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\ElectricEngine.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-08T15:30:35.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TurboEngine.h",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\TurboEngine.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\TurboEngine.h",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\TurboEngine.h",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\TurboEngine.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-08T15:30:32.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Engine.h",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Engine.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Engine.h",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Engine.h",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Engine.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-08T15:30:31.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ElectricEngine.h",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\ElectricEngine.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\ElectricEngine.h",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\ElectricEngine.h",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\ElectricEngine.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-08T15:30:30.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Car.h",
+              "DocumentMoniker": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Car.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Car.h",
+              "ToolTip": "C:\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Car.h",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Users\\Chisu\\source\\repos\\Anu 1 Faculta\\T2\\T2\\Car.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-08T15:30:28.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\main.cpp",
+              "RelativeDocumentMoniker": "Test\\main.cpp",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\main.cpp",
+              "RelativeToolTip": "Test\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-08T15:20:41.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UI.cpp",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\UI.cpp",
+              "RelativeDocumentMoniker": "Test\\UI.cpp",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\UI.cpp",
+              "RelativeToolTip": "Test\\UI.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-08T15:20:22.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Service.h",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\Service.h",
+              "RelativeDocumentMoniker": "Test\\Service.h",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\Service.h",
+              "RelativeToolTip": "Test\\Service.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-08T15:16:54.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UI.h",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\UI.h",
+              "RelativeDocumentMoniker": "Test\\UI.h",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2 2\\Test\\Test\\UI.h",
+              "RelativeToolTip": "Test\\UI.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-08T15:16:45.861Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

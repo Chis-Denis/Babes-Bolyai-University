@@ -1,0 +1,81 @@
+@model ASP1.ViewModels.PaginatedList<ASP1.Models.Reservation>
+
+@{
+    ViewData["Title"] = "My Reservations"; // Sets the title of the page.
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : ""; // Determines if the 'Previous' button should be disabled.
+    var nextDisabled = !Model.HasNextPage ? "disabled" : ""; // Determines if the 'Next' button should be disabled.
+}
+
+<h1>My Reservations for @ViewBag.PersonName</h1> // Displays the title with the person's name.
+
+@if (Model != null && Model.Any()) // Checks if there are any reservations to display. -->
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Date</th>
+                <th>Reserved Resource ID</th>
+                <th></th> // Empty header for the delete button column. -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var reservation in Model) // Iterates through each reservation in the paginated list. -->
+            {
+                <tr>
+                    <td>@reservation.type</td>
+                    <td>@reservation.date</td>
+                    <td>@reservation.idReservedResource</td>
+                    <td>
+                        <form asp-controller="Home" asp-action="DeleteReservation" method="post"> // Form for deleting a reservation. -->
+                            <input type="hidden" name="id" value="@reservation.id" /> // Hidden input for reservation ID. -->
+                            <input type="hidden" name="personName" value="@ViewBag.PersonName" /> // Hidden input for person's name, to maintain context after deletion. -->
+                            <input type="hidden" name="specificDate" value="@ViewBag.SpecificDate" /> // Hidden input for specific date, to maintain context after deletion. -->
+                            <input type="hidden" name="destinationCity" value="@ViewBag.DestinationCity" /> // Hidden input for destination city, to maintain context after deletion. -->
+                            <input type="hidden" name="pageNumber" value="@Model.PageIndex" /> // Hidden input for current page number, to return to the same page after deletion. -->
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button> // Delete button. -->
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="container"> // Container for pagination controls. -->
+        <a asp-action="ShowReservations" // Link to navigate to the previous page. -->
+           asp-route-pageNumber="@(Model.PageIndex - 1)" // Sets the page number for the previous page. -->
+           asp-route-personName="@ViewBag.PersonName" // Passes the person's name to the next page. -->
+           asp-route-specificDate="@ViewBag.SpecificDate" // Passes the specific date to the next page. -->
+           asp-route-destinationCity="@ViewBag.DestinationCity" // Passes the destination city to the next page. -->
+           class="btn btn-default @(prevDisabled)">Previous</a> // Styling and disability class for the button. -->
+        @for (int i = 1; i <= Model.TotalPages; i++) // Loop to generate page number links. -->
+        {
+            <a asp-action="ShowReservations" // Link to navigate to a specific page. -->
+               asp-route-pageNumber="@i" // Sets the page number for the current link. -->
+               asp-route-personName="@ViewBag.PersonName" // Passes the person's name to the next page. -->
+               asp-route-specificDate="@ViewBag.SpecificDate" // Passes the specific date to the next page. -->
+               asp-route-destinationCity="@ViewBag.DestinationCity" // Passes the destination city to the next page. -->
+               class="btn @(i == Model.PageIndex ? "btn-primary" : "btn-default")">@i</a> // Styling for the page number link, highlighting the current page. -->
+        }
+        <a asp-action="ShowReservations" // Link to navigate to the next page. -->
+           asp-route-pageNumber="@(Model.PageIndex + 1)" // Sets the page number for the next page. -->
+           asp-route-personName="@ViewBag.PersonName" // Passes the person's name to the next page. -->
+           asp-route-specificDate="@ViewBag.SpecificDate" // Passes the specific date to the next page. -->
+           asp-route-destinationCity="@ViewBag.DestinationCity" // Passes the destination city to the next page. -->
+           class="btn btn-default @(nextDisabled)">Next</a> // Styling and disability class for the button. -->
+    </div>
+
+}
+else // If no reservations are found. -->
+{
+    <p>No reservations found for @ViewBag.PersonName.</p> // Message displayed when no reservations are found. -->
+}
+
+<div>
+    <form asp-controller="Home" asp-action="BeginReservation" method="post"> // Form to go back to reservation options, preserving context. -->
+        <input type="hidden" name="personName" value="@ViewBag.PersonName" /> // Hidden input for person's name. -->
+        <input type="hidden" name="specificDate" value="@ViewBag.SpecificDate" /> // Hidden input for specific date. -->
+        <input type="hidden" name="destinationCity" value="@ViewBag.DestinationCity" /> // Hidden input for destination city. -->
+        <button type="submit" class="btn btn-info">Back to Reservation Options</button> // Button to navigate back. -->
+    </form>
+</div> 

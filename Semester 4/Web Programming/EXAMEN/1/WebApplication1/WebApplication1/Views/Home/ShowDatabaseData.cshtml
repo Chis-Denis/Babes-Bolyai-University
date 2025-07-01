@@ -1,0 +1,112 @@
+@{
+    ViewData["Title"] = "Database Data";
+}
+
+<h1>Current Database Data</h1>
+
+<h2>Flights</h2>
+@{
+    var flights = ViewBag.Flights as List<WebApplication1.Models.Flight>;
+}
+@if (flights != null && flights.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Destination City</th>
+                <th>Available Seats</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var flight in flights)
+            {
+                <tr>
+                    <td>@flight.flightID</td>
+                    <td>@flight.date</td>
+                    <td>@flight.destinationCity</td>
+                    <td>@flight.availableSeats</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No flights found in the database.</p>
+}
+
+<h2>Hotels</h2>
+@{
+    var hotels = ViewBag.Hotels as List<WebApplication1.Models.Hotel>;
+}
+@if (hotels != null && hotels.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>City</th>
+                <th>Available Rooms</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var hotel in hotels)
+            {
+                <tr>
+                    <td>@hotel.hotelID</td>
+                    <td>@hotel.hotelName</td>
+                    <td>@hotel.date</td>
+                    <td>@hotel.city</td>
+                    <td>@hotel.availableRooms</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hotels found in the database.</p>
+}
+
+<h2>Reservations</h2>
+@{
+    var reservations = ViewBag.Reservations as List<WebApplication1.Models.Reservation>;
+}
+@if (reservations != null && reservations.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Person</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Resource ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var reservation in reservations)
+            {
+                <tr>
+                    <td>@reservation.id</td>
+                    <td>@reservation.person</td>
+                    <td>@reservation.date</td>
+                    <td>@reservation.type</td>
+                    <td>@reservation.idReservedResource</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No reservations found in the database.</p>
+}
+
+<div>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Back to Home</a>
+</div> 

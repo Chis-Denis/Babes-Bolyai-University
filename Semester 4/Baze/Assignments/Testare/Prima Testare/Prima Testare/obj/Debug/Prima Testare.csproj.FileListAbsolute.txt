@@ -1,0 +1,14 @@
+C:\Chestii\Programe\Facultate\Anu2Sem1\SQL C#\Testare\Prima Testare\Prima Testare\bin\Debug\Prima Testare.exe.config
+C:\Chestii\Programe\Facultate\Anu2Sem1\SQL C#\Testare\Prima Testare\Prima Testare\bin\Debug\Prima Testare.exe
+C:\Chestii\Programe\Facultate\Anu2Sem1\SQL C#\Testare\Prima Testare\Prima Testare\bin\Debug\Prima Testare.pdb
+C:\Chestii\Programe\Facultate\Anu2Sem1\SQL C#\Testare\Prima Testare\Prima Testare\obj\Debug\Prima Testare.csproj.AssemblyReference.cache
+C:\Chestii\Programe\Facultate\Anu2Sem1\SQL C#\Testare\Prima Testare\Prima Testare\obj\Debug\Prima Testare.csproj.CoreCompileInputs.cache
+C:\Chestii\Programe\Facultate\Anu2Sem1\SQL C#\Testare\Prima Testare\Prima Testare\obj\Debug\Prima Testare.exe
+C:\Chestii\Programe\Facultate\Anu2Sem1\SQL C#\Testare\Prima Testare\Prima Testare\obj\Debug\Prima Testare.pdb
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Testare\Prima Testare\Prima Testare\bin\Debug\Prima Testare.exe.config
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Testare\Prima Testare\Prima Testare\bin\Debug\Prima Testare.exe
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Testare\Prima Testare\Prima Testare\bin\Debug\Prima Testare.pdb
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Testare\Prima Testare\Prima Testare\obj\Debug\Prima Testare.csproj.AssemblyReference.cache
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Testare\Prima Testare\Prima Testare\obj\Debug\Prima Testare.csproj.CoreCompileInputs.cache
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Testare\Prima Testare\Prima Testare\obj\Debug\Prima Testare.exe
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Testare\Prima Testare\Prima Testare\obj\Debug\Prima Testare.pdb

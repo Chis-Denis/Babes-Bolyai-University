@@ -1,0 +1,51 @@
+@model IEnumerable<WebApplication1.Models.Hotel>
+
+@{
+    ViewData["Title"] = "Available Hotels";
+}
+
+<h1>Available Hotels for @ViewBag.DestinationCity on @ViewBag.SpecificDate</h1>
+
+<p>Hello, @ViewBag.PersonName!</p>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Hotel ID</th>
+                <th>Hotel Name</th>
+                <th>Date</th>
+                <th>City</th>
+                <th>Available Rooms</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var hotel in Model)
+            {
+                <tr>
+                    <td>@hotel.hotelID</td>
+                    <td>@hotel.hotelName</td>
+                    <td>@hotel.date</td>
+                    <td>@hotel.city</td>
+                    <td>@hotel.availableRooms</td>
+                    <td>
+                        <form asp-controller="Home" asp-action="ReserveHotel" method="post">
+                            <input type="hidden" name="hotelID" value="@hotel.hotelID" />
+                            <button type="submit" class="btn btn-sm btn-success">Reserve</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hotels available for the selected criteria.</p>
+}
+
+<div>
+    <a asp-controller="Home" asp-action="Reservations" class="btn btn-info">View My Reservations</a>
+</div> 

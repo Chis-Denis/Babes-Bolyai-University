@@ -1,0 +1,26 @@
+﻿  main.c
+  services.c
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\main.c(18,70): error C2197: 'Service *createService(Repository *,UndoRedoRepository *)': too many arguments for call
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\services.c(8,10): warning C4029: declared formal parameter list different from definition
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\services.c(17,14): error C2039: 'typeOfUndoRedo': is not a member of 'Service'
+      C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\services.h(5,16):
+      see declaration of 'Service'
+  
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\services.c(181,28): error C2198: 'DynamicArray *createDynamicArray(int,DestroyElementFunctionPointer)': too few arguments for call
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\services.c(209,28): error C2198: 'DynamicArray *createDynamicArray(int,DestroyElementFunctionPointer)': too few arguments for call
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\services.c(237,28): error C2198: 'DynamicArray *createDynamicArray(int,DestroyElementFunctionPointer)': too few arguments for call
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\services.c(264,12): error C2198: 'int undoOperation(UndoRedoRepository *,Repository *)': too few arguments for call
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\services.c(270,12): error C2198: 'int redoOperation(UndoRedoRepository *,Repository *)': too few arguments for call
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\services.c(275,21): error C2039: 'typeOfUndoRedo': is not a member of 'Service'
+      C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\services.h(5,16):
+      see declaration of 'Service'
+  
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\services.c(275,5): warning C4033: 'getTypeOfUndoRedo' must return a value
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\services.c(292,18): warning C4090: 'function': different 'const' qualifiers
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\services.c(293,23): warning C4090: 'function': different 'const' qualifiers
+  services_test.c
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\services_test.c(13,70): error C2197: 'Service *createService(Repository *,UndoRedoRepository *)': too many arguments for call
+  user_interface.c
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\user_interface.c(196,5): warning C4013: 'getProductsBasedOnFilteringService' undefined; assuming extern returning int
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3 bun\Project1\Project1\user_interface.c(211,5): warning C4013: 'getProductsExpiringInXDaysService' undefined; assuming extern returning int
+  Generating Code...

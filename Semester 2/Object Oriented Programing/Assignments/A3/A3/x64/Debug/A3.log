@@ -1,0 +1,5 @@
+﻿  tests.c
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3\A3\tests.c(51,5): warning C4013: 'free' undefined; assuming extern returning int
+  UI.c
+C:\Chestii\Programe\Facultate\Anu2Sem2\OOP\A3\A3\UI.c(80,9): error C2143: syntax error: missing ';' before 'case'
+  Generating Code...

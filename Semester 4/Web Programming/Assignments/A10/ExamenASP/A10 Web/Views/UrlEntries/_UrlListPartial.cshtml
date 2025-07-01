@@ -1,0 +1,38 @@
+@model IEnumerable<UrlEntry>
+<table class="table">
+    <thead>
+        <tr>
+            <th>URL</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td><a href="@item.Url" target="_blank">@item.Url</a></td>
+            <td>@item.Description</td>
+            <td>@item.Category</td>
+            <td>
+                <a href="@Url.Action("Edit", new { id = item.Id })">Edit</a> |
+                <a href="@Url.Action("Delete", new { id = item.Id })">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<div>
+    Page @ViewBag.CurrentPage of @ViewBag.TotalPages
+    <div>
+        @if (ViewBag.CurrentPage > 1)
+        {
+            <a href="#" class="page-link" data-page="@(ViewBag.CurrentPage - 1)">Previous</a>
+        }
+        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+        {
+            <a href="#" class="page-link" data-page="@(ViewBag.CurrentPage + 1)">Next</a>
+        }
+    </div>
+</div> 

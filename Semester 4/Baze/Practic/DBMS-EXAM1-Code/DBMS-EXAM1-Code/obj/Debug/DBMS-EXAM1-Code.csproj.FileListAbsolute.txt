@@ -1,0 +1,9 @@
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Practic\DBMS-EXAM1-Code\DBMS-EXAM1-Code\obj\Debug\DBMS-EXAM1-Code.csproj.AssemblyReference.cache
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Practic\DBMS-EXAM1-Code\DBMS-EXAM1-Code\obj\Debug\DBMS_EXAM1_Code.Properties.Resources.resources
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Practic\DBMS-EXAM1-Code\DBMS-EXAM1-Code\obj\Debug\DBMS-EXAM1-Code.csproj.GenerateResource.cache
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Practic\DBMS-EXAM1-Code\DBMS-EXAM1-Code\obj\Debug\DBMS-EXAM1-Code.csproj.CoreCompileInputs.cache
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Practic\DBMS-EXAM1-Code\DBMS-EXAM1-Code\bin\Debug\DBMS-EXAM1-Code.exe.config
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Practic\DBMS-EXAM1-Code\DBMS-EXAM1-Code\bin\Debug\DBMS-EXAM1-Code.exe
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Practic\DBMS-EXAM1-Code\DBMS-EXAM1-Code\bin\Debug\DBMS-EXAM1-Code.pdb
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Practic\DBMS-EXAM1-Code\DBMS-EXAM1-Code\obj\Debug\DBMS-EXAM1-Code.exe
+C:\Chestii\Programe\Facultate\Anu2Sem2\SQL C#\Practic\DBMS-EXAM1-Code\DBMS-EXAM1-Code\obj\Debug\DBMS-EXAM1-Code.pdb

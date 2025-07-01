@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Reservation Options";
+}
+
+<h1>Welcome, @ViewBag.PersonName!</h1>
+<h2>Reservation for @ViewBag.DestinationCity on @ViewBag.SpecificDate</h2>
+
+<p>What would you like to reserve?</p>
+
+<div>
+    <form asp-controller="Home" asp-action="ShowFlights" method="post" style="display:inline;">
+        <input type="hidden" name="personName" value="@ViewBag.PersonName" />
+        <input type="hidden" name="specificDate" value="@ViewBag.SpecificDate" />
+        <input type="hidden" name="destinationCity" value="@ViewBag.DestinationCity" />
+        <button type="submit" class="btn btn-primary">Flights</button>
+    </form>
+    <form asp-controller="Home" asp-action="ShowHotels" method="post" style="display:inline;">
+        <input type="hidden" name="personName" value="@ViewBag.PersonName" />
+        <input type="hidden" name="specificDate" value="@ViewBag.SpecificDate" />
+        <input type="hidden" name="destinationCity" value="@ViewBag.DestinationCity" />
+        <button type="submit" class="btn btn-secondary">Hotels</button>
+    </form>
+    <form asp-controller="Home" asp-action="ShowReservations" method="get" style="display:inline;">
+        <input type="hidden" name="personName" value="@ViewBag.PersonName" />
+        <input type="hidden" name="specificDate" value="@ViewBag.SpecificDate" />
+        <input type="hidden" name="destinationCity" value="@ViewBag.DestinationCity" />
+        <button type="submit" class="btn btn-info">View My Reservations</button>
+    </form>
+</div> 

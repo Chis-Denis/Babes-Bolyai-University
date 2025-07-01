@@ -1,0 +1,49 @@
+@model IEnumerable<WebApplication1.Models.Flight>
+
+@{
+    ViewData["Title"] = "Available Flights";
+}
+
+<h1>Available Flights for @ViewBag.DestinationCity on @ViewBag.SpecificDate</h1>
+
+<p>Hello, @ViewBag.PersonName!</p>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Flight ID</th>
+                <th>Date</th>
+                <th>Destination City</th>
+                <th>Available Seats</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var flight in Model)
+            {
+                <tr>
+                    <td>@flight.flightID</td>
+                    <td>@flight.date</td>
+                    <td>@flight.destinationCity</td>
+                    <td>@flight.availableSeats</td>
+                    <td>
+                        <form asp-controller="Home" asp-action="ReserveFlight" method="post">
+                            <input type="hidden" name="flightID" value="@flight.flightID" />
+                            <button type="submit" class="btn btn-sm btn-primary">Reserve</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No flights available for the selected criteria.</p>
+}
+
+<div>
+    <a asp-controller="Home" asp-action="Reservations" class="btn btn-info">View My Reservations</a>
+</div> 

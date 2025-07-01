@@ -1,0 +1,8 @@
+com\example\model\GameSession.class
+com\example\model\Move.class
+com\example\util\DatabaseUtil.class
+com\example\servlet\GameServlet.class
+com\example\dao\GameDAO.class
+com\example\dao\UserDAO.class
+com\example\servlet\LoginServlet.class
+com\example\model\User.class

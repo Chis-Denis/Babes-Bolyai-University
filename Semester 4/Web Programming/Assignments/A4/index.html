@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        /* Container for the thumbnail images - uses flexbox for horizontal layout */
+        .thumbnail-container {
+            display: flex;          /* Makes thumbnails display in a row */
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for individual thumbnail images */
+        .thumbnail {
+            width: 150px;
+            height: 150px;
+        }
+
+        /* Container for the large image display */
+        .large-image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Style for the large image */
+        .large-image {
+            max-width: 800px;
+            max-height: 600px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container for thumbnail images -->
+    <div class="thumbnail-container">
+        <!-- Each thumbnail points to its full-size version -->
+        <img src="images/thumb1.jpeg" alt="Thumbnail 1" class="thumbnail" data-large="images/thumb1.jpeg">
+        <img src="images/thumb2.jpeg" alt="Thumbnail 2" class="thumbnail" data-large="images/thumb2.jpeg">
+        <img src="images/thumb3.jpeg" alt="Thumbnail 3" class="thumbnail" data-large="images/thumb3.jpeg">
+        <img src="images/thumb4.jpeg" alt="Thumbnail 4" class="thumbnail" data-large="images/thumb4.jpeg">
+    </div>
+
+    <!-- Container for the large image that appears -->
+    <div class="large-image-container">
+        <img id="largeImage" class="large-image" alt="Large Image">
+    </div>
+
+    <script>
+        // Wait for the HTML document to be fully loaded before running the script
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all elements with class 'thumbnail'
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            // Get the large image element where we'll display the full-size image
+            const largeImage = document.getElementById('largeImage');
+
+            // Add mouseover event listener to each thumbnail
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('mouseover', function() {
+                    // Get the path to the large image from data-large attribute
+                    const largeImagePath = this.getAttribute('data-large');
+                    // Set the source of the large image
+                    largeImage.src = largeImagePath;
+                    // Make the large image visible
+                    largeImage.style.display = 'block';
+                });
+            });
+
+            //new thing
+            let currentIndex = 0;
+            largeImage.addEventListener('mouseover', function() {
+                const allThumbnails = Array.from(thumbnails);
+                currentIndex = (currentIndex + 1) % allThumbnails.length;
+                if (currentIndex == 0)
+                    {
+                        document.getElementById("thumb1.jpeg").style.display = 'none';
+                    }
+                const nextImagePath = allThumbnails[currentIndex].getAttribute('data-large');
+                largeImage.src = nextImagePath;
+            });
+        });
+    </script>
+</body>
+</html> 

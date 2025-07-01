@@ -1,0 +1,46 @@
+@model IEnumerable<WebApplication1.Models.Reservation>
+
+@{
+    ViewData["Title"] = "My Reservations";
+}
+
+<h1>Your Reservations, @ViewBag.PersonName</h1>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Person</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Resource ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var reservation in Model)
+            {
+                <tr>
+                    <td>@reservation.id</td>
+                    <td>@reservation.person</td>
+                    <td>@reservation.date</td>
+                    <td>@reservation.type</td>
+                    <td>@reservation.idReservedResource</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <form asp-controller="Home" asp-action="CancelAllReservations" method="post" onsubmit="return confirm('Are you sure you want to cancel all your reservations?');">
+        <button type="submit" class="btn btn-danger">Cancel All Reservations</button>
+    </form>
+}
+else
+{
+    <p>You have no active reservations.</p>
+}
+
+<div>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Start New Reservation</a>
+</div> 

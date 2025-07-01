@@ -1,0 +1,198 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\repository.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|solutionrelative:TestOOP v2\\repository.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\service.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|solutionrelative:TestOOP v2\\service.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\user_interface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|solutionrelative:TestOOP v2\\user_interface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\domain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|solutionrelative:TestOOP v2\\domain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\domain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|solutionrelative:TestOOP v2\\domain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|solutionrelative:TestOOP v2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\dynamic_vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|solutionrelative:TestOOP v2\\dynamic_vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\service.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|solutionrelative:TestOOP v2\\service.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\user_interface.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|solutionrelative:TestOOP v2\\user_interface.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\repository.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4521B6EA-F3F1-478F-924A-30E71FD48A0F}|TestOOP v2\\TestOOP v2.vcxproj|solutionrelative:TestOOP v2\\repository.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "domain.cpp",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\domain.cpp",
+              "RelativeDocumentMoniker": "TestOOP v2\\domain.cpp",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\domain.cpp",
+              "RelativeToolTip": "TestOOP v2\\domain.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-03T16:16:30.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "user_interface.h",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\user_interface.h",
+              "RelativeDocumentMoniker": "TestOOP v2\\user_interface.h",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\user_interface.h",
+              "RelativeToolTip": "TestOOP v2\\user_interface.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-03T15:25:39.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "user_interface.cpp",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\user_interface.cpp",
+              "RelativeDocumentMoniker": "TestOOP v2\\user_interface.cpp",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\user_interface.cpp",
+              "RelativeToolTip": "TestOOP v2\\user_interface.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAEsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-03T15:22:29.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "domain.h",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\domain.h",
+              "RelativeDocumentMoniker": "TestOOP v2\\domain.h",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\domain.h",
+              "RelativeToolTip": "TestOOP v2\\domain.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-03T15:21:12.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "dynamic_vector.h",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\dynamic_vector.h",
+              "RelativeDocumentMoniker": "TestOOP v2\\dynamic_vector.h",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\dynamic_vector.h",
+              "RelativeToolTip": "TestOOP v2\\dynamic_vector.h",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAB8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-03T15:20:49.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "service.h",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\service.h",
+              "RelativeDocumentMoniker": "TestOOP v2\\service.h",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\service.h",
+              "RelativeToolTip": "TestOOP v2\\service.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-03T15:31:17.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "service.cpp",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\service.cpp",
+              "RelativeDocumentMoniker": "TestOOP v2\\service.cpp",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\service.cpp",
+              "RelativeToolTip": "TestOOP v2\\service.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-03T15:20:44.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "repository.cpp",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\repository.cpp",
+              "RelativeDocumentMoniker": "TestOOP v2\\repository.cpp",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\repository.cpp",
+              "RelativeToolTip": "TestOOP v2\\repository.cpp",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAJIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-03T15:20:42.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "repository.h",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\repository.h",
+              "RelativeDocumentMoniker": "TestOOP v2\\repository.h",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\repository.h",
+              "RelativeToolTip": "TestOOP v2\\repository.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-03T15:25:12.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\main.cpp",
+              "RelativeDocumentMoniker": "TestOOP v2\\main.cpp",
+              "ToolTip": "C:\\Chestii\\Programe\\Facultate\\Anu2Sem2\\OOP\\Test OOPv2\\TestOOP v2\\TestOOP v2\\main.cpp",
+              "RelativeToolTip": "TestOOP v2\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-03T15:20:39.158Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

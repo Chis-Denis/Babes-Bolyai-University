@@ -1,0 +1,60 @@
+@model IEnumerable<ASP1.Models.Flight>
+
+@{
+    ViewData["Title"] = "Available Flights";
+}
+
+<h1>Available Flights for @ViewBag.DestinationCity on @ViewBag.SpecificDate</h1>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-info">@ViewBag.Message</div>
+}
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Destination City</th>
+                <th>Available Seats</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var flight in Model)
+            {
+                <tr>
+                    <td>@flight.date</td>
+                    <td>@flight.destinationCity</td>
+                    <td>@flight.availableSeats</td>
+                    <td>
+                        <form asp-controller="Home" asp-action="ReserveFlight" method="post">
+                            <input type="hidden" name="flightID" value="@flight.flightID" />
+                            <input type="hidden" name="personName" value="@ViewBag.PersonName" />
+                            <input type="hidden" name="specificDate" value="@ViewBag.SpecificDate" />
+                            <input type="hidden" name="destinationCity" value="@ViewBag.DestinationCity" />
+                            <button type="submit" class="btn btn-success">Reserve</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No flights available for this destination and date.</p>
+}
+
+<div>
+    @* Start of change: Modified Back to Reservation Options button to use POST form to persist user data *@
+    <form asp-controller="Home" asp-action="BeginReservation" method="post">
+        <input type="hidden" name="personName" value="@ViewBag.PersonName" />
+        <input type="hidden" name="specificDate" value="@ViewBag.SpecificDate" />
+        <input type="hidden" name="destinationCity" value="@ViewBag.DestinationCity" />
+        <button type="submit" class="btn btn-info">Back to Reservation Options</button>
+    </form>
+    @* End of change: Modified Back to Reservation Options button to use POST form to persist user data *@
+</div> 

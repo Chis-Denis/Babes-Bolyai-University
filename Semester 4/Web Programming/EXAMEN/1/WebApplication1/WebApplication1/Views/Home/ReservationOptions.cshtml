@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Reservation Options";
+}
+
+<h1>Choose Your Reservation Type</h1>
+
+<p>Hello, @ViewBag.PersonName!</p>
+<p>Date: @ViewBag.SpecificDate</p>
+<p>City: @ViewBag.DestinationCity</p>
+
+<div class="mt-3">
+    <a asp-controller="Home" asp-action="Flights" class="btn btn-primary">Flights</a>
+    <a asp-controller="Home" asp-action="Hotels" class="btn btn-success">Hotels</a>
+</div> 

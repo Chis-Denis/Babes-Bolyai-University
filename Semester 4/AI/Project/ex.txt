@@ -1,0 +1,41 @@
+1. Rastrigin Function
+Boxplot Analysis
+All four configurations (real-arithmetic, real-blx, binary-1point, binary-2point) achieve low best fitness values, with medians close to zero.
+Spread (variance):
+All methods show some spread, but the real-valued and binary encodings perform similarly.
+Outliers are present in all configurations, indicating that in a few runs, the GA did not find the global minimum.
+Median:
+The median best fitness is very close to zero for all, suggesting that most runs successfully found or approached the global minimum.
+No configuration is dramatically better than the others, but you might see slightly less spread for real-blx and binary-1point.
+Interpretation
+All GA configurations are effective at minimizing the Rastrigin function.
+Occasional outliers suggest that the GA can sometimes get stuck in local minima, which is expected for a highly multimodal function like Rastrigin.
+No clear winner: All methods are robust, but you could check the printed means and standard deviations for a more precise ranking.
+2. Himmelblau Function
+Boxplot Analysis
+real-blx and binary-1point have the lowest medians and the tightest boxes, indicating very consistent and successful optimization.
+real-arithmetic and binary-2point show slightly higher medians and more spread, with a few outliers.
+Outliers are present, but less frequent and less severe than for Rastrigin.
+Interpretation
+real-blx crossover (real-valued encoding) and binary-1point crossover (binary encoding) are the most reliable for Himmelblau, consistently finding the global minimum.
+real-arithmetic and binary-2point are still effective but slightly less consistent.
+Overall, the GA is very effective for Himmelblau, with most runs achieving near-zero best fitness.
+Statistical Significance
+The t-tests and ANOVA you ran (see terminal output) will tell you if the differences between configurations are statistically significant.
+If p-values are less than 0.05, the differences are significant; otherwise, they are not.
+Summary Table Example (based on your results)
+| Function | Encoding | Crossover | Mean Best Fitness | Std. Dev. | Notes |
+|-------------|------------|-------------|-------------------|-----------|------------------------------|
+| Rastrigin | Real | Arithmetic | ~0.9 | ~1.0 | All configs similar, some outliers |
+| Rastrigin | Real | BLX | ~0.9 | ~1.0 | |
+| Rastrigin | Binary | 1-point | ~0.9 | ~1.0 | |
+| Rastrigin | Binary | 2-point | ~0.9 | ~1.0 | |
+| Himmelblau | Real | Arithmetic | Slightly higher | | More spread, some outliers |
+| Himmelblau | Real | BLX | Near zero | Very low | Most consistent |
+| Himmelblau | Binary | 1-point | Near zero | Very low | Most consistent |
+| Himmelblau | Binary | 2-point | Slightly higher | | More spread, some outliers |
+Conclusions
+All GA configurations are effective for both functions, but some are more consistent.
+For Himmelblau, real-blx and binary-1point are the most robust.
+For Rastrigin, all methods are similar, but outliers are more common due to the function’s complexity.
+Statistical tests confirm whether observed differences are significant.
