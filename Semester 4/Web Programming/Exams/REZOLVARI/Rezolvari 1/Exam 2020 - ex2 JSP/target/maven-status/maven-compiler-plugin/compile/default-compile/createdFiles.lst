@@ -1,0 +1,9 @@
+com\example\controller\ChannelController.class
+com\example\controller\LoginController.class
+com\example\service\ChannelService.class
+com\example\domain\Subscription.class
+com\example\domain\User.class
+com\example\service\UserService.class
+com\example\domain\DbManager.class
+com\example\domain\Channel.class
+com\example\exam2020ex2\HelloServlet.class

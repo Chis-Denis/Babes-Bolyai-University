@@ -1,0 +1,7 @@
+com\example\model\DbManager.class
+com\example\controller\FamilyController.class
+com\example\controller\LoginController.class
+com\example\exam2020ex8\HelloServlet.class
+com\example\service\UserService.class
+com\example\model\User.class
+com\example\model\Authenticate.class

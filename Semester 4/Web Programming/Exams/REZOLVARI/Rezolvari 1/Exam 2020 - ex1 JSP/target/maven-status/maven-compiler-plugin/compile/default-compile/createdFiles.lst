@@ -1,0 +1,10 @@
+com\example\model\Journal.class
+com\example\controller\JournalController.class
+com\example\model\Article.class
+com\example\model\DbManager.class
+com\example\controller\LoginController.class
+com\example\controller\LogoutController.class
+com\example\Service\JournalService.class
+com\example\exam2020ex1\HelloServlet.class
+com\example\model\User.class
+com\example\Service\UserService.class

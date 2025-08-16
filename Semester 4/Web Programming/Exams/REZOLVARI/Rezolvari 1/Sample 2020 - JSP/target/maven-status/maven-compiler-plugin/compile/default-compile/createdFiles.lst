@@ -1,0 +1,9 @@
+com\example\service\AssetService.class
+com\example\model\DbManager.class
+com\example\controller\LoginController.class
+com\example\controller\LogoutController.class
+com\example\controller\AssetController.class
+com\example\service\UserService.class
+com\example\exam2020sample\HelloServlet.class
+com\example\model\User.class
+com\example\model\Asset.class
