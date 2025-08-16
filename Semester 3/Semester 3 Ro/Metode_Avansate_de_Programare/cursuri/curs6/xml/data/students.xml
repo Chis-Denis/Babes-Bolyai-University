@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<students>
+    <student id="1">
+        <nume>Harry Potter</nume>
+        <grupa>221</grupa>
+    </student>
+    <student id="2">
+        <nume>Harry Potter 2</nume>
+        <grupa>223</grupa>
+    </student>
+    <student id="34">
+        <nume>Ana</nume>
+        <grupa>223</grupa>
+    </student>
+</students>

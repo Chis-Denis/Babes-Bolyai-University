@@ -1,0 +1,19 @@
+; ( solve '(A (B 1) (1 C 4) 7 (D 1 (6 F)) ((G 4) 6)) )
+;mapcarul
+(defun maxglob (l)
+	(cond
+		((null l) 0)
+		((numberp (car l)) (max (car l)(maxglob (cdr l))))
+		((atom (car l)) (maxglob(cdr l)))
+		(t (max(maxglob(car l)) (maxglob(cdr l))))
+	)
+)
+
+
+(defun solve (l)
+	(cond
+		((atom l) 0)
+		((evenp (maxglob l)) (+ 1 (apply #'+ (mapcar #'solve l))))
+		(t (apply #'+ (mapcar #'solve l)))
+	)
+)

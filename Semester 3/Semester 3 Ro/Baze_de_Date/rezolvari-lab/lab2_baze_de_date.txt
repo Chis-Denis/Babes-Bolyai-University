@@ -1,0 +1,35 @@
+CREATE DATABASE Penitenciar
+GO
+USE Penitenciar
+GO
+
+CREATE TABLE CapeteDeAcuzare(
+Cid INT PRIMARY KEY, 
+Denumire VARCHAR(50) NOT NULL,
+Severitate INT DEFAULT -1 ) -- GIVE A DEFAULT VALUE
+
+CREATE TABLE Inchisori(
+Iid INT PRIMARY KEY,
+Denumire VARCHAR(51),
+Localitate VARCHAR(49) NOT NULL,
+TipInchisoare VARCHAR(52) CHECK (TipInchisoare='Inchis' OR TipInchisoare='Deschis' OR TipInchisoare='Semideschis'))--POATE SA FIE DOAR UNA DINTRE CELE 3
+
+CREATE TABLE Detinuti(
+Did INT PRIMARY KEY IDENTITY, --identity este un autoincrement, iti pune el 1-2-3-4...7 in tabel ex identity(2:2) incepe de la 2 si sare de 2 in 2
+Nume VARCHAR(50),
+Varsta INT CHECK (Varsta > 0),
+ProfilPsihologic VARCHAR(50),
+Iid INT FOREIGN KEY REFERENCES Inchisori (Iid)) -- trebuiie sa-i spunem cu ce tabel se leaga si care e cheia primara din acel tabel
+
+CREATE TABLE Dosare(
+Did INT FOREIGN KEY REFERENCES Detinuti (Did),
+Cid INT FOREIGN KEY REFERENCES CapeteDeAcuzare(Cid),
+NrAni INT NOT NULL,
+CONSTRAINT pk_Dosare PRIMARY KEY (Did, Cid))
+
+CREATE TABLE Director(
+DirId INT FOREIGN KEY  REFERENCES Inchisori(Iid),
+Nume VARCHAR(50),
+TelefonMobil VARCHAR(30),
+CONSTRAINT pk_Directori PRIMARY KEY(DirId))
+

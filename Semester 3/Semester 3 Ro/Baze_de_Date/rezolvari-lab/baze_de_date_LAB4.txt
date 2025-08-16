@@ -1,0 +1,20 @@
+<--------------LABORATOR 4--------------->
+
+	10 interogari(doar 10 interogari in care sa includem pe celelalte)
+		-7 interogari sunt pe cel putin 3 tabele
+		-2 interogari sunt pe tabele aflate in relatia many-to-many
+--
+| Conditii: Nume LIKE 'A%'  (incepe cu A)
+|	  Nume LIKE '%A%' (contine in interior pe A)
+|	  Nume LIKE '%A'  (se sfarseste cu A)
+|	  Nume LIKE 'A_%' (incepe cu A si are cel putin 2 caractere)
+--
+		-2 interogari ce folosesc DISTINCT (daca avem 2 studenti cu nume Andrei, va afisa o singura data)
+
+GROUP BY - atunci cand vreau sa afisez corespunzator fiecarei grupe media notelor
+
+HAVING -conditie pentru functiile de agregare: COUNT, SUM, AVF, MIN, MAX
+
+Interogări bine documentate (ne aşteptăm la o descriere pe scurt a ceea ce face interogarea).
+ -ex: studentii cu nume care incepe cu litera A
+

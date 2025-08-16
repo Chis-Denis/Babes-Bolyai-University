@@ -1,0 +1,75 @@
+% R01
+
+
+lg([],0).
+lg([_|T],X):-
+	lg(T,X1),
+	X is X1 + 1.
+
+delN([],_,[]).
+% delN(L,0,L).
+delN([H|T],N,R):-
+	is_list(H),
+	N > 0,
+	lg(H,X),
+	X mod 2 =:= 0,!,
+	N1 is N - 1,
+	delN(T,N1,R).
+
+delN([H|T],N,[H|R]):-
+	delN(T,N,R).
+
+
+%lista subm de suma S
+subm1([L1|_],L1,[L1]).
+subm1([_|T],S,R):-subm(T,S,R).
+subm1([H|T],S,[H|R]):- S1 is S - H, S1 > 0, subm(T,S1,R).
+
+
+
+
+
+(defun inloc (l e k)
+	(cond
+		((and (eq k 0) (atom l)) e)
+		((and (atom l) (not(eq k 0))) l)
+		(t (mapcar #'(lambda (l) (inloc l e (- k 1)))l ))
+	)
+)
+
+(defun si (a)
+	(cond
+		((null a) t)
+		((atom a) a)
+		((listp a)(and (si(car a)) (si(cdr a))))
+	)
+)
+
+(defun nrs (l)
+	(cond
+		((and (numberp l) (eq (rem l 2)0)) t)
+		((numberp l)  nil)
+		((atom l) t) ; intra si (null l) aici
+		(t (mapcar #'si (nrs  l) ))
+	)
+)
+
+
+(defun numeric (l)
+	(cond
+		((null l) nil)
+		((numberp (car l)) (list(car l)))
+		((atom (car l)) (numeric (cdr l)))
+		(t (append (numeric (car l)) (numeric (cdr l))))
+	)
+)
+
+
+'(A 3 (B 2) (1 C 4) (D 2 (6 F)) ((G 4) 6))
+(defun main (l)
+	(cond
+		((atom l) 0)
+		((and (listp l) (evenp(car (numeric l))))  (+ 1 (apply #'+ (mapcar #'main  l))))
+		(t (apply #'+ (mapcar #'main  l)) )
+	)
+)

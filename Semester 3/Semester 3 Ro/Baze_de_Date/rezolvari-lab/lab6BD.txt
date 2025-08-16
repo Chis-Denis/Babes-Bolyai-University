@@ -1,0 +1,123 @@
+		Laborator 6
+
+VERSIUNE
+*Vid 
+Nr Versiune INT 0
+
+
+Versiune 1: modif tip coloana
+Versiune 2:adaug default
+Versiune 3:crearea tabela
+Versiune 4:adauga camp nou
+Versiune 5:creare constrangere foreign key
+
+v3,v4,v5 se pot lega. cream tabela, adaugam campul pe care creeam constrangerea
+
+
+Detinuti
+*Did
+Nume
+Prenume
+Varsta INT
+
+
+            V1:
+    ALTER TABLE Detinuti
+    ALTER COLUMN Varsta SMALL INT
+
+
+        iV1:(inversa lui V1)
+    ALTER TABLE Detinuti
+    ALTER COLUMN Varsta INT
+
+
+            V2:
+    ALTER TABLE Detinuti
+    ADD CONSTRAINT df_Detinuti DEFAULT -1 FOR Varsta
+
+            iV2:(inversa lui V2)
+    ALTER TABLE Detinuti
+    DROP CONSTRAINT df_Detinuti
+            
+            V3:
+    ALTER TABLE Regrete(
+    Rid INT PRIMARY KEY IDENTITY,
+    Motiv VARCHAR(50),
+    Intensitate INT)\
+
+        iV3:(inversa lui V3)
+    DROP TABLE Regrete
+
+        V4:
+    ALTER TABLE Regrete
+    ADD Manifestare VARCHAR(100)
+
+        iV4:
+    ALTER TABLE Regrete
+    DROP COLOUMN Manifestare
+
+        V5:
+    ALTER TABLE Regrete
+    ADD Did INT NOT NULL 
+    ALTER TABLE Regrete
+    ADD CONSTRAINT fk_Regrete FOREIGN KEY Did REFRENCES Detinuti(Did)
+
+        iV5(inversa lui V5)
+    ALTER TABLE Regrete
+    DROP CONSTRAINT fk_Regrete 
+    --am sters constrangerea, dar coloana ramane
+    ALTER TABLE Regrete
+    DROP COLOUMN Did
+
+
+foreign key- e de acelasi tip cu cheia primara, not null si are aceleasi valori
+
+
+Pentru fiecare dintre scripturile de mai sus scrieţi/generaţi un alt scriptcare implementează inversul operaţiei. De asemenea, creaţi o nouă tabelă care să memoreze versiunea structurii bazei de date (presupunând că acestă versiune este pur şi simplu un număr întreg).
+-fiecare bucata de cod scrisa mai sus se scrie intr-o procedura
+
+CREATE PROCEDURE V1 AS
+BEGIN
+.
+.(bucata de cod) - creaza procedura V1
+.
+END
+GO
+
+BEGIN/END - daca avem mai mult de o line de cod
+
+ca sa rulam procedura trebuie sa : EXEC V1
+
+Ca sa verificam daca procedura s-a executat cu succes, puten sa punem un print la finalul procedurii pentru a nu rula baza de date si a verifica in mai multe locuri daca s-a facut modificarea PRINT 'message'
+
+
+De asemenea, scrieţi o altă procedură stocată ce primeşte ca parametru un număr de versiune şi aduce baza de date la versiunea respectivă.
+
+ORICE PARAMETRU TREBUIE SA AIBA IN FATA @
+
+DECLARE @vers INT (declarare de variabila)
+SET @vers=1 (ii setam o valoare variabilei)
+
+
+CREATE PROCEDURE V1@vers int 
+.
+.
+.
+GO
+
+EXEC Main 9
+
+Prima data validam parametrul ( sa fie in intervalul care trebuie, sa nu fie un numar mai mare decat cate versiuni avem )
+
+EXEC Main 3(V1,V2,V3)
+-validam ca parametrul 3 sa fie corect
+-verificam ce versiune a bazei de date avem 
+-dupa ce executam codul pentru a ajunge la versiunea pe care o dorim
+-trebuie sa inlocuim in tabela Versiune(la versiune inlocuim 0 cu 3)
+-daca parametrul e acelasi cu versiunea actuala (facem un print)
+
+EXEC MAIN 2 
+-apelam iV3 (apelam inversa)
+
+IDEA E CA SA AVEM APROAPE ACELASI NUME LA TOATE PROCEDURILE(V1,V2,V3)
+SI CAND APELAM SA APELAM CU V+(STRING)i unde i=un contor 

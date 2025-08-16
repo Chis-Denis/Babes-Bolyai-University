@@ -1,0 +1,22 @@
+GO
+USE DB
+GO
+
+CREATE PROCEDURE aduga_(@@@)
+AS
+BEGIN
+    IF (EXISTS (SELECT * FROM WHERE =@ AND =@ ))
+    BEGIN
+        UPDATE SET
+        WHERE =@ AND =@
+    END
+    ELSE
+    BEGIN
+        INSERT INTO 
+        VALUES
+    END
+END
+
+SELECT * FROM 
+EXEC 
+SELECT * FROM

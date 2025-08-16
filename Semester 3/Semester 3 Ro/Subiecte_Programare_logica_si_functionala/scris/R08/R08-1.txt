@@ -1,0 +1,14 @@
+Bilet 8
+1. Se defineste functia G prin (DEFUN G(L)(+(CAR L)(CADR L))).
+   Pentru redenumirea functiei G se efectueaza (SETQ H`F)(SET H `G).
+   Ce se va obtine prin evaluarea formei (F` (2 3 4 5 6 ))?
+   Justificati si dati o solutie pt. o astfel de situatie.
+
+2. Sa se scrie un program LISP si sa se deduca complexitatea pt. urmat. cerinta.
+   Se da o lista liniara numerica si se cere sa se scrie de 2 ori elem-le din N in N.
+   De exemplu, pt. lista (1 2 3 4 5) si N=2 rezulta lista (1 2 2 3 4 4 5)
+
+3. Se da o lista neliniara. Sa se scrie un program LISP pt determinarea nr-lui de subliste de la 
+   orice nivel pt care nr-ul atomilor numerici de la orice nivel este impar
+- nivelul superficial al listei se considera 1. Prelucrarea se va face folosind o fctie MAP.
+  De exemplu, lista A( B 2)(1 C 4)(D 1 (9 F)((G 7)6)) are 3 astfel de liste (D 1 (9F)), (9 F),(G 7)

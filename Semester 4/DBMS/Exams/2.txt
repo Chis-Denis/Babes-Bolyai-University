@@ -1,0 +1,327 @@
+Question 1: Access paths for queries with one relation
+Your answer: 1 and 2 make sense, 3 and 4 you don't understand
+Correct answer: All four (1, 2, 3, 4) are valid access paths
+Explanation from Lecture 9:
+
+Single-index access path: Uses one index matching the selection condition
+Multiple-index access path: Uses intersection of RIDs from multiple indexes (when several indexes match different parts of the selection condition)
+Sorted index access path: Uses a clustered B+ tree index where GROUP BY attributes are a prefix of the search key, avoiding the need for sorting
+Index-only access path: All required attributes are included in the index key, so no need to retrieve actual tuples
+
+Similar question:
+Which access path would be most efficient for: SELECT Age FROM Students WHERE Age > 20 AND Name = 'John' given:
+
+Hash index on Name
+B+ tree index on Age
+Composite index on (Name, Age, StudentID)
+
+Question 2: Serial execution of transactions
+Your answer: 1 (database is in consistent state after execution)
+Correct answer: 1 is correct
+Explanation from Lecture 1:
+Serial execution guarantees consistency because each transaction is a correct program that preserves database consistency when executed in isolation.
+Follow-up question:
+Consider transactions T1 and T2 executing serially on a consistent database. T1 transfers $100 from account A to B. T2 adds 5% interest to all accounts. If initial balances are A=$1000, B=$2000:
+
+What are final balances after T1→T2?
+What are final balances after T2→T1?
+Are both outcomes consistent?
+
+Question 3: External merge sort runs
+Your answer: ⌈N/B⌉ is closest, adding 1 when N/B is not integer
+Correct answer: ⌈N/B⌉ sorted runs of B pages each (except the last one)
+Explanation from Lecture 7:
+Pass 0 uses all B buffer pages to read B pages at a time, sort them in memory, and write them as runs. This produces ⌈N/B⌉ runs.
+Similar question:
+A relation has 108 pages. With 5 buffer pages, external merge sort produces:
+
+How many runs in pass 0?
+What is the size of each run?
+How many passes total?
+
+Question 4: Join implementation techniques
+Your answer: 1, 4
+Correct answer: 1, 4 are correct
+Explanation from Lecture 6:
+
+Iteration techniques: Simple/Page-Oriented/Block Nested Loops Join
+Indexing techniques: Index Nested Loops Join
+Partitioning techniques: Sort-Merge Join, Hash Join
+
+Question 5: ACID
+Your answer: Atomicity, Consistency, Isolation, Durability
+Correct: Yes, from Lecture 1
+Question 6: Isolation levels and anomalies
+Your answer: 1, 2, 3, 4
+Correct answer: All are correct
+Explanation from Lecture 3:
+
+READ UNCOMMITTED: allows dirty reads, unrepeatable reads, phantoms
+READ COMMITTED: prevents dirty reads, allows unrepeatable reads, phantoms
+REPEATABLE READ: prevents dirty reads and unrepeatable reads, allows phantoms
+SERIALIZABLE: prevents all anomalies
+
+Question 7: ARIES Analysis phase
+Your answer: Don't know
+Correct answer: 1, 2, 3 are correct
+Explanation from Lecture 4:
+The Analysis phase:
+
+Reconstructs state at checkpoint (reads Transaction Table and Dirty Page Table from checkpoint)
+Scans log forward from checkpoint
+For each log record:
+
+End record: removes T from Transaction Table
+Other records: adds T if not present, updates lastLSN
+
+
+
+Transaction Table: Contains one entry per active transaction with fields: transID, status, lastLSN
+Dirty Page Table: Contains one entry per dirty page in buffer with fields: pageID, recLSN
+Similar questions:
+
+What information does the Analysis phase determine?
+How does ARIES handle a commit log record during Analysis?
+What is recLSN in the Dirty Page Table?
+
+Question 8: Main objectives of security
+Your answer: 2 and 3, but not sure
+Correct answer: 1 (Data transparency is NOT a main security objective)
+Explanation from Lecture 5:
+Main security objectives are:
+
+Security: Protecting data against unauthorized users
+Integrity: Protecting data against authorized users (ensuring correct operations)
+Availability: Ensuring data is accessible when needed
+
+Data transparency relates to distributed systems, not security.
+Question 9: Steal, no-force strategy
+Your answer: 1, don't know about 4
+Correct answer: 1 is correct, 4 is incorrect
+Explanation from Lecture 4:
+
+Steal: Pages can be written to disk before transaction commits
+No-force: Changes are not forced to disk when transaction commits
+This approach is used by most systems including ARIES
+Transactions must still maintain atomicity and durability (4 is false)
+
+Similar question:
+In a no-steal, force system:
+
+Can uncommitted changes be written to disk?
+Must all changes be written at commit time?
+Is recovery simpler or more complex?
+
+Question 10: Horizontal fragmentation
+Your answer: 2, 4
+Correct answer: 2, 4 are correct
+Explanation from Lecture 10:
+
+Horizontal fragmentation uses selection predicates
+Fragments are disjoint subsets of rows
+Reconstruction operator is UNION
+Vertical fragmentation uses projection and natural join
+
+Similar question:
+Given Employees(EID, Name, Dept, Salary), horizontally fragment by:
+
+Fragment 1: Dept='Sales'
+Fragment 2: Dept='IT'
+What query reconstructs the original relation?
+
+Question 11: Two-Phase Commit protocol
+Your answer: Don't know
+Correct answer: 1 is correct
+Explanation from Lecture 11:
+In 2PC:
+
+Coordinator sends prepare messages
+Subordinates vote yes/no
+If ANY subordinate votes no OR timeout occurs → coordinator aborts
+If ALL vote yes → coordinator commits
+
+The protocol ensures atomicity across distributed sites.
+Similar questions:
+
+What happens if coordinator fails after sending prepare?
+When can a subordinate unilaterally abort?
+What is the blocking problem in 2PC?
+
+Question 12: Data replication techniques
+Your answer: 1 and 3 are correct
+Correct answer: 1 and 3 are correct
+Explanation from Lecture 10:
+Synchronous replication:
+
+Voting
+Read-any write-all (must update all copies before commit)
+
+Asynchronous replication:
+
+Primary site replication
+Peer-to-peer replication
+
+Question 13: Distributed query with horizontal fragmentation
+Your answer: 1
+Correct answer: 1 is correct
+Explanation from Lecture 10:
+With A < 70 at Madrid and A >= 70 at Athens, the query WHERE A BETWEEN 50 AND 100 needs:
+
+Madrid: processes A BETWEEN 50 AND 69
+Athens: processes A BETWEEN 70 AND 100
+Union results
+
+Similar questions:
+
+If query is WHERE A = 85, where is it executed?
+If query is WHERE A < 30, where is it executed?
+Cost comparison: shipping data vs. shipping results?
+
+Question 14: Database access request
+Your answer: 1, 3, 4
+Correct answer: 1, 3, 4 are correct
+Explanation from Lecture 5:
+Access request components:
+
+Requesting user (who)
+Requested object (what)
+Requested operation (how)
+
+Question 15: Index matching conditions
+Your answer: Correct analysis
+Correct answer: 2, 3 are correct
+Explanation from Lectures 6-7:
+
+Hash index: requires equality on ALL attributes
+B+ tree: can use prefix of search key
+
+More index questions:
+
+Index <A,B,C>, which conditions match for hash vs B+ tree:
+
+A=5 AND C=10
+A>5 AND B=10
+A=5
+B=10
+
+
+
+Question 16: Simple two-way merge sort cost
+Your answer: Not sure about the formula
+Correct answer: 3: 2P(⌈log₂(P)⌉ + 1)
+Explanation from Lecture 6:
+
+3 buffer pages: 2 for input, 1 for output
+Number of passes: ⌈log₂(N)⌉ + 1
+Cost per pass: 2N (read + write)
+Total: 2N × (⌈log₂(N)⌉ + 1)
+
+Pass 0: Create N 1-page sorted runs
+Each subsequent pass: Merge pairs of runs
+Question 17: Left-deep trees
+Your answer: Don't know where this is from
+Correct answer: 4 (right child of each join node is base relation)
+Explanation from Lecture 9:
+System R considers only left-deep trees where:
+
+Right child is always a base relation
+Allows full pipelining
+Reduces search space
+
+Question 18: SQL injection prevention
+Your answer: 1, 2, 3
+Correct answer: All are correct
+Explanation from Lecture 5:
+Prevention methods include data validation, parameterized statements, and escaping special characters.
+Question 19: Concurrent transaction execution result
+Your answer: 4
+Correct answer: 4 is correct
+Explanation: This defines serializability from Lecture 1.
+Question 20: Strict 2PL protocol
+Your answer: 2, 4
+Correct answer: 2, 4 are correct
+Explanation from Lecture 3:
+
+Strict 2PL: All locks released at transaction end
+Regular 2PL: Can release during execution but cannot acquire new locks after first release
+
+Question 21: REDO phase of ARIES
+Your answer: 2
+Correct answer: 2 is correct
+Explanation from Lecture 4:
+
+REDO: Repeats history, brings DB to crash state
+UNDO: Removes effects of uncommitted transactions
+Analysis: Identifies what to redo/undo
+
+Question 22: Vertical fragmentation
+Your answer: 1, 3
+Correct answer: 1, 3 are correct
+Explanation from Lecture 10:
+Uses projection operators and natural join for reconstruction.
+Question 23: Primary site replication
+Your answer: 2, 3
+Correct answer: 2, 3 are correct
+Explanation from Lecture 10:
+
+Primary copy is master, changes propagate to secondaries
+Capture step can use log-based or procedural capture
+Log contains update records of committed transactions
+
+Question 24: Choosing algorithm for relational operator
+Your answer: All
+Correct answer: All are correct
+Explanation: From Lectures 6-8, all factors affect algorithm choice.
+Question 25: Index matching with <a,b>
+Your answer: 1, 3, 4
+Correct answer: 1, 4 are correct (3 is wrong - extra attributes)
+Question 26: Query cost estimation
+Cannot determine without more context about relation R and statistics
+Question 27: Undoing update log record
+Correct answer: 3 (compensation log record)
+Explanation from Lecture 4:
+CLR contains undoNextLSN field pointing to next record to undo.
+Question 28: Algorithms using indexing
+Your answer: 2
+Correct answer: 2 is correct
+Question 29: System catalog contents
+Correct answer: 1, 2, 4
+Explanation from Lecture 9:
+Catalog maintains: NTuples(R), NPages(R), NKeys(I), INPages(I), IHeight(I), ILow(I), IHigh(I)
+Question 30: Query block
+Correct answer: All are correct
+Explanation from Lecture 8:
+Query block has exactly one SELECT and FROM, at most one WHERE, GROUP BY, HAVING.
+Question 31: Reduction factor for Age=30
+Correct answer: 3: 1/NKeys(I)
+Explanation from Lecture 9:
+With index on column and equality condition, RF ≈ 1/NKeys(I).
+Question 32: Phantom deadlocks
+Your answer: 4 feels right
+Correct answer: 2, 4 are correct
+Explanation from Lecture 11:
+Phantom deadlocks are false positives due to delays in propagating local waits-for graphs.
+Question 33: Relational algebra properties
+Correct answer: 1, 2, 3
+Explanation from Lecture 9:
+Cross-product and join are both associative and commutative.
+Question 34: Replication of horizontal fragments
+Correct answer: 5 (None of the above)
+Explanation: Any fragment can be replicated independently.
+Question 35: Selectivity measurement
+Your answer: 3
+Correct answer: 3 (pages)
+Explanation from Lecture 6:
+Selectivity = number of pages retrieved.
+Question 36: Centralized distributed deadlock detection
+Correct answer: 1, 2
+Explanation from Lecture 11:
+Single site builds global waits-for graph; phantom deadlocks possible.
+Questions 37-39: Already well understood by you.
+Additional practice questions I recommend:
+
+Recovery: If system crashes during UNDO phase, what happens on restart?
+Isolation levels: Transaction T1 reads A=100, T2 updates A to 200 and commits. If T1 reads A again under different isolation levels, what values are possible?
+Join costs: Compare costs of different join algorithms for R(1000 pages) ⋈ S(100 pages) with 52 buffer pages.
+2PC: Draw the message flow diagram for successful commit with 1 coordinator and 2 subordinates.
+External sort: Why is B-1 used for merging in external merge sort instead of B?

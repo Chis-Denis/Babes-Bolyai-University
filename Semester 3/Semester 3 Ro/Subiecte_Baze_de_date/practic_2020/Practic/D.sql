@@ -1,0 +1,11 @@
+GO
+USE DB
+GO
+
+CREATE FUNCTION functie(@)
+RETURNS TABLE AS
+    RETURN
+        ***
+GO
+
+SELECT * FROM 

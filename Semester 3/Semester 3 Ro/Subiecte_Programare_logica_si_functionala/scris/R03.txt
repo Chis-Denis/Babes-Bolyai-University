@@ -1,0 +1,113 @@
+%R03
+
+add([],E,Poz,Poz,[E]).
+add([],_,_,_,[]).
+add([H|T],E,Poz,Pow,[H|R]):-
+	Poz < Pow,!,
+	Poz1 is Poz + 1,
+	add(T,E,Poz1,Pow,R).
+add([H|T],E,Poz,Poz,[H,E|R]):-
+	Pow1 is Poz * 2,
+	Poz1 is Poz + 1,
+	add(T,E,Poz1,Pow1,R).
+
+% add([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],-11,1,2,X),write(X).
+
+insert(E,T,[E|T]).
+insert(E,[H|T],[H|R]):-insert(E,T,R).
+
+perm([],[]).
+perm([H|T],R1):-
+	perm(T,R),
+	insert(H,R,R1).
+
+permBune(N,X):-
+	N1 is N - 1,
+	gen(N1,N,L),
+	perm(L,X),
+	verif(X).
+
+%gen(ind,elAct,Rez)
+gen(0,E,[E]):-!.
+gen(I,E,[E|R]):-
+	I > 0,!,
+	I1 is I - 1,
+	E1 is E + 1,
+	gen(I1,E1,R).
+
+verif([]).
+verif([_]).
+verif([H1,H2|T]):-
+	abs(H1 - H2) =< 2,
+	verif([H2|T]).
+
+
+
+
+
+
+
+
+;(defun f(l)
+;	(cond
+;		((atom l) -1)
+;		((> (f (car l)) 0) (+ (car l)(f (car l)) (f (cdr l))))
+;		(t (f (cdr l)))
+;	)
+;)
+
+; (defun ff(l)
+	; (cond
+		; ((atom l) -1)
+		; (t   (lambda (v) 
+		; (cond 
+			; ((> v 0)  (+ (car l) v (f (cdr l))) )
+			; (t (f (cdr l)))
+		; )
+		; )(ff (car l))   )
+	; )
+; )
+
+(defun ff(l)
+	((lambda (v)
+		(cond
+			((atom l) -1)
+			((> v 0)  (+ (car l) v (f (cdr l))) )
+			(t (f (cdr l)))
+		
+		))
+	(ff (car l))
+	)
+)
+
+
+
+
+(defun inloc0(l n)
+	(cond
+		((and (eq n -1) (atom l)) 0)
+		((and (not(eq n -1)) (atom l)) l)
+		(t (mapcar #'(lambda (l) (inloc0 l (- n 1)))l)) 
+	)
+)
+
+
+
+; ( solve '(A 3 (B 2) (1 C 4) (D 2 (6 F)) ((G 4) 6)) 0) - este decalat cu 1 nivelul (=> mai facem un wrapper)
+;mapcarul
+(defun minniv (l)
+	(cond
+		((null l) 999999)
+		((numberp (car l)) (min (car l)(minniv (cdr l))))
+		(t (minniv (cdr l)))
+	)
+)
+
+
+(defun solve (l niv)
+	(cond
+		((atom l) 0)
+		((and (oddp niv) (evenp (minniv l))) (+ 1 (apply #'+ (mapcar #'(lambda (l) (solve l (+ 1 niv)))l))))
+		(t (apply #'+ (mapcar #'(lambda (l) (solve l (+ 1 niv)))l)))
+	)
+)

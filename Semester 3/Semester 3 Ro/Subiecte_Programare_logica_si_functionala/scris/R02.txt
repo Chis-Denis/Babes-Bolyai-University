@@ -1,0 +1,98 @@
+%R02
+
+% f([],-1).
+% f([H|T],S):-f(T,S1),S1>0,!,S is S1+H.
+% f([_|T],S):-f(T,S1),S is S1.
+
+f([],-1).
+f([H|T],S):-f(T,S1),aux(H,S1,S).
+
+aux(H,S1,S):-S1>0,!,S is S1+H.
+aux(_,S,S).
+
+
+%2
+%transf lista -> multime
+find([E|_],E):-!.
+find([_|T],E):-find(T,E).
+
+toset([],[]).
+toset([H|T],[H|R]):-
+	not(find(T,H)),!,
+	toset(T,R).
+toset([_|T],R):-
+	toset(T,R).
+
+
+toset1([],C,C).
+toset1([H|T],C,R):-
+	not(find(T,H)),!,
+	C1 = [H|C],
+	toset1(T,C1,R).
+toset1([_|T],C,R):-
+	toset1(T,C,R).
+
+
+insert(E,T,[E|T]).
+insert(E,[H|T],[H|R]):-insert(E,T,R).
+
+aranj([E|_],E,1,[E]).
+aranj([_|T],E,K,R):-aranj(T,E,K,R).
+aranj([H|T],P,K,R1):-
+	P mod H =:= 0,
+	K > 1,
+	K1 is K - 1,
+	P1 is P div H,
+	aranj(T,P1,K1,R),
+	insert(H,R,R1).
+
+
+
+
+
+
+
+
+
+
+
+;inloc val numerice cu succesorul.
+
+(defun inloc (l)
+	(cond
+		((null l) nil)
+		((and (numberp (car l)) (evenp (car l))) (cons (+(car l) 1) (inloc (cdr l))))
+		((listp (car l)) (cons (inloc (car l)) (inloc (cdr l)) ))
+		(t (cons (car l) (inloc (cdr l))))
+	)
+)
+
+(defun inloc1 (l)
+	(cond
+		((and (numberp l) (evenp l)) (+ l 1))
+		((atom l) l)
+		(t (mapcar #'inloc1 l))
+	)
+)
+
+
+;mapcarul
+(defun maxniv (l)
+	(cond
+		((null l) 0)
+		((numberp (car l)) (max (car l)(maxniv (cdr l))))
+		(t (maxniv (cdr l)))
+	)
+)
+
+
+(defun solve (l niv)
+	(cond
+		((atom l) 0)
+		((and (oddp niv) (evenp (maxniv l))) (+ 1 (apply #'+ (mapcar #'(lambda (l) (solve l (+ 1 niv)))l))))
+		(t (apply #'+ (mapcar #'(lambda (l) (solve l (+ 1 niv)))l)))
+	)
+)
+
+
+
