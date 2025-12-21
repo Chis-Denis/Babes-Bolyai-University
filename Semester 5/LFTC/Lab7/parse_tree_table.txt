@@ -1,0 +1,45 @@
+Parse Tree Table (Father/Sibling Relations)
+======================================================================
+
+Node     Symbol                    Father   Sibling  Production
+----------------------------------------------------------------------
+1        Program                   0        0        0         
+2        StmtList                  1        0        1         
+3        StmtList                  2        4        1         
+4        Stmt                      2        0        3         
+5        DeclStmt                  4        0        10        
+6        DeclTail                  5        7        11        
+7        id                        5        8        -         
+8        Type                      5        0        13        
+9        int                       8        0        -         
+10       Expr                      6        11       26        
+11       =                         6        0        -         
+12       ExprRest                  10       13       29        
+13       Term                      10       0        30        
+14       TermRest                  13       15       33        
+15       Power                     13       0        34        
+16       PowerRest                 15       17       38        
+17       Factor                    15       0        40        
+18       const                     17       0        -         
+19       epsilon                   16       0        -         
+20       epsilon                   14       0        -         
+21       epsilon                   12       0        -         
+22       StmtList                  3        23       -         
+23       Stmt                      3        0        3         
+24       DeclStmt                  23       0        10        
+25       DeclTail                  24       26       11        
+26       id                        24       27       -         
+27       Type                      24       0        13        
+28       int                       27       0        -         
+29       Expr                      25       30       26        
+30       =                         25       0        -         
+31       ExprRest                  29       32       -         
+32       Term                      29       0        30        
+33       TermRest                  32       34       -         
+34       Power                     32       0        34        
+35       PowerRest                 34       36       -         
+36       Factor                    34       0        40        
+37       const                     36       0        -         
+
+======================================================================
+Total nodes: 37

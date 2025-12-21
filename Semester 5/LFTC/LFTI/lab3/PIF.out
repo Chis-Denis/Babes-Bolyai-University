@@ -1,0 +1,34 @@
+atribuie - (keyword)
+= - (delimiter)
+CONST(72) -> bucket 150
+; - (delimiter)
+atribuie - (keyword)
+ID(y) -> bucket 121
+= - (delimiter)
+CONST(87) -> bucket 176
+; - (delimiter)
+ID(atribu) -> bucket 191
+ID(suma) -> bucket 65
+= - (delimiter)
+ID(x) -> bucket 120
++ - (operator)
+ID(y) -> bucket 121
+; - (delimiter)
+dezvaluie - (keyword)
+( - (delimiter)
+ID(suma) -> bucket 65
+) - (delimiter)
+; - (delimiter)
+daca - (keyword)
+( - (delimiter)
+ID(suma) -> bucket 65
+> - (operator)
+CONST(10) -> bucket 22
+) - (delimiter)
+atunci - (keyword)
+dezvaluie - (keyword)
+( - (delimiter)
+ID(x) -> bucket 120
+) - (delimiter)
+; - (delimiter)
+gata - (keyword)

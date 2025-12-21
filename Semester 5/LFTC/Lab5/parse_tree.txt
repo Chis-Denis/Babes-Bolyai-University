@@ -1,0 +1,67 @@
+Program
+  StmtList
+    Stmt
+      DeclStmt
+        Type [int:int]
+        id [id:a]
+        Expr
+          Term
+            Power
+              Factor
+                const [const:5]
+    Stmt
+      DeclStmt
+        Type [int:int]
+        id [id:b]
+        Expr
+          Term
+            Power
+              Factor
+                const [const:10]
+    Stmt
+      OutputStmt
+        Expr
+          Term
+            Power
+              Factor
+                const [const:"GCD:"]
+    Stmt
+      ExprStmt
+        Expr
+          Term
+            Power
+              Factor
+                id [id:a]
+              op [^^:^^]
+              Factor
+                id [id:b]
+    Stmt
+      IfStmt
+        Cond
+          Expr
+            Term
+              Power
+                Factor
+                  id [id:a]
+          cmp [>:>]
+          Expr
+            Term
+              Power
+                Factor
+                  id [id:b]
+        StmtList
+          Stmt
+            OutputStmt
+              Expr
+                Term
+                  Power
+                    Factor
+                      const [const:"A is greater"]
+        StmtList
+          Stmt
+            OutputStmt
+              Expr
+                Term
+                  Power
+                    Factor
+                      const [const:"B is greater or equal"]

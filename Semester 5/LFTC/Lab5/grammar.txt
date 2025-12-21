@@ -1,0 +1,53 @@
+# Grammar (factorized for predictive parsing)
+# Terminals are keywords/operators from Lab4/tokens.txt plus id, const
+# Nonterminals are Capitalized names. ε = epsilon
+
+Program       -> StmtList
+StmtList      -> Stmt StmtList | ε
+
+Stmt          -> DeclStmt
+              | AssignStmt
+              | InputStmt
+              | OutputStmt
+              | IfStmt
+              | WhileStmt
+              | ExprStmt
+
+DeclStmt      -> Type id DeclTail
+DeclTail      -> = Expr | ε
+Type          -> int | str | char | array<int> | array<str>
+
+AssignStmt    -> id = Expr
+InputStmt     -> INPUT id
+OutputStmt    -> OUTPUT Expr
+
+IfStmt        -> IF Cond THEN StmtList ElsePart END
+ElsePart      -> ELSE StmtList | ε
+
+WhileStmt     -> WHILE Cond DO StmtList END
+
+ExprStmt      -> Expr
+
+# Expressions: precedence and left-assoc via factoring
+Expr          -> Term ExprRest
+ExprRest      -> AddOp Term ExprRest | ε
+AddOp         -> + | -
+
+Term          -> Power TermRest
+TermRest      -> MulOp Power TermRest | ε
+MulOp         -> * | /
+
+Power         -> Factor PowerRest
+PowerRest     -> PowOp Factor PowerRest | ε
+PowOp         -> ^^ | %% | @@
+
+Factor        -> id | const | ( Expr ) | ArrayAccess | FuncCall
+ArrayAccess   -> id [ Expr ]
+FuncCall      -> id ( ArgListOpt )
+ArgListOpt    -> ArgList | ε
+ArgList       -> Expr ArgTail
+ArgTail       -> , Expr ArgTail | ε
+
+Cond          -> Expr CmpOp Expr
+CmpOp         -> = | != | > | < | >= | <=
+

@@ -1,0 +1,70 @@
+program ::= statement_list | epsilon
+statement_list ::= statement statement_list | statement
+statement ::= decl_stmt 
+            | assign_stmt 
+            | input_stmt 
+            | output_stmt 
+            | if_stmt 
+            | while_stmt 
+            | def_stmt 
+            | return_stmt 
+            | expr_stmt
+
+
+decl_stmt ::= type identifier decl_tail
+decl_tail ::= "=" expression | epsilon
+
+type ::= "int" | "str" | "char" | "array<int>" | "array<str>"
+assign_stmt ::= identifier "=" expression
+
+input_stmt ::= "INPUT" identifier
+output_stmt ::= "OUTPUT" expression
+if_stmt ::= "IF" condition "THEN" statement_list else_part "END"
+else_part ::= "ELSE" statement_list | epsilon
+while_stmt ::= "WHILE" condition "DO" statement_list "END"
+
+def_stmt ::= "DEF" identifier "(" parameters_opt ")" "BEGIN" statement_list "END"
+parameters_opt ::= parameters | epsilon
+parameters ::= identifier parameters_tail
+parameters_tail ::= "," identifier parameters_tail | epsilon
+
+return_stmt ::= "RETURN" expression
+
+
+expr_stmt ::= expression
+expression ::= term expression_rest
+expression_rest ::= operator term expression_rest | epsilon
+term ::= identifier 
+       | number 
+       | string 
+       | char_literal 
+       | array_access 
+       | "(" expression ")" 
+       | function_call
+
+function_call ::= identifier "(" arguments_opt ")"
+arguments_opt ::= arguments | epsilon
+arguments ::= expression arguments_tail
+arguments_tail ::= "," expression arguments_tail | epsilon
+
+array_access ::= identifier "[" expression "]"
+
+condition ::= expression comparison_op expression
+operator ::= "+" | "-" | "*" | "/" | "^^" | "%%" | "@@"
+comparison_op ::= "=" | "!=" | ">" | "<" | ">=" | "<="
+
+
+identifier ::= letter identifier_tail
+identifier_tail ::= letter | digit | "_" | epsilon
+
+number ::= digit number_tail | digit
+number_tail ::= digit number_tail | epsilon
+
+string ::= '"' char_seq '"'
+char_seq ::= char char_seq | epsilon
+
+char_literal ::= "'" char "'"
+char ::= letter | digit | symbol
+symbol ::= "+" | "-" | "*" | "/" | " " | "_" | "@" | "%" | "^"
+letter ::= "A" | "B" | ... | "Z" | "a" | "b" | ... | "z"
+digit ::= "0" | "1" | ... | "9"

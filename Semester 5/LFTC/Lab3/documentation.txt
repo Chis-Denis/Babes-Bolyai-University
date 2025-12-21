@@ -1,0 +1,61 @@
+Lab 3 – Lexical Analysis for the Math Computation DSL
+
+1. Objective
+------------
+The final solution produces both lexical analysis results (PIF, ST) and a working hash table
+implementation for efficient symbol storage.
+
+
+2. Tools and Environment
+------------------------
+ - **Programming Language (Lexical Analyzer):** Python 3.12
+ - **Programming Language (Symbol Table):** C
+ - **Environment:** Visual Studio Code on Windows 10
+ - **Token Detection:** Python regular expressions (regex)
+ - **Data Structure (ST):** Hash Table with separate chaining (linked lists)
+
+
+3. Lexical Analysis Implementation
+----------------------------------
+The lexical analyzer (lexer.py) performs token classification based on predefined keywords, 
+operators, and separators stored in *tokens.txt*. Each token read from the source program is 
+matched against regex patterns for identifiers and constants.
+
+**Regex patterns used:**
+ - Identifier:  `^[a-zA-Z_][a-zA-Z0-9_]*$`
+ - Integer constant:  `^[0-9]+$`
+ - String constant:  `^\"[^\"]*\"$`
+ - Char constant:  `^'.'$`
+
+**File inputs and outputs:**
+ - Input files:
+     - `tokens.txt` – fixed tokens (keywords, operators, delimiters)
+     - `program.txt` – source program written in the Math Computation DSL
+ - Output files:
+     - `PIF.txt` – Program Internal Form
+     - `ST.txt` – Symbol Table
+     - `Errors.txt` – Lexical errors
+
+**Program Internal Form (PIF):**
+Each entry contains:
+ - the token itself (or its generic category: id / const)
+ - an index (–1 for reserved tokens, index in ST for identifiers/constants)
+
+**Symbol Table (ST):**
+Two internal dictionaries store:
+ - identifiers (variable names, function names)
+ - constants (numeric, string, or character values)
+
+**Error Detection:**
+Invalid or unknown tokens are written to `Errors.txt`, including line numbers.
+
+Example detected lexical errors:
+
+
+These occur when multi-word strings are not enclosed properly, which demonstrates correct
+error handling behavior by the lexer.
+
+
+4. Example Execution
+--------------------
+**Source (program.txt):**

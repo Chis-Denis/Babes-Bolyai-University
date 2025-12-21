@@ -1,0 +1,36 @@
+LET
+atribuie x = 10;
+atribuie y = x * 3;
+
+PRINT
+dezvaluie(x);
+
+FOR
+gogoasa i de_la 1 pana_la 10 fa
+    dezvaluie(i);
+gata
+
+IF
+daca (y > 23) atunci
+    dezvaluie(y);
+gata
+
+MEAN
+medie(x, y, z);
+
+
+
+atribuie a = 1;
+atribuie b = 2;
+atribuie c = 3;
+
+medie(a, b, c);
+
+gogoasa i de_la 1 pana_la 3 fa
+    atribuie val = i * 2;
+    dezvaluie(val);
+gata
+
+daca (c / a > 2) atunci
+    dezvaluie(c);
+gata

@@ -1,0 +1,37 @@
+Derivation Sequence
+==========================================
+
+  1. Factor -> NUMBER
+  2. Term -> Factor
+  3. Expr -> Term
+  4. AssignStmt -> ATRIBUIE ID ASSIGN Expr SEMICOLON
+  5. Stmt -> AssignStmt
+  6. StmtList -> Stmt
+  7. Factor -> ID
+  8. Term -> Factor
+  9. Factor -> NUMBER
+ 10. Term -> Term MULT Factor
+ 11. Expr -> Term
+ 12. AssignStmt -> ATRIBUIE ID ASSIGN Expr SEMICOLON
+ 13. Stmt -> AssignStmt
+ 14. StmtList -> StmtList Stmt
+ 15. PrintStmt -> DEZVALUIE OPEN_PAREN ID CLOSE_PAREN SEMICOLON
+ 16. Stmt -> PrintStmt
+ 17. StmtList -> StmtList Stmt
+ 18. Factor -> ID
+ 19. Term -> Factor
+ 20. Expr -> Term
+ 21. CmpOp -> GT
+ 22. Factor -> NUMBER
+ 23. Term -> Factor
+ 24. Expr -> Term
+ 25. Cond -> Expr CmpOp Expr
+ 26. PrintStmt -> DEZVALUIE OPEN_PAREN ID CLOSE_PAREN SEMICOLON
+ 27. Stmt -> PrintStmt
+ 28. StmtList -> Stmt
+ 29. IfStmt -> DACA OPEN_PAREN Cond CLOSE_PAREN ATUNCI StmtList GATA
+ 30. Stmt -> IfStmt
+ 31. StmtList -> StmtList Stmt
+ 32. Program -> StmtList
+
+Total: 32 productions

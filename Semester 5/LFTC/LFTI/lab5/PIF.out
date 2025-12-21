@@ -1,0 +1,85 @@
+atribuie - (keyword)
+ID(x) -> bucket 120
+= - (delimiter)
+CONSTANT(5) -> bucket 53
+; - (delimiter)
+atribuie - (keyword)
+ID(y) -> bucket 121
+= - (delimiter)
+CONSTANT(8) -> bucket 56
+; - (delimiter)
+atribuie - (keyword)
+ID(suma) -> bucket 65
+= - (delimiter)
+ID(x) -> bucket 120
++ - (operator)
+ID(y) -> bucket 121
+; - (delimiter)
+dezvaluie - (keyword)
+( - (delimiter)
+ID(suma) -> bucket 65
+) - (delimiter)
+; - (delimiter)
+daca - (keyword)
+( - (delimiter)
+ID(suma) -> bucket 65
+> - (operator)
+CONSTANT(10) -> bucket 22
+) - (delimiter)
+atunci - (keyword)
+dezvaluie - (keyword)
+( - (delimiter)
+ID(x) -> bucket 120
+) - (delimiter)
+; - (delimiter)
+gata - (keyword)
+CONSTANT(13) -> bucket 25
+CONSTANT(5) -> bucket 53
+atribuie - (keyword)
+ID(a) -> bucket 97
+= - (delimiter)
+CONSTANT(1) -> bucket 49
+; - (delimiter)
+atribuie - (keyword)
+ID(b) -> bucket 98
+= - (delimiter)
+CONSTANT(2) -> bucket 50
+; - (delimiter)
+atribuie - (keyword)
+ID(c) -> bucket 99
+= - (delimiter)
+ID(a) -> bucket 97
+; - (delimiter)
+gogoasa - (keyword)
+ID(i) -> bucket 105
+de_la - (keyword)
+CONSTANT(1) -> bucket 49
+pana_la - (keyword)
+CONSTANT(3) -> bucket 51
+fa - (keyword)
+atribuie - (keyword)
+ID(val) -> bucket 167
+= - (delimiter)
+ID(i) -> bucket 105
+* - (operator)
+CONSTANT(2) -> bucket 50
+; - (delimiter)
+dezvaluie - (keyword)
+( - (delimiter)
+ID(val) -> bucket 167
+) - (delimiter)
+; - (delimiter)
+gata - (keyword)
+medie - (keyword)
+( - (delimiter)
+ID(a) -> bucket 97
+, - (delimiter)
+ID(b) -> bucket 98
+, - (delimiter)
+ID(c) -> bucket 99
+) - (delimiter)
+; - (delimiter)
+CONSTANT(2) -> bucket 50
+CONSTANT(4) -> bucket 52
+CONSTANT(6) -> bucket 54
+CONSTANT(2) -> bucket 50

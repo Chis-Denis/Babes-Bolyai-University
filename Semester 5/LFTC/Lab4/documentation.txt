@@ -1,0 +1,234 @@
+Lab 4 – Finite Automata and Regular Grammars
+=============================================
+
+1. Objective
+------------
+For the domain-specific programming language from Lab 1, define Finite Automata (FA) 
+and Regular Grammars (RG) for identifiers and constants, and implement the transformation 
+from RG to FA using Theorem 1. Replace the regex-based recognition in Lab 3 with 
+FA-based recognition.
+
+
+2. Regular Grammar Definitions
+------------------------------
+
+2.1 Identifier Grammar
+----------------------
+Based on Lab 1 BNF:
+    identifier ::= letter identifier_tail
+    identifier_tail ::= letter | digit | "_" | epsilon
+
+Regular Grammar (right-linear form):
+    G₁ = (N, Σ, P, S)
+    where:
+    - N = {S, A} (non-terminals)
+    - Σ = {a-z, A-Z, 0-9, _} (letters, digits, underscore)
+    - S = S (start symbol)
+    - P (productions):
+        S -> aA | bA | ... | zA | A_ | B_ | ... | Z_ | _
+        A -> aA | bA | ... | zA | 0A | ... | 9A | _A
+    
+    In simplified form:
+        S -> letter A | _
+        A -> letter A | digit A | _A
+    
+    This grammar generates all valid identifiers that start with a letter or underscore,
+    followed by zero or more letters, digits, or underscores.
+
+
+2.2 Integer Constant Grammar
+----------------------------
+Based on Lab 1 BNF:
+    number ::= digit number_tail | digit
+    number_tail ::= digit number_tail | epsilon
+
+Regular Grammar (right-linear form):
+    G₂ = (N, Σ, P, S)
+    where:
+    - N = {S, A} (non-terminals)
+    - Σ = {0-9} (digits)
+    - S = S (start symbol)
+    - P (productions):
+        S -> 0A | 1A | ... | 9A
+        A -> 0A | 1A | ... | 9A
+    
+    In simplified form:
+        S -> digit A
+        A -> digit A
+    
+    This grammar generates all non-negative integer constants consisting of one or 
+    more digits.
+
+
+3. Finite Automaton Construction (Theorem 1)
+-------------------------------------------
+
+Theorem 1 states: "For any regular grammar G=(N, Σ, P, S) there exists a FA 
+M=(Q, Σ, δ, q₀, F) such that L(G) = L(M)."
+
+Construction rules:
+    - Q = N ∪ {K}, where K ∉ N (add one final state)
+    - q₀ = S (initial state is the start symbol)
+    - F = {K} ∪ {S | if S → ε ∈ P}
+    - Transitions:
+      * if A → aB ∈ P then δ(A, a) = B
+      * if A → a ∈ P then δ(A, a) = K
+
+
+3.1 Identifier Automaton (M₁)
+---------------------------
+Constructed from G₁ using Theorem 1:
+
+    M₁ = (Q₁, Σ₁, δ₁, q₀₁, F₁)
+    
+    Q₁ = {S, A, K}  (states from grammar + final state K)
+    Σ₁ = {a-z, A-Z, 0-9, _}
+    q₀₁ = S
+    
+    Transitions (δ₁):
+        For all letters: δ(S, letter) = A
+        For underscore: δ(S, _) = A
+        For all letters: δ(A, letter) = A
+        For all digits: δ(A, digit) = A
+        For underscore: δ(A, _) = A
+    
+    F₁ = {A, K}  (states that can accept)
+    
+    Note: A is a final state because once we read at least one character,
+    we can accept the identifier. K would be for terminal productions,
+    but we handle this by making A final.
+
+
+3.2 Integer Constant Automaton (M₂)
+-----------------------------------
+Constructed from G₂ using Theorem 1:
+
+    M₂ = (Q₂, Σ₂, δ₂, q₀₂, F₂)
+    
+    Q₂ = {S, A, K}  (states from grammar + final state K)
+    Σ₂ = {0-9}
+    q₀₂ = S
+    
+    Transitions (δ₂):
+        For all digits: δ(S, digit) = A
+        For all digits: δ(A, digit) = A
+    
+    F₂ = {A, K}  (A is final, allowing acceptance after reading digits)
+    
+    Note: A is final because we need at least one digit for a valid integer.
+
+
+4. Implementation
+------------------
+
+4.1 Finite Automaton Class
+-------------------------
+Implemented in `finite_automata.py`:
+
+    class FiniteAutomaton:
+        - Q: set of states
+        - Sigma: alphabet
+        - delta: transition function (dict)
+        - q0: initial state
+        - F: set of final states
+        
+        def accepts(string):
+            Simulates the FA on the input string
+            Returns True if string is accepted, False otherwise
+
+
+4.2 Conversion Functions
+-----------------------
+    rg_to_fa_identifier():
+        - Constructs FA M₁ from identifier grammar
+        - Returns FiniteAutomaton object
+    
+    rg_to_fa_integer():
+        - Constructs FA M₂ from integer grammar
+        - Returns FiniteAutomaton object
+
+
+4.3 Integration with Lab 3 Lexer
+--------------------------------
+Modified lexer in `lexer_fa.py`:
+    - Imports automata from finite_automata.py
+    - Replaces re.match() calls with FA.accepts() calls
+    - Functions replaced:
+      * is_valid_identifier(token) - uses FA_IDENTIFIER
+      * is_valid_integer(token) - uses FA_INTEGER
+
+
+5. Testing and Verification
+---------------------------
+
+5.1 Unit Tests
+-------------
+Tested both automata with various inputs:
+
+Identifier Automaton (M₁):
+    ✓ "x" → ACCEPT
+    ✓ "variable" → ACCEPT
+    ✓ "var123" → ACCEPT
+    ✓ "_underscore" → ACCEPT
+    ✗ "0invalid" → REJECT (starts with digit)
+    ✗ "var-able" → REJECT (contains invalid char)
+
+Integer Automaton (M₂):
+    ✓ "0" → ACCEPT
+    ✓ "123" → ACCEPT
+    ✓ "999" → ACCEPT
+    ✗ "abc" → REJECT (contains letters)
+    ✗ "12a" → REJECT (contains letter)
+
+
+5.2 Integration Test
+-------------------
+Tested complete lexer on program.txt from Lab 3:
+    - Output ST.txt matches Lab 3 exactly
+    - Output PIF.txt matches Lab 3 exactly
+    - Same error detection as Lab 3
+    
+Result: ✓ FA-based lexer produces identical output to regex-based lexer
+
+
+6. Results and Deliverables
+---------------------------
+
+6.1 Source Code
+--------------
+- finite_automata.py: FA class and conversion functions
+- lexer_fa.py: Modified lexer using FA instead of regex
+- All files compile and run successfully
+
+
+6.2 Functionality
+-----------------
+✓ Defined Regular Grammars for identifiers and integer constants
+✓ Implemented Theorem 1 transformation (RG → FA)
+✓ Implemented FA simulation to check string acceptance
+✓ Successfully replaced regex checks with FA in lexer
+✓ Verified output matches Lab 3 lexer results
+
+
+6.3 Key Achievement
+------------------
+The implementation successfully demonstrates the equivalence between:
+    - Regular expressions (used in Lab 3)
+    - Regular grammars (defined for Lab 4)
+    - Finite automata (implemented for Lab 4)
+
+All three formalisms recognize the same languages for identifiers and integers,
+proving the theoretical concepts from the course in practice.
+
+
+7. References
+------------
+- Lab 1: Math Computation DSL BNF definition
+- Lab 3: Regex-based lexical analysis
+- Course material: Theorem 1 (RG to FA conversion)
+- Formal Languages & Compiler Design, S. Motogna
+
+
+---
+End of Documentation
+

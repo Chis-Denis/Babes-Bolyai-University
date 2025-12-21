@@ -1,0 +1,220 @@
+Math Computation DSL - Use Case and Choice of Statements
+
+
+Overview
+The Math Computation DSL is a domain-specific language designed to support integer and string-based mathematical computation through simple and expressive syntax.
+This section presents the statements defined in the language, explaining their purpose and providing examples of use.
+
+
+1. Declaration Statement
+Syntax:
+    int x = 10
+    str name = "Alice"
+    array<int> nums
+
+Purpose:
+    Declares variables of basic or composed types (int, str, char, array<T>) to store and manipulate data.
+
+Example:
+    int a = 5
+    int b = 3
+    OUTPUT a + b
+# Declares two integers used later for arithmetic operations.
+
+
+2. Assignment Statement
+Syntax:
+    identifier = expression
+
+Purpose:
+    Updates an existing variable with a new value.
+
+Justification:
+    Needed for dynamic computations, iterative updates, and state changes inside loops or functions.
+
+Example:
+    int x = 0
+    x = x + 1
+    OUTPUT x
+# Updates the value of x and prints it.
+
+
+3. INPUT Statement
+Syntax:
+    INPUT variable
+
+Purpose:
+    Reads a value from the user and stores it in a variable.
+
+Justification:
+    Allows user interaction and dynamic program behavior.
+
+Example:
+    int n
+    INPUT n
+    OUTPUT "You entered:" n
+# Reads an integer n from the console and prints it.
+
+
+4. OUTPUT Statement
+Syntax:
+    OUTPUT expression
+
+Purpose:
+    Displays computed results or text to the user.
+
+Justification:
+    Essential for observing program output and verifying computations.
+
+Example:
+    OUTPUT "Sum of numbers:"
+    OUTPUT a + b
+# Prints both a string message and a computed result.
+
+
+
+5. IF - THEN - ELSE - END Statement
+Syntax:
+    IF condition THEN
+        statement_list
+    ELSE
+        statement_list
+    END
+
+Purpose:
+    Performs conditional branching - executes code only if a condition holds true.
+
+Justification:
+    Enables decision-making in computations (e.g., comparing numbers, selecting formulas).
+
+Example:
+    IF a > b THEN
+        OUTPUT "a is greater"
+    ELSE
+        OUTPUT "b is greater or equal"
+    END
+# Compares two integers and prints the correct message.
+
+
+
+6. WHILE - DO - END Statement
+Syntax:
+    WHILE condition DO
+        statement_list
+    END
+
+Purpose:
+    Executes a set of statements repeatedly while the condition is true.
+
+Justification:
+    Used for iteration, e.g., repeating calculations, filling arrays, etc.
+
+Example:
+    int i = 0
+    WHILE i < 3 DO
+        OUTPUT i
+        i = i + 1
+    END
+# Prints numbers from 0 to 2.
+
+
+
+7. DEF - BEGIN - END (Function Definition)
+Syntax:
+    DEF name(parameters)
+    BEGIN
+        statement_list
+    END
+
+Purpose:
+    Defines a reusable computation block (function) that can be called multiple times.
+
+Justification:
+    Encourages modular programming - separating logic into reusable, callable components.
+
+Example:
+    DEF sum(x, y)
+    BEGIN
+        RETURN x + y
+    END
+# Defines a function sum that returns the addition of two numbers.
+
+
+
+8. RETURN Statement
+Syntax:
+    RETURN expression
+
+Purpose:
+    Specifies the result to be sent back from a function.
+
+Justification:
+    Allows functions to produce output values for reuse elsewhere in the program.
+
+Example:
+    DEF gcd(x, y)
+    BEGIN
+        RETURN x ^^ y
+    END
+# Returns the greatest common divisor of two numbers.
+
+
+
+9. Array Access Statement
+Syntax:
+    array_name[index] = expression
+    OUTPUT array_name[index]
+
+Purpose:
+    Stores or retrieves data in a composed structure (array).
+
+Justification:
+    Required for handling collections of values and performing indexed computations.
+
+Example:
+    array<int> values
+    int i = 0
+    WHILE i < 3 DO
+        values[i] = i * 2
+        i = i + 1
+    END
+    OUTPUT values[1]
+# Demonstrates dynamic array usage with a loop.
+
+
+
+10. Domain-Specific Operators
+Syntax:
+    a ^^ b    # GCD
+    a %% b    # LCM
+    a @@ b    # Power Sum
+
+Purpose:
+    Provide direct computation for common mathematical operations in number theory.
+
+Justification:
+    These operators make the DSL domain-specific - simplifying otherwise complex operations into one symbol.
+
+Example:
+    int a = 12
+    int b = 8
+    OUTPUT "GCD:" a ^^ b
+    OUTPUT "LCM:" a %% b
+    OUTPUT "Power Sum:" a @@ b
+# Demonstrates mathematical operators specialized for this DSL.
+
+
+
+11. Expression Statement
+Syntax:
+    expression
+
+Purpose:
+    Allows a simple expression to be executed as a standalone statement (e.g., function call).
+
+Justification:
+    Useful for concise syntax when a return value isn’t needed.
+
+Example:
+    sum(a, b)
+# Calls the function sum without storing or printing its result.

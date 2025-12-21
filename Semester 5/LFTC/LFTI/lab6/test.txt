@@ -1,0 +1,7 @@
+atribuie x = 10;
+atribuie y = x * 3;
+dezvaluie(x);
+daca (y > 23) atunci
+    dezvaluie(y);
+gata
+

@@ -1,0 +1,14 @@
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4 BUN\bin\Debug\net6.0\Lab4.exe
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4 BUN\bin\Debug\net6.0\Lab4.deps.json
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4 BUN\bin\Debug\net6.0\Lab4.runtimeconfig.json
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4 BUN\bin\Debug\net6.0\Lab4.dll
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4 BUN\bin\Debug\net6.0\Lab4.pdb
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4 BUN\obj\Debug\net6.0\Lab4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4 BUN\obj\Debug\net6.0\Lab4.AssemblyInfoInputs.cache
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4 BUN\obj\Debug\net6.0\Lab4.AssemblyInfo.cs
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4 BUN\obj\Debug\net6.0\Lab4.csproj.CoreCompileInputs.cache
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4 BUN\obj\Debug\net6.0\Lab4.dll
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4 BUN\obj\Debug\net6.0\refint\Lab4.dll
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4 BUN\obj\Debug\net6.0\Lab4.pdb
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4 BUN\obj\Debug\net6.0\Lab4.genruntimeconfig.cache
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4 BUN\obj\Debug\net6.0\ref\Lab4.dll

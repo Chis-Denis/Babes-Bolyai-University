@@ -1,0 +1,104 @@
+Derivation Sequence (String of Productions)
+
+This shows the sequence of grammar productions applied during parsing.
+Productions are grouped by statement for clarity.
+
+
+Statement 1: Unknown  // int a = 5
+    1. Type -> int
+      2. Factor -> CONST
+      3. Power -> Factor
+      4. Term -> Power
+      5. Expr -> Term
+        6. DeclTail -> ASSIGN Expr
+  7. DeclStmt -> Type ID DeclTail
+
+Statement 2: DeclStmt  // int 1b = 10
+  8. Stmt -> DeclStmt
+    9. Type -> int
+     10. Factor -> CONST
+     11. Power -> Factor
+     12. Term -> Power
+     13. Expr -> Term
+       14. DeclTail -> ASSIGN Expr
+
+Statement 3: Unknown  // OUTPUT "GCD:" a ^^ b
+ 15. DeclStmt -> Type ID DeclTail
+
+Statement 4: DeclStmt  // IF a > b THEN
+ 16. Stmt -> DeclStmt
+     17. Factor -> CONST
+     18. Power -> Factor
+     19. Term -> Power
+     20. Expr -> Term
+
+Statement 5: Unknown  // OUTPUT "A is greater"
+ 21. OutputStmt -> OUTPUT Expr
+
+Statement 6: OutputStmt  // ELSE
+ 22. Stmt -> OutputStmt
+     23. Factor -> ID
+     24. Power -> Factor
+     25. Factor -> ID
+     26. Power -> Power POWER_SUM Factor
+     27. Term -> Power
+     28. Expr -> Term
+
+Statement 7: Unknown  // OUTPUT "B is greater or equal"
+ 29. ExprStmt -> Expr
+
+Statement 8: ExprStmt  // END
+ 30. Stmt -> ExprStmt
+     31. Factor -> ID
+     32. Power -> Factor
+     33. Term -> Power
+     34. Expr -> Term
+       35. CmpOp -> >
+     36. Factor -> ID
+     37. Power -> Factor
+     38. Term -> Power
+     39. Expr -> Term
+       40. Cond -> Expr CmpOp Expr
+     41. Factor -> CONST
+     42. Power -> Factor
+     43. Term -> Power
+     44. Expr -> Term
+
+Statement 9: Unknown
+ 45. OutputStmt -> OUTPUT Expr
+
+Statement 10: OutputStmt
+ 46. Stmt -> OutputStmt
+   47. StmtList -> ε
+   48. StmtList -> Stmt StmtList
+     49. Factor -> CONST
+     50. Power -> Factor
+     51. Term -> Power
+     52. Expr -> Term
+
+Statement 11: Unknown
+ 53. OutputStmt -> OUTPUT Expr
+
+Statement 12: OutputStmt
+ 54. Stmt -> OutputStmt
+   55. StmtList -> ε
+   56. StmtList -> Stmt StmtList
+   57. ElsePart -> ELSE StmtList
+
+Statement 13: Unknown
+ 58. IfStmt -> IF Cond THEN StmtList ElsePart END
+
+Statement 14: IfStmt
+ 59. Stmt -> IfStmt
+   60. StmtList -> ε
+   61. StmtList -> Stmt StmtList
+   62. StmtList -> Stmt StmtList
+   63. StmtList -> Stmt StmtList
+   64. StmtList -> Stmt StmtList
+   65. StmtList -> Stmt StmtList
+
+Final Assembly: Building Program
+   66. Program -> StmtList
+
+Total: 66 productions
+Parsing method: Bottom-up (LALR) using PLY/yacc

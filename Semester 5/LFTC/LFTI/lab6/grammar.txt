@@ -1,0 +1,35 @@
+Grammar Definition for Mini DSL
+================================
+
+<program> ::= <lista_poruncilor>
+
+<lista_poruncilor> ::= <porunca> | <porunca> <lista_poruncilor>
+
+<porunca> ::= <atribuire> | <dezvaluire> | <gogoasa> | <daca> | <medie_numere>
+
+<atribuire> ::= "atribuie" <id> "=" <expr> ";"
+
+<dezvaluire> ::= "dezvaluie" "(" <id> ")" ";"
+
+<gogoasa> ::= "gogoasa" <id> "de_la" <number> "pana_la" <number> "fa" <lista_poruncilor> "gata"
+
+<daca> ::= "daca" "(" <conditie> ")" "atunci" <lista_poruncilor> [ "altfel" <lista_poruncilor> ] "gata"
+
+<medie_numere> ::= "medie" "(" <lista_id> ")" ";"
+
+<lista_id> ::= <id> | <id> "," <lista_id>
+
+<conditie> ::= <expr> <operator_de_conditie> <expr>
+
+<operator_de_conditie> ::= ">" | "<" | "==" | "!="
+
+<expr> ::= <termen> | <expr> "+" <termen> | <expr> "-" <termen>
+
+<termen> ::= <factor> | <termen> "*" <factor> | <termen> "/" <factor>
+
+<factor> ::= <number> | <id> | "(" <expr> ")"
+
+<id> ::= <litera> { <litera> | <cifra> }*
+
+<number> ::= <cifra> { <cifra> }*
+

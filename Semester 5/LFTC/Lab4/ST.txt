@@ -1,0 +1,10 @@
+Identifiers:
+0 -> a
+1 -> b
+
+Constants:
+0 -> 5
+1 -> 10
+2 -> "GCD:"
+3 -> "A is greater"
+4 -> "B is greater or equal"

@@ -1,0 +1,74 @@
+# Mini DSL Grammar for Lab 7
+# Based on Lab5/grammar.txt, adapted for LL(1) parsing
+
+Program -> StmtList
+StmtList -> Stmt StmtList
+StmtList -> ε
+
+Stmt -> DeclStmt
+Stmt -> AssignStmt
+Stmt -> InputStmt
+Stmt -> OutputStmt
+Stmt -> IfStmt
+Stmt -> WhileStmt
+Stmt -> ExprStmt
+
+DeclStmt -> Type id DeclTail
+DeclTail -> = Expr
+DeclTail -> ε
+Type -> int
+Type -> str
+Type -> char
+Type -> array<int>
+Type -> array<str>
+
+AssignStmt -> id = Expr
+InputStmt -> INPUT id
+OutputStmt -> OUTPUT Expr
+
+IfStmt -> IF Cond THEN StmtList ElsePart END
+ElsePart -> ELSE StmtList
+ElsePart -> ε
+
+WhileStmt -> WHILE Cond DO StmtList END
+
+ExprStmt -> Expr
+
+Expr -> Term ExprRest
+ExprRest -> + Term ExprRest
+ExprRest -> - Term ExprRest
+ExprRest -> ε
+
+Term -> Power TermRest
+TermRest -> * Power TermRest
+TermRest -> / Power TermRest
+TermRest -> ε
+
+Power -> Factor PowerRest
+PowerRest -> ^^ Factor PowerRest
+PowerRest -> %% Factor PowerRest
+PowerRest -> @@ Factor PowerRest
+PowerRest -> ε
+
+Factor -> id
+Factor -> const
+Factor -> ( Expr )
+Factor -> ArrayAccess
+Factor -> FuncCall
+
+ArrayAccess -> id [ Expr ]
+FuncCall -> id ( ArgListOpt )
+ArgListOpt -> ArgList
+ArgListOpt -> ε
+ArgList -> Expr ArgTail
+ArgTail -> , Expr ArgTail
+ArgTail -> ε
+
+Cond -> Expr CmpOp Expr
+CmpOp -> =
+CmpOp -> !=
+CmpOp -> >
+CmpOp -> <
+CmpOp -> >=
+CmpOp -> <=
+

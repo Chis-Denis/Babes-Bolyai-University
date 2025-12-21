@@ -1,0 +1,28 @@
+atribuie x = 5;
+atribuie y = 8;
+atribuie suma = x + y;
+dezvaluie(suma);
+
+daca (suma > 10) atunci
+    dezvaluie(x);
+gata
+
+13
+5
+
+
+atribuie a = 1;
+atribuie b = 2;
+atribuie c = a;
+
+gogoasa i de_la 1 pana_la 3 fa
+    atribuie val = i * 2;
+    dezvaluie(val);
+gata
+
+medie(a, b, c);
+
+2
+4
+6
+2

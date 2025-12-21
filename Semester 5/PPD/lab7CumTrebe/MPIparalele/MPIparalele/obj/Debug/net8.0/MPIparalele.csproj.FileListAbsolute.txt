@@ -1,0 +1,5 @@
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab7CumTrebe\MPIparalele\MPIparalele\obj\Debug\net8.0\MPIparalele.csproj.AssemblyReference.cache
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab7CumTrebe\MPIparalele\MPIparalele\obj\Debug\net8.0\MPIparalele.GeneratedMSBuildEditorConfig.editorconfig
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab7CumTrebe\MPIparalele\MPIparalele\obj\Debug\net8.0\MPIparalele.AssemblyInfoInputs.cache
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab7CumTrebe\MPIparalele\MPIparalele\obj\Debug\net8.0\MPIparalele.AssemblyInfo.cs
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab7CumTrebe\MPIparalele\MPIparalele\obj\Debug\net8.0\MPIparalele.csproj.CoreCompileInputs.cache

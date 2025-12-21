@@ -1,0 +1,8 @@
+int a = 5
+int 1b = 10
+OUTPUT "GCD:" a ^^ b
+IF a > b THEN
+    OUTPUT "A is greater"
+ELSE
+    OUTPUT "B is greater or equal"
+END

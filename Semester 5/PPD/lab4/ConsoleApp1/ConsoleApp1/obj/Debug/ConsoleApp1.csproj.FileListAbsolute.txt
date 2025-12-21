@@ -1,0 +1,7 @@
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Chestii\Programe\Facultate\Anu3Sem1\paralele\lab4\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

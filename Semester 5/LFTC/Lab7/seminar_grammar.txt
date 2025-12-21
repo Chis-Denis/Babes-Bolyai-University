@@ -1,0 +1,9 @@
+# Example grammar from seminar for Requirement 1
+# Simple expression grammar
+
+E -> T E'
+E' -> + T E' | ε
+T -> F T'
+T' -> * F T' | ε
+F -> ( E ) | id
+

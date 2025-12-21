@@ -1,0 +1,35 @@
+int a
+int b
+INPUT a
+INPUT b
+OUTPUT "Running computations..."
+OUTPUT "GCD:" a ^^ b
+OUTPUT "LCM:" a %% b
+IF a > b THEN
+    OUTPUT "a is greater"
+ELSE
+    OUTPUT "b is greater or equal"
+END
+
+------------------------------------
+
+DEF power_stats(x, y)
+BEGIN
+    RETURN x @@ y
+END
+
+int base = 2
+int limit = 4
+array<int> results
+
+int i = 0
+WHILE i < limit DO
+    results[i] = power_stats(base, i)
+    i = i + 1
+END
+
+OUTPUT "Computed powers:"
+OUTPUT results[0]
+OUTPUT results[1]
+OUTPUT results[2]
+OUTPUT results[3]

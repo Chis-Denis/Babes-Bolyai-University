@@ -1,0 +1,7 @@
+atribuie $ = 72;
+atribuie y = 87;
+atribu suma = x + y;
+dezvaluie(suma);
+daca (suma > 10) atunci
+    dezvaluie(x);
+gata

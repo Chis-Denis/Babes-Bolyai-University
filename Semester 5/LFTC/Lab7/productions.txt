@@ -1,0 +1,17 @@
+String of Productions (Requirement 1)
+======================================================================
+
+Input: id + id * id
+
+Productions applied:
+1. E -> T E'
+2. E' -> + T E'
+3. E' -> ε
+4. T -> F T'
+5. T' -> * F T'
+6. T' -> ε
+7. F -> id
+8. F -> id
+9. T -> F T'
+10. T' -> ε
+11. F -> id
