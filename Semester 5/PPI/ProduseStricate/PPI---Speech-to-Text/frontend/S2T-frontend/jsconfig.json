@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/views/*": ["./src/views/*"],
+      "@/services/*": ["./src/services/*"],
+      "@/models/*": ["./src/models/*"],
+      "@/viewmodels/*": ["./src/viewmodels/*"],
+      "@/config/*": ["./src/config/*"],
+      "@/guards/*": ["./src/guards/*"],
+      "@/router/*": ["./src/router/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
