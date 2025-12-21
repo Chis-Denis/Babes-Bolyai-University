@@ -28,7 +28,7 @@ medical_reports = MockRouter("medical_reports")
 consultation_forms = MockRouter("consultation_forms")
 prescription_forms = MockRouter("prescription_forms")
 
-HF_TOKEN = os.getenv("HF_TOKEN", "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")
+HF_TOKEN = os.getenv("HF_TOKEN", "")
 
 # Verificare token HF_TOKEN
 if not HF_TOKEN or HF_TOKEN == "":
