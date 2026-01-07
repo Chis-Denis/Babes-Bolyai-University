@@ -39,6 +39,17 @@ ENV/
 snapshots/
 results/
 
+# C++ build artifacts
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.exe
+*.a
+*.so
+*.dylib
+
 # OS
 .DS_Store
 Thumbs.db

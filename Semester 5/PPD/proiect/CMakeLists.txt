@@ -55,10 +55,6 @@ else()
     message(STATUS "Install MPI to build distributed examples")
 endif()
 
-# Test executable
-add_executable(test_nbody test.cpp)
-target_link_libraries(test_nbody nbody_threaded nbody_shared)
-
 # Installation
 install(TARGETS simple complex distributed_example
     RUNTIME DESTINATION bin

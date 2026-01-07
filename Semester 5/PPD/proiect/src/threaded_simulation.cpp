@@ -4,6 +4,7 @@
 #include <chrono>
 #include <algorithm>
 #include <thread>
+#include <future>
 
 ThreadedNBodySimulation::ThreadedNBodySimulation(std::vector<Body> bodies, int num_threads)
     : bodies_(std::move(bodies)), num_bodies_(bodies_.size()), time_elapsed_(0.0), step_count_(0) {

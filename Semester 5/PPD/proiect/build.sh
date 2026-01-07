@@ -9,5 +9,7 @@ make -j$(nproc)
 echo "Build complete! Executables are in the build/ directory:"
 echo "  - simple (threaded example)"
 echo "  - complex (threaded example)"
-echo "  - distributed_example (MPI example)"
+if [ -f distributed_example ]; then
+    echo "  - distributed_example (MPI example)"
+fi
 
