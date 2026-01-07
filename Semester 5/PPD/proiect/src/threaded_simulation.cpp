@@ -17,6 +17,9 @@ ThreadedNBodySimulation::ThreadedNBodySimulation(std::vector<Body> bodies, int n
     } else {
         num_threads_ = num_threads;
     }
+    
+    // Initialize previous forces for Velocity Verlet
+    prev_forces_.resize(bodies_.size(), {0.0, 0.0, 0.0});
 }
 
 std::vector<std::pair<size_t, std::array<double, 3>>> 
@@ -24,9 +27,10 @@ ThreadedNBodySimulation::calculateForcesChunk(size_t start_idx, size_t end_idx) 
     std::vector<std::pair<size_t, std::array<double, 3>>> results;
     results.reserve(end_idx - start_idx);
     
+    size_t num_bodies_size = static_cast<size_t>(num_bodies_);
     for (size_t i = start_idx; i < end_idx; ++i) {
         std::array<double, 3> force = {0.0, 0.0, 0.0};
-        for (size_t j = 0; j < num_bodies_; ++j) {
+        for (size_t j = 0; j < num_bodies_size; ++j) {
             if (i != j) {
                 std::array<double, 3> f = calculateForce(bodies_[i], bodies_[j]);
                 for (int k = 0; k < 3; ++k) {
@@ -43,18 +47,20 @@ ThreadedNBodySimulation::calculateForcesChunk(size_t start_idx, size_t end_idx) 
 std::vector<std::array<double, 3>> 
 ThreadedNBodySimulation::calculateForcesParallel() const {
     // Divide work among threads
-    size_t chunk_size = std::max(size_t(1), num_bodies_ / num_threads_);
+    size_t num_bodies_size = static_cast<size_t>(num_bodies_);
+    size_t num_threads_size = static_cast<size_t>(num_threads_);
+    size_t chunk_size = std::max(size_t(1), num_bodies_size / num_threads_size);
     std::vector<std::future<std::vector<std::pair<size_t, std::array<double, 3>>>>> futures;
     
-    for (size_t i = 0; i < num_bodies_; i += chunk_size) {
-        size_t end_idx = std::min(i + chunk_size, size_t(num_bodies_));
+    for (size_t i = 0; i < num_bodies_size; i += chunk_size) {
+        size_t end_idx = std::min(i + chunk_size, num_bodies_size);
         futures.push_back(std::async(std::launch::async, 
             &ThreadedNBodySimulation::calculateForcesChunk, 
             this, i, end_idx));
     }
     
     // Collect results
-    std::vector<std::array<double, 3>> forces(num_bodies_, {0.0, 0.0, 0.0});
+    std::vector<std::array<double, 3>> forces(num_bodies_size, {0.0, 0.0, 0.0});
     
     for (auto& future : futures) {
         auto chunk_results = future.get();
@@ -67,14 +73,36 @@ ThreadedNBodySimulation::calculateForcesParallel() const {
 }
 
 void ThreadedNBodySimulation::step(double dt) {
-    // Calculate forces in parallel
-    std::vector<std::array<double, 3>> forces = calculateForcesParallel();
+    // Leapfrog integration requires completing the velocity half-step from previous iteration
+    static bool first_step = true;
     
-    // Update positions and velocities
-    for (size_t i = 0; i < bodies_.size(); ++i) {
-        updatePosition(bodies_[i], forces[i], dt);
+    if (!first_step) {
+        // Complete the velocity half-step from previous iteration
+        // (forces were calculated at the end of previous step)
+        std::vector<std::array<double, 3>> prev_forces = calculateForcesParallel();
+        for (size_t i = 0; i < bodies_.size(); ++i) {
+            for (int j = 0; j < 3; ++j) {
+                bodies_[i].velocity[j] += (prev_forces[i][j] / bodies_[i].mass) * (dt * 0.5);
+            }
+        }
     }
     
+    // Calculate forces at current positions
+    std::vector<std::array<double, 3>> forces = calculateForcesParallel();
+    
+    // Update positions and velocities (half-step velocity, full-step position)
+    for (size_t i = 0; i < bodies_.size(); ++i) {
+        // Half-step velocity update
+        for (int j = 0; j < 3; ++j) {
+            bodies_[i].velocity[j] += (forces[i][j] / bodies_[i].mass) * (dt * 0.5);
+        }
+        // Full-step position update
+        for (int j = 0; j < 3; ++j) {
+            bodies_[i].position[j] += bodies_[i].velocity[j] * dt;
+        }
+    }
+    
+    first_step = false;
     time_elapsed_ += dt;
     step_count_++;
 }
@@ -82,12 +110,12 @@ void ThreadedNBodySimulation::step(double dt) {
 void ThreadedNBodySimulation::run(int num_steps, double dt, bool verbose) {
     auto start_time = std::chrono::high_resolution_clock::now();
     
-    for (int step = 0; step < num_steps; ++step) {
+    for (int step_num = 0; step_num < num_steps; ++step_num) {
         step(dt);
         
-        if (verbose && (step + 1) % std::max(1, num_steps / 10) == 0) {
+        if (verbose && (step_num + 1) % std::max(1, num_steps / 10) == 0) {
             auto [kinetic, potential, total] = getEnergy();
-            std::cout << "Step " << (step + 1) << "/" << num_steps 
+            std::cout << "Step " << (step_num + 1) << "/" << num_steps 
                       << " | Time: " << std::scientific << std::setprecision(2) << time_elapsed_
                       << "s | Energy: " << total << " J" << std::endl;
         }

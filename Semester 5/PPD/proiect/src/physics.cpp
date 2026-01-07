@@ -52,18 +52,18 @@ std::vector<std::array<double, 3>> calculateAllForces(const std::vector<Body>& b
 }
 
 void updatePosition(Body& body, const std::array<double, 3>& force, double dt) {
-    // Calculate acceleration (a = F / m)
+    // This function is kept for compatibility but Leapfrog is now implemented
+    // directly in the simulation classes for better energy conservation.
+    // Simple Euler integration (kept as fallback)
     std::array<double, 3> acceleration;
     for (int i = 0; i < 3; ++i) {
         acceleration[i] = force[i] / body.mass;
     }
     
-    // Update velocity (v = v + a * dt)
     for (int i = 0; i < 3; ++i) {
         body.velocity[i] += acceleration[i] * dt;
     }
     
-    // Update position (x = x + v * dt)
     for (int i = 0; i < 3; ++i) {
         body.position[i] += body.velocity[i] * dt;
     }

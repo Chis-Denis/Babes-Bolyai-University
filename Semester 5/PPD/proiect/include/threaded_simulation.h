@@ -66,6 +66,7 @@ public:
 
 private:
     std::vector<Body> bodies_;
+    std::vector<std::array<double, 3>> prev_forces_;  // For Velocity Verlet
     int num_bodies_;
     int num_threads_;
     double time_elapsed_;

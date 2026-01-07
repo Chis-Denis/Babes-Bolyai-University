@@ -1,29 +1,21 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
+# C++ Build artifacts
 build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
 
-# Virtual environments
-venv/
-env/
-ENV/
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
 
 # IDE
 .vscode/
@@ -31,26 +23,48 @@ ENV/
 *.swp
 *.swo
 *~
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-# Project specific
+# Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.sbr
+*.sdf
+*.opensdf
+*.sln.docstates
+
+# Project specific output
 *.png
 *.jpg
 *.pdf
 snapshots/
 results/
-
-# C++ build artifacts
-build/
-CMakeCache.txt
-CMakeFiles/
-cmake_install.cmake
-Makefile
-*.exe
-*.a
-*.so
-*.dylib
+*.dat
+*.out
 
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 

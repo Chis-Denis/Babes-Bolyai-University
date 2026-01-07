@@ -8,10 +8,8 @@ A comprehensive C++ implementation of the n-body problem simulation with two par
 
 ```
 proiect/
-├── CMakeLists.txt          # CMake build configuration
+├── Makefile                # Build configuration
 ├── README.md               # This file
-├── build.sh                # Linux/macOS build script
-├── build.bat               # Windows build script
 ├── include/                # Header files
 │   ├── body.h             # Body class
 │   ├── physics.h          # Physics calculations
@@ -32,65 +30,48 @@ proiect/
 
 ## Requirements
 
-- C++17 compatible compiler (GCC 7+, Clang 5+, MSVC 2017+)
-- CMake 3.10 or higher
-- For distributed implementation: MPI (OpenMPI or MPICH)
+- C++17 compatible compiler (g++ is included with MSYS2/MinGW)
+- Make (mingw32-make on Windows)
+- For distributed implementation: MPI (optional)
+
+**Note**: OpenCL is NOT required. This project uses standard C++ threading (`std::async`) and MPI for distributed computing.
+
+## Quick Start
+
+### Build the Project
+
+```powershell
+# Build all threaded examples
+mingw32-make all
+
+# Or build specific targets
+mingw32-make simple
+mingw32-make complex
+mingw32-make distributed  # (requires MPI)
+```
+
+### Run Examples
+
+```powershell
+# Simple threaded example
+.\build\simple.exe
+
+# Complex example (solar system)
+.\build\complex.exe
+
+# Distributed example (requires MPI)
+mpiexec -n 4 .\build\distributed_example.exe
+```
 
 ## Building
 
-### Basic Build
-
-```bash
-mkdir build
-cd build
-cmake ..
-make
-```
-
-### Windows (Visual Studio)
-
-```bash
-mkdir build
-cd build
-cmake .. -G "Visual Studio 16 2019"
-cmake --build . --config Release
-```
-
 ### With MPI Support
 
-Ensure MPI is installed and CMake can find it:
+Install MPI to build the distributed implementation:
 
-```bash
-# Linux
-sudo apt-get install libopenmpi-dev openmpi-bin
-
-# macOS
-brew install openmpi
-
-# Windows
-# Install MS-MPI from Microsoft
-```
-
-CMake will automatically detect MPI if installed.
-
-## Running
-
-### Threaded Examples
-
-```bash
-# Simple example
-./build/simple
-
-# Complex example
-./build/complex
-```
-
-### Distributed Example
-
-```bash
-# Run with 4 MPI processes
-mpirun -np 4 ./build/distributed_example
-```
+- **Windows**: Install MS-MPI from Microsoft
+- **Linux**: `sudo apt-get install libopenmpi-dev openmpi-bin`
+- **macOS**: `brew install openmpi`
 
 ## Features
 
@@ -144,6 +125,23 @@ int main(int argc, char* argv[]) {
     MPI_Finalize();
     return 0;
 }
+```
+
+## Testing
+
+### Quick Test
+
+```powershell
+# Build the project
+mingw32-make all
+
+# Test threaded implementation
+.\build\simple.exe
+.\build\complex.exe
+
+# Test distributed implementation (requires MPI)
+mingw32-make distributed
+mpiexec -n 4 .\build\distributed_example.exe
 ```
 
 ## License

@@ -8,7 +8,7 @@ int main() {
     std::cout << "Simple N-Body Simulation (Threaded)" << std::endl;
     std::cout << "============================================================" << std::endl;
     
-    // Generate bodies
+    // Generate bodies with more stable initial conditions
     std::cout << "\nGenerating bodies..." << std::endl;
     auto bodies = generateRandomBodies(10, 1e20, 1e25, -1e6, 1e6, -1e3, 1e3);
     
@@ -17,9 +17,9 @@ int main() {
     // Create simulation
     ThreadedNBodySimulation simulation(bodies, 4);
     
-    // Run simulation
+    // Run simulation with smaller time step for better energy conservation
     std::cout << "\nRunning simulation..." << std::endl;
-    simulation.run(100, 1.0, true);
+    simulation.run(100, 0.1, true);  // Reduced dt from 1.0 to 0.1
     
     // Print statistics
     std::cout << "\n============================================================" << std::endl;

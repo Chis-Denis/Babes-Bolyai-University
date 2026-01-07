@@ -175,15 +175,33 @@ DistributedNBodySimulation::calculateLocalForces(
 }
 
 void DistributedNBodySimulation::step(double dt) {
+    // Velocity Verlet integration (energy-conserving)
+    
     // Gather all positions and masses
     auto [all_positions, all_masses] = gatherAllPositionsMasses();
     
-    // Calculate forces for local bodies
+    // Calculate forces for local bodies at current positions
     std::vector<std::array<double, 3>> local_forces = calculateLocalForces(all_positions, all_masses);
     
-    // Update local bodies
+    // Update positions: x(t+dt) = x(t) + dt * v(t) + 0.5 * dt^2 * a(t)
     for (size_t i = 0; i < local_bodies_.size(); ++i) {
-        updatePosition(local_bodies_[i], local_forces[i], dt);
+        for (int j = 0; j < 3; ++j) {
+            double acceleration = local_forces[i][j] / local_bodies_[i].mass;
+            local_bodies_[i].position[j] += local_bodies_[i].velocity[j] * dt + 0.5 * acceleration * dt * dt;
+        }
+    }
+    
+    // Gather updated positions and calculate new forces
+    auto [new_positions, new_masses] = gatherAllPositionsMasses();
+    std::vector<std::array<double, 3>> new_forces = calculateLocalForces(new_positions, new_masses);
+    
+    // Update velocities: v(t+dt) = v(t) + 0.5 * dt * (a(t) + a(t+dt))
+    for (size_t i = 0; i < local_bodies_.size(); ++i) {
+        for (int j = 0; j < 3; ++j) {
+            double accel_old = local_forces[i][j] / local_bodies_[i].mass;
+            double accel_new = new_forces[i][j] / local_bodies_[i].mass;
+            local_bodies_[i].velocity[j] += 0.5 * dt * (accel_old + accel_new);
+        }
     }
     
     time_elapsed_ += dt;
