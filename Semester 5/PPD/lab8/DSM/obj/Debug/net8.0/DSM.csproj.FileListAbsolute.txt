@@ -1,0 +1,12 @@
+C:\Users\Chisu\Documents\GitHub\Babes-Bolyai-University\Semester 5\PPD\lab8\DSM\bin\Debug\net8.0\DSM.deps.json
+C:\Users\Chisu\Documents\GitHub\Babes-Bolyai-University\Semester 5\PPD\lab8\DSM\bin\Debug\net8.0\DSM.dll
+C:\Users\Chisu\Documents\GitHub\Babes-Bolyai-University\Semester 5\PPD\lab8\DSM\bin\Debug\net8.0\DSM.pdb
+C:\Users\Chisu\Documents\GitHub\Babes-Bolyai-University\Semester 5\PPD\lab8\DSM\obj\Debug\net8.0\DSM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chisu\Documents\GitHub\Babes-Bolyai-University\Semester 5\PPD\lab8\DSM\obj\Debug\net8.0\DSM.AssemblyInfoInputs.cache
+C:\Users\Chisu\Documents\GitHub\Babes-Bolyai-University\Semester 5\PPD\lab8\DSM\obj\Debug\net8.0\DSM.AssemblyInfo.cs
+C:\Users\Chisu\Documents\GitHub\Babes-Bolyai-University\Semester 5\PPD\lab8\DSM\obj\Debug\net8.0\DSM.csproj.CoreCompileInputs.cache
+C:\Users\Chisu\Documents\GitHub\Babes-Bolyai-University\Semester 5\PPD\lab8\DSM\obj\Debug\net8.0\DSM.sourcelink.json
+C:\Users\Chisu\Documents\GitHub\Babes-Bolyai-University\Semester 5\PPD\lab8\DSM\obj\Debug\net8.0\DSM.dll
+C:\Users\Chisu\Documents\GitHub\Babes-Bolyai-University\Semester 5\PPD\lab8\DSM\obj\Debug\net8.0\refint\DSM.dll
+C:\Users\Chisu\Documents\GitHub\Babes-Bolyai-University\Semester 5\PPD\lab8\DSM\obj\Debug\net8.0\DSM.pdb
+C:\Users\Chisu\Documents\GitHub\Babes-Bolyai-University\Semester 5\PPD\lab8\DSM\obj\Debug\net8.0\ref\DSM.dll

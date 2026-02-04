@@ -43,9 +43,6 @@ public:
      */
     std::tuple<double, double, double> getEnergy() const;
     
-    /**
-     * Get simulation statistics.
-     */
     struct Statistics {
         int num_bodies;
         int num_threads;
